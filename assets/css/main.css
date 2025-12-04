@@ -2646,3 +2646,42 @@ input, select, textarea {
        para que el video no se pegue al borde. */
 	padding: 0; /* Aseguramos que el video llene su columna sin relleno interno adicional */
 }
+
+#designProcess{
+
+	ul.designList{
+		padding: 0 7em 0 7em;
+	}
+
+	li.designItem{
+		list-style: none;
+		border-left: 0.1em dashed black;
+		min-height: 15em;
+
+
+	}
+
+	li.designItem::before {
+		position: absolute;
+		content: "";
+		border: 0.5em solid black;
+		/* Movemos el círculo para que quede DENTRO del padding-left: 7em */
+		left: 4.55em; /* Posición horizontal del círculo */
+		height: 5em;
+		width: 5em;
+		border-radius: 50%; /* Añadimos border-radius para que sea un círculo */
+		transform: translateY(-10%); /* Lo centramos verticalmente con el contenido */
+		background: white; /* Relleno blanco para tapar la línea punteada */
+		z-index: 10;
+	}
+	.designItem-content {
+		/* Mantenemos el margen izquierdo que ya habías ajustado para evitar la línea y el círculo */
+		margin-left: 4em;
+
+		/* PROPIEDAD CLAVE: Define el ancho máximo del recuadro */
+		/* Lo establecemos al 60% del espacio disponible (puedes ajustar este valor) */
+		width: 90%;
+
+		/* Ya no necesitamos margin-right: 7em; si usamos width: 60%; */
+	}
+}
