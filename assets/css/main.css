@@ -1837,7 +1837,7 @@ input, select, textarea {
 		ul.social li {
 			position: relative;
 			display: inline-block;
-			margin: 0.25em;
+			margin: 3em;
 			top: 0;
 			padding-left: 0;
 		}
@@ -1848,35 +1848,45 @@ input, select, textarea {
 				-ms-transition: top .2s ease-in-out;
 				transition: top .2s ease-in-out;
 				display: block;
-				width: 48px;
-				height: 48px;
-				border-radius: 6px;
-				top: 0;
+				width: 200px;
+				height: 200px;
+				top: 1em;
 				position: relative;
+				border-radius: 50%;
+			}
+
+			.social-label {
+				display: block;
+				margin-top: 1em; /* Espacio entre el círculo y el texto */
+				color: white; /* Color oscuro para el texto (ajusta al de tu diseño) */
+				font-size: 2em;
+				font-weight: 600;
+				text-align: center;
 			}
 
 				ul.social li a:before {
+					/*
 					background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 					background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 					background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+					background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));*/
 					-moz-transition: background-color .2s ease-in-out;
 					-webkit-transition: background-color .2s ease-in-out;
 					-ms-transition: background-color .2s ease-in-out;
 					transition: background-color .2s ease-in-out;
-					background-color: #444;
-					border-radius: 6px;
+					/*background-color: #444;*/
+					border-radius: 50%;
 					box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
 					color: #2E2E2E !important;
 					display: block;
-					font-size: 26px;
-					height: 48px;
-					line-height: 48px;
+					font-size: 5em;
+					line-height: 200px;
 					text-align: center;
 					outline: 0;
 					overflow: hidden;
 					text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
-					width: 48px;
+					width: 200px;
+					height: 200px;
 				}
 
 				ul.social li a.fa-twitter {
@@ -2650,30 +2660,36 @@ input, select, textarea {
 #designProcess{
 
 	ul.designList{
-		padding: 0 7em 0 7em;
+		padding: 0 12em 0 12em;
 	}
 
 	li.designItem{
 		list-style: none;
 		border-left: 0.1em dashed black;
 		min-height: 15em;
-
+		position: relative;
 
 	}
 
+	li.designItem span{
+		list-style: none;
+	}
+
 	li.designItem::before {
+
 		position: absolute;
-		content: "";
-		border: 0.5em solid black;
+		content: none;/* Desactivamos el círculo creado por pseudoelemento */
+		border: 0.5em solid purple;
 		/* Movemos el círculo para que quede DENTRO del padding-left: 7em */
 		left: 4.55em; /* Posición horizontal del círculo */
-		height: 5em;
-		width: 5em;
+		height: 4em;
+		width: 4em;
 		border-radius: 50%; /* Añadimos border-radius para que sea un círculo */
 		transform: translateY(-10%); /* Lo centramos verticalmente con el contenido */
 		background: white; /* Relleno blanco para tapar la línea punteada */
 		z-index: 10;
 	}
+
 	.designItem-content {
 		/* Mantenemos el margen izquierdo que ya habías ajustado para evitar la línea y el círculo */
 		margin-left: 4em;
@@ -2683,5 +2699,36 @@ input, select, textarea {
 		width: 90%;
 
 		/* Ya no necesitamos margin-right: 7em; si usamos width: 60%; */
+	}
+
+	/* 2. Estilo del Círculo (contenedor de la imagen/icono) */
+	.timeline-marker {
+		position: absolute;
+		/*left: -0em; /* Misma posición de la línea punteada */
+		top: 1em;
+		transform: translate(-70%, -50%); /* Centrado vertical y horizontal en el eje de la línea */
+
+		width: 3em;
+		height: 3em;
+		border-radius: 50%;
+		background-color: #dcd0fe; /* Relleno blanco para tapar la línea */
+		z-index: 10;
+
+		/* CLAVE: Flexbox para centrar el icono/imagen DENTRO del círculo */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* 3. Estilo para el Icono o la Imagen */
+	.timeline-marker i {
+		font-size: 1.5em; /* Tamaño del icono */
+		color: black;
+	}
+
+	.timeline-marker img {
+		max-width: 80%; /* La imagen no debe llenar completamente el círculo */
+		max-height: 80%;
+		object-fit: contain; /* Asegura que la imagen se vea bien dentro del círculo */
 	}
 }
