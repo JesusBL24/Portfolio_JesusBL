@@ -231,7 +231,7 @@ input, select, textarea {
 	/* **PROPIEDADES CLAVE PARA LA UNIFORMIDAD** */
 
 	/* 1. Ancho y Alto fijos (Ajusta estos valores según tus necesidades visuales) */
-	width: 150px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
+	width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
 	height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
 
 	/* 2. Propiedades para Centrar el Texto Verticalmente y Horizontalmente */
@@ -254,6 +254,10 @@ input, select, textarea {
 	overflow: hidden; /* Oculta el texto que exceda el ancho/alto */
 	text-overflow: ellipsis; /* Añade puntos suspensivos si el texto se corta (si el texto no cabe) */
 	white-space: nowrap;
+}
+
+.tag.some {
+	border: 0.2em dashed black;
 }
 
 	header {
@@ -291,7 +295,9 @@ input, select, textarea {
 
 		.container.portfolio {
 			width: 1200px;
+			justify-content: center;
 		}
+
 
 		@media screen and (max-width: 1680px) {
 
@@ -1832,15 +1838,37 @@ input, select, textarea {
 		margin: 0;
 		list-style: none;
 		padding-left: 0;
+
+		/* Flexbox para centrar los LI dentro del UL */
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center; /* Centra los LI internamente */
+		gap: 5em;
+
+		/* CLAVE A: Forzar que el UL no ocupe más espacio del que necesita */
+		width: fit-content;
+
+		/* CLAVE B: Centrar el UL horizontalmente en su contenedor padre */
+		margin-left: auto;
+		margin-right: auto;
+
+		/* Asegurar que el margin: 0; inicial no anule el auto */
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
-		ul.social li {
-			position: relative;
-			display: inline-block;
-			margin: 3em;
-			top: 0;
-			padding-left: 0;
-		}
+			ul.social li.social-item-wrapper { /* Asegúrate de usar esta clase en tu HTML <li> */
+				position: relative;
+
+				/* CAMBIO CLAVE: Usa Flexbox en columna para apilar Círculo sobre Etiqueta */
+				display: flex;
+				flex-direction: column;
+				align-items: center; /* Centra el círculo y la etiqueta uno sobre el otro */
+
+				margin: 0;
+				top: 0;
+				padding-left: 0;
+			}
 
 			ul.social li a {
 				-moz-transition: top .2s ease-in-out;
@@ -1852,7 +1880,7 @@ input, select, textarea {
 				height: 200px;
 				top: 1em;
 				position: relative;
-				border-radius: 50%;
+				border-radius: 50%; /* Mantenido aquí para el área de enlace */
 			}
 
 			.social-label {
@@ -1889,8 +1917,8 @@ input, select, textarea {
 					height: 200px;
 				}
 
-				ul.social li a.fa-twitter {
-					background-color: #2DAAE4;
+				ul.social li a.fa-phone-alt {
+					background-color: #C4376B;
 				}
 
 				ul.social li a.fa-facebook-f {
@@ -1909,8 +1937,8 @@ input, select, textarea {
 					background-color: #51718A;
 				}
 
-				ul.social li a.fa-google-plus {
-					background-color: #DA2713;
+				ul.social li a.fa-envelope {
+					background-color: #FAFAFA;
 				}
 
 				ul.social li a.fa-github {
@@ -1980,6 +2008,7 @@ input, select, textarea {
 
 /* Box */
 
+
 	.box {
 		background: #fff;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
@@ -1988,7 +2017,7 @@ input, select, textarea {
 	}
 
 		.box.style1 {
-			padding: 2em 1em 5em 2em;
+			padding: 2em 1em 3em 2em;
 			margin-top: 0.5em;
 		}
 			#aboutMe section.box.style1 {
@@ -1996,6 +2025,29 @@ input, select, textarea {
 				/* Opcional: Si el texto es negro (como en tu plantilla original),
 			       debes cambiar el color del texto a blanco para que se vea */
 				color: black;
+			}
+
+			.aboutMePadre{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: auto;
+
+				.aboutMeHijo {
+					margin-right: 2em;
+					max-width: 60em;
+				}
+				.aboutMeHijo2 {
+					margin-right: 2em;
+					margin-bottom: 2em;
+				}
+			}
+
+			#aboutMe section.aboutMeTextSection {
+			/* Opcional: Si el texto es negro (como en tu plantilla original),
+               debes cambiar el color del texto a blanco para que se vea */
+				color: black;
+				margin-top: 0.5em;
 			}
 
 			.box.style1 h3 {
@@ -2019,6 +2071,15 @@ input, select, textarea {
 			width: auto;
 		}
 
+		.box.style5{
+			background: #dcd0fe;
+			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			padding: 2em;
+			margin-bottom: 3em;
+			min-width: 60em;
+		}
+
 /* Icons */
 
 	.icon {
@@ -2035,8 +2096,15 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
+		}
+
+		.icon.fas:before {
 			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
+		}
+
+		/* Para Iconos de Marca (Brands) - Como LinkedIn */
+		.icon.brands:before {
+			font-family: 'Font Awesome 5 Brands'; /* CLAVE: Familia de fuente correcta */
 		}
 
 		.icon:before {
@@ -2094,10 +2162,13 @@ input, select, textarea {
 			background-color: #303030;
 			color: #999;
 			text-shadow: -1px -1px 0px #181818;
+			justify-content: center;
+			align-items: center;
 		}
 
 			.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
 				color: #fff;
+				margin-bottom: 2em;
 			}
 
 			.wrapper.style4 form input[type=text],
@@ -2136,6 +2207,8 @@ input, select, textarea {
 			padding-left: 0;
 		}
 
+
+
 		#nav li {
 			display: inline-block;
 			padding-left: 0;
@@ -2157,6 +2230,52 @@ input, select, textarea {
 			height: 2.5em;
 			line-height: 2.5em;
 			padding: 0 1.25em;
+		}
+
+		#nav .container {
+			/*display: flex;*/ !important;
+			justify-content: center; /* Esto centra el grupo principal de enlaces */
+			align-items: center;
+			padding: 0;
+		}
+
+		/* 2. Regla CLAVE: Empujar el botón de idioma a la izquierda */
+		#nav #lang-switch {
+			/* Esto toma todo el espacio horizontal disponible entre el
+		       botón de idioma y el resto de los enlaces, empujándolo al extremo izquierdo. */
+			margin-right: auto;
+
+			/* Opcional: Asegurar que el botón de idioma tenga el mismo estilo que los demás LI */
+			/* Si tienes padding o márgenes definidos para #nav li, asegúrate de que #lang-switch herede o lo anule */
+		}
+
+		/* 3. Ajuste Opcional para el Botón (igualar estilos) */
+		#nav #lang-switch a {
+			/* Asegúrate de que el enlace del botón de idioma se vea como los otros enlaces */
+			padding: 0.5em 1em; /* Ejemplo de padding */
+			display: inline-block;
+		}
+		#nav ul.container a {
+			/* Si tienes una altura (height) definida para el botón,
+		       line-height debe coincidir para centrar el texto. */
+			height: 40px; /* Ejemplo, usa tu valor real */
+			line-height: 40px; /* CLAVE: Igual a la altura */
+
+			/* Asegúrate de que display sea inline-block o block si usas height */
+			display: block;
+
+			/* Otros estilos... */
+			padding: 0 1.25em;
+			/* ... */
+		}
+
+		#nav ul.container a.active-lang {
+			background-color: white; /* Fondo blanco */
+			color: black !important; /* Texto negro para contraste */
+
+			/* Opcional: Asegúrate de que no se apliquen estilos de hover cuando esté activo */
+			pointer-events: none; /* Deshabilita el click en el botón ya activo */
+			cursor: default;
 		}
 
 			#nav a:hover {
@@ -2189,6 +2308,12 @@ input, select, textarea {
 					border-right: solid 0.75em transparent;
 					border-top: solid 0.6em #282828;
 				}
+
+		#nav ul.container li:nth-last-child(3) {
+			border-right: 1px solid #444;
+			padding-right: 1.5em;
+			margin-right: 1em;
+		}
 
 /* Articles */
 
@@ -2415,9 +2540,19 @@ input, select, textarea {
 
 			ul.social {
 				padding: 1em 0.5em 0 0.5em;
+
+				/* CLAVE 1: Usa Flexbox para la disposición horizontal */
+				display: flex;
+				flex-wrap: wrap; /* Para que salten de línea si es necesario */
+
+				/* CLAVE 2: Centra todos los elementos horizontalmente */
+				justify-content: center;
 			}
 
 				ul.social li {
+					display: flex;
+					flex-direction: column;
+					align-items: center; /* CLAVE: Esto centra el círculo sobre la etiqueta */
 					margin: 0.5em 0.5em 0.5em 0.5em;
 				}
 
@@ -2504,6 +2639,7 @@ input, select, textarea {
 						background-color: transparent;
 					}
 
+
 		/* Articles */
 
 			#top {
@@ -2547,6 +2683,19 @@ input, select, textarea {
 /* **************************************************************************** */
 /* *******************************CUSTOM CLASSES******************************* */
 /* **************************************************************************** */
+
+.signatures-container {
+	display: flex;         /* Habilita la alineación horizontal */
+	justify-content: space-between; /* Distribuye el espacio entre las dos columnas */
+	gap: 6em;             /* Añade un pequeño espacio entre las columnas (opcional) */
+}
+
+/* Opcional: Asegurar que las listas ocupen un ancho igual */
+.signatures-container .list-col {
+	flex-basis: 50%; /* Ocupa la mitad del espacio disponible */
+	padding: 0;
+}
+
 
 /* Estilo para el contenedor de cada proyecto */
 .project-entry {
@@ -2601,7 +2750,7 @@ input, select, textarea {
 	max-width: 350px;
 	width: 100%;
 	object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-	border: 1px solid black;
+	border: 1em solid black;
 }
 
 /* 2. Lista de responsabilidades */
@@ -2690,6 +2839,13 @@ input, select, textarea {
 		z-index: 10;
 	}
 
+	/* NUEVA REGLA: Elimina la línea en el último <li> de la lista */
+	li.designItem:last-child {
+		border-left: none;
+		/* Opcional: Puede ajustar la altura mínima para el último elemento */
+		min-height: auto;
+	}
+
 	.designItem-content {
 		/* Mantenemos el margen izquierdo que ya habías ajustado para evitar la línea y el círculo */
 		margin-left: 4em;
@@ -2698,8 +2854,39 @@ input, select, textarea {
 		/* Lo establecemos al 60% del espacio disponible (puedes ajustar este valor) */
 		width: 90%;
 
+		justify-content: center;
+		border: 0.2em solid black;
+		border-radius: 8px;
+
+
 		/* Ya no necesitamos margin-right: 7em; si usamos width: 60%; */
 	}
+
+	.designItem-content p {
+		/* CLAVE: Establece un ancho máximo de 65 caracteres (puedes ajustar este número) */
+		width: 90%;
+		/* Nota: Esto NO reducirá la caja, solo el texto dentro de ella */
+		margin: 0 auto;
+	}
+
+	.designItem-content h3 {
+		/* Mantenemos el centrado del texto si limitaste su ancho con margin: 0 auto; */
+		max-width: 50ch;
+		margin: 0 auto;
+
+		/* CLAVE A: AÑADIR LA LÍNEA SEPARADORA */
+		border-bottom: 2px solid #ccc; /* Línea sólida de 2px de color gris claro */
+
+		/* CLAVE B: Separación Vertical */
+		padding-bottom: 0.5em; /* Espacio entre el texto del h3 y la línea */
+		margin-bottom: 1.3em; /* Espacio entre la línea y el párrafo siguiente */
+
+		/* Aseguramos que el h3 se comporte como bloque para que el borde se muestre */
+		display: block;
+		text-align: center; /* Centrar el texto del h3 */
+		color: #3e3e3e; /* Color del texto del título */
+	}
+
 
 	/* 2. Estilo del Círculo (contenedor de la imagen/icono) */
 	.timeline-marker {
@@ -2732,3 +2919,13 @@ input, select, textarea {
 		object-fit: contain; /* Asegura que la imagen se vea bien dentro del círculo */
 	}
 }
+
+.explanationSkills {
+	display: flex; /* Habilita Flexbox */
+	justify-content: center; /* Centra horizontalmente el contenido (el span) */
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+
+
+}
+

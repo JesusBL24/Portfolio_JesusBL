@@ -16,12 +16,20 @@
 		<!-- Nav -->
 			<nav id="nav">
 				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#aboutMe">About me</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#experience">Experience</a></li>
-					<li><a href="#designProcess">Design process</a></li>
-					<li><a href="#contact" id = "contactMe">Contact me</a></li>
+					<li><a href="#top" data-i18n="nav_top">Top</a></li>
+					<li><a href="#aboutMe" data-i18n="nav_about">About me</a></li>
+					<li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+					<li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+					<li><a href="#designProcess" data-i18n="nav_design_process">Design process</a></li>
+					<li><a href="#contact" id = "contactMe" data-i18n="nav_contact">Contact me</a></li>
+
+					<li id="lang-switch-en">
+						<a onclick="setLanguage('en')">ENG</a>
+					</li>
+					<li id="lang-switch-es">
+						<a onclick="setLanguage('es')">ESP</a>
+					</li>
+
 				</ul>
 			</nav>
 
@@ -35,10 +43,10 @@
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
 								<h1><strong>Jesús Bastante</strong></h1>
-								<h2>Game Designer, Programmer, Producer</h2>
+								<h2  data-i18n="home_roles">Game Designer, Programmer, Producer</h2>
 							</header>
-							<p>I'm a level and systems designer, developer, artist and storyteller with great passion and ambition for creating innovative games.</p>
-							<h2 id="eslogan">'Handcraft experiences loop by loop'</h2>
+							<p data-i18n="home_description">I'm a level and systems designer, developer, artist and storyteller with great passion and ambition for creating innovative games.</p>
+							<h2 id="eslogan" data-i18n="home_eslogan">'Handcraft experiences loop by loop'</h2>
 							<!--<a href="#work" class="button large scrolly">Learn about what I do</a>-->
 						</div>
 					</div>
@@ -46,59 +54,58 @@
 				</div>
 			</article>
 
-		<!-- Work -->
+		<!-- AboutMe -->
 			<article id="aboutMe" class="wrapper style2">
 				<div class="container">
 					<header>
-						<h1>About me</h1>
+						<h1 data-i18n="aboutMe_title">About me</h1>
 						<!--<p>Odio turpis amet sed consequat eget posuere consequat.</p>-->
 					</header>
-					<div class="row aln-left">
-						<div class="col-8 col-12-medium col-12-small">
-							<section class="aboutMeTextSection">
+					<div class="aboutMePadre">
+						<div class="col-6 col-12-medium col-12-small aboutMeHijo">
+							<section class="box aboutMeTextSection">
 								<!--<h3>Mi Perfil como Game Designer y Programador</h3>-->
-								<p align="left">
-									Born in 2003, I’ve been playing videogames since my 3 years old, internally developing a sense of how they are designed and the objective of their mechanics and decisions. As a kid, I also spent a lot of time playing with my LEGOs, imaging stories and worlds later on would take me to start writing and developing my interest in storytelling and art.
+								<p align="left" data-i18n="aboutMe_p1">
+									Born in 2003, my interest in video games started at the age of three, allowing me to internally develop an intuitive understanding of <strong>why different mechanics work</strong>
+									and the objectives behind design decisions focused on the <strong>player experience</strong> .
+
+									As a child, I also spent long evenings playing with LEGO, imagining stories and worlds that later inspired me to begin writing, programming, and cultivating a strong interest
+									in storytelling and art.
 								</p>
-								<p align="left">
-									Recently, I have received my bachelor’s degree Game Design and Development at the Rey Juan Carlos University in Madrid. During these years I’ve been studying game design simple and advanced concepts, programming in C#, C++ and Unity Engine. Moreover, I participated with my friends in several game jams as designer and storyteller - even I was art director once.
+								<p align="left" data-i18n="aboutMe_p2">
+									I recently received my Bachelor's degree in Game Design and Development from Rey Juan Carlos University in Madrid. During these years, I  studied <strong>game design</strong>,
+									<strong>the video game production pipeline</strong>, and programming in <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> and <strong>Unity Engine</strong> .
+
+									Furthermore, my desire for improvement led me to independently studying design and participating with colleagues in several game jams as a designer and storyteller (and even once as an art director). This experience has significantly strengthened my <strong>communication</strong>, <strong>team working</strong>, <strong>analysis</strong>, and <strong>problem-solving skills</strong>.
 								</p>
-								<p align="left">
-									This year my first multiplatform project  ‘El Coco’  has been released , where I worked together with the Recotechnology S.L team as game designer and producer. Here I designed difficulty and progression systems, designed the narrative structure,  implemented levels and enemies, leaded my team as producer and prepared the game pages for all platforms. This is just the start, my passion for games and learning desire leads me to look for new horizons and further develop my skills.
+								<p align="left" data-i18n="aboutMe_p3">
+									This year, my first multiplatform project, <strong>'El Coco'</strong>, was released, where I collaborated with the Recotechnology S.L. team as a Game Designer and Producer. My responsibilities
+									included designing <strong>difficulty and progression systems</strong>, <strong>structuring the narrative</strong>, <strong>implementing levels and enemies</strong>,
+									<strong>leading the team</strong> in my production role, and preparing the game pages for all launch platforms.
+								</p>
+								<p align="left" data-i18n="aboutMe_p4">
+									This is just the beginning; my passion for games and continuous desire to learn drive me to seek new horizons and further develop my professional skills.
 								</p>
 							</section>
 						</div>
 
-						<div class="col-3 col-12-medium col-12-small">
+						<div class="col-6 col-12-medium col-12-small">
 							<section class="box style1">
-								<h3>Important University lessons</h3>
+								<h3 data-i18n="aboutMe_subjects">Relevant University signatures</h3>
 								<ul class="features">
-									<li>Game design principles</li>
-									<li>Narrative design and script writing</li>
-									<li>Iterative design</li>
-									<li>Videogame development framework</li>
-									<li>Game design principles</li>
-									<li>Game design principles</li>
-									<li>Game design principles</li>
+									<li data-i18n="aboutMe_subject1">Game design principles</li>
+									<li data-i18n="aboutMe_subject2">Narrative design and script writing</li>
+									<li data-i18n="aboutMe_subject3">Object oriented programming</li>
+									<li data-i18n="aboutMe_subject4">Programming patterns</li>
+									<li data-i18n="aboutMe_subject5">Level design principles</li>
+									<li data-i18n="aboutMe_subject6">VR</li>
+									<li data-i18n="aboutMe_subject7">Iterative design</li>
+									<li data-i18n="aboutMe_subject8">Development pipeline</li>
+									<li data-i18n="aboutMe_subject9">Artificial intelligence</li>
+									<li data-i18n="aboutMe_subject10">Visual design</li>
 								</ul>
 							</section>
 						</div>
-						<!--
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-camera-retro"></span>
-								<h3>Lorem dolor tempus</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
-
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-thumbs-up"></span>
-								<h3>Feugiat posuere</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-							-->
 						</div>
 					</div>
 				<!--
@@ -113,50 +120,71 @@
 		<!-- Skills -->
 			<article id="skills" class="wrapper style3">
 				<div class="container portfolio">
-					<header>
-						<h1>Skills</h1>
-						<p>Along my journey, I have worked with several tools and developed my skills to be the best possible professional.</p>
+						<header>
+						<h1 data-i18n="skills_title">Skills</h1>
+						<p data-i18n="skills_description">Along my journey, I have worked with several tools and developed my skills to be the best possible professional.</p>
 					</header>
-					<div class="row">
+
+
+						<div class="explanationSkills">
+						<span class="tag some" data-i18n="skills_some_experience">Some experience</span>
+						</div>
+					<!-- Programmer -->
+					<div class="row aln-center">
 						<div class="col-3 col-6-medium col-12-small">
 							<article class="box style2">
-								<h3><a href="#">Programmer</a></h3>
+								<h3><a data-i18n="skills_programmer">Programming</a></h3>
 
 								<div class="skill-tags">
-									<span class="tag">Prototipado</span>
-									<span class="tag">Sistemas de Juego</span>
+									<span class="tag" data-i18n="skills_unity">Unity Engine / c#</span>
+									<span class="tag" data-i18n="skills_c++">C++</span>
+									<span class="tag some" data-i18n="skills_unreal">Unreal Engine 5</span>
+									<span class="tag" data-i18n="skills_html">HTML / CSS</span>
+									<span class="tag some" data-i18n="skills_js">JavaScript</span>
+									<span class="tag" data-i18n="skills_maths">Mathematics</span>
 
 								</div>
 							</article>
 						</div>
-						<div class="col-0.5 col-6-medium col-12-small"></div>
+
+
+						<!-- Game Designer -->
 						<div class="col-5 col-6-medium col-12-small">
 							<article class="box style2">
 
-								<h3><a href="#">Game Designer</a></h3>
+								<h3><a data-i18n="skills_gameDesign">Game Design</a></h3>
 
 								<div class="skill-tags">
-									<span class="tag">Prototipado</span>
-									<span class="tag">Sistemas de Juego</span>
-									<span class="tag">Unity/C#</span>
-									<span class="tag">Diseño de Niveles</span>
-									<span class="tag">Diseño de Niveles</span>
-									<span class="tag">Diseño de Niveles</span>
-									<span class="tag">Diseño de Niveles</span>
-									<span class="tag">Diseño de Niveles</span>
-									<span class="tag">Diseño de Niveles</span>
+									<span class="tag" data-i18n="skills_systems">Systems Design</span>
+									<span class="tag" data-i18n="skills_designPatterns">Design patterns</span>
+									<span class="tag" data-i18n="skills_enemy">Enemy Design</span>
+									<span class="tag" data-i18n="skills_iterative">Iterative Design</span>
+									<span class="tag" data-i18n="skills_documentation">Documentation</span>
+									<span class="tag" data-i18n="skills_excel">Excel</span>
+									<span class="tag" data-i18n="skills_prototype">Prototipying</span>
+									<span class="tag" data-i18n="skills_playtest">Playtesting</span>
+									<span class="tag" data-i18n="skills_narrative">Narrative Design</span>
+									<span class="tag" data-i18n="skills_level">Level Design</span>
+									<span class="tag some" data-i18n="skills_visual">Visual Design</span>
+									<span class="tag some" data-i18n="skills_blender">Blender</span>
 								</div>
 
 							</article>
 						</div>
-						<div class="col-0.5 col-6-medium col-12-small"></div>
+
+
+						<!-- Producer -->
 						<div class="col-3 col-6-medium col-12-small">
 							<article class="box style2">
-								<h3><a href="#">Producer</a></h3>
+								<h3><a data-i18n="skills_producing">Producing</a></h3>
 
 								<div class="skill-tags">
-									<span class="tag">Prototipado</span>
-									<span class="tag">Sistemas de Juego</span>
+									<span class="tag" data-i18n="skills_communication">Communication</span>
+									<span class="tag" data-i18n="skills_agile">Agile</span>
+									<span class="tag" data-i18n="skills_leadership">Leadership</span>
+									<span class="tag" data-i18n="skills_endToEnd">End-to-end</span>
+									<span class="tag" data-i18n="skills_jira">Jira</span>
+									<span class="tag" data-i18n="skills_functional">Cross-functional</span>
 								</div>
 
 							</article>
@@ -169,63 +197,236 @@
 		<article id="experience" class="wrapper style">
 			<div class="container">
 				<header>
-					<h2>Mi Experiencia y Proyectos</h2>
-					<p>Along my journey, I have worked with several tools and developed my skills to be the best possible professional.</p>
+					<h1 data-i18n="experience_title">Experience and projects</h1>
+					<p data-i18n="experience_description">These are my featured professional and personal projects that highlight my skills on game development</p>
 				</header>
 
-				<!-- Proyecto 1 -->
-				<div class="row project-entry">
+				<div class="col-8 col-12-medium col-12-small row aln-center">
+					<section class="box style5">
+						<h3 data-i18n="experience_professional">Professional projects</h3>
+					</section>
+				</div>
 
+				<!-- Proyecto 1 -->
+				<div class="project-entry">
+					<div class="row">
+						<div class="col-12">
+							<h3>El Coco (Recotechnology. 2025)</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12">
+							<p data-i18n="el_coco_description">
+								Este año se lanzó mi primer proyecto multiplataforma, <strong>'El Coco'</strong>... </p>
+						</div>
+					</div>
+
+					<div class="row aln-center">
+						<div class="col-5 col-12-medium col-12-small image-column">
+							<div class="video-container">
+								<iframe width="100%" height="315" src="https://www.youtube.com/embed/w1VXgXGJoMo?si=kQGGENqdgGSA5-C-" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="col-7 col-12-medium col-12-small content-column">
+							<div class="skill-tags project-tags">
+								<span class="tag" data-i18n="skill_unity">Unity Engine / C#</span>
+								<span class="tag" data-i18n="skill_systems_design">Systems Design</span>
+								<span class="tag" data-i18n="skill_iterative_design">Iterative Design</span>
+								<span class="tag" data-i18n="skill_enemy_design">Enemy Design</span>
+								<span class="tag" data-i18n="skill_level_design">Level Design</span>
+								<span class="tag" data-i18n="skill_narrative_design">Narrative Design</span>
+								<span class="tag" data-i18n="skill_leadership">Leadership</span>
+								<span class="tag" data-i18n="skill_end_to_end">End-to-end</span>
+							</div>
+
+							<ul class="project-details">
+								<li data-i18n="el_coco_role"><strong>Game designer and producer.</strong></li>
+								<li data-i18n="el_coco_lead">Leaded my team as main designer and producer.</li>
+								<li data-i18n="el_coco_systems">Designed difficulty, progression and narrative systems.</li>
+								<li data-i18n="el_coco_enemies">Implemented enemies and encounters.</li>
+								<li data-i18n="el_coco_platforms">Available on: PS5, PS4, Xbox One, Xbox Series, Nintendo Switch and Steam.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row project-entry aln-center">
 					<div class="col-5 col-12-medium col-12-small image-column">
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/w1VXgXGJoMo?si=kQGGENqdgGSA5-C-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 
 					<div class="col-7 col-12-medium col-12-small content-column">
 
-						<h3>Título del Proyecto o Puesto de Trabajo</h3>
+						<h3>El Coco (Recotechnology. 2025)</h3>
 
 						<div class="skill-tags project-tags">
-							<span class="tag">Unity/C#</span>
-							<span class="tag">Diseño de Sistemas</span>
-							<span class="tag">Producción</span>
+							<span class="tag" data-i18n="skills_unity">Unity Engine / C#</span>
+							<span class="tag" data-i18n="skills_systems">Systems Design</span>
+							<span class="tag" data-i18n="skills_iterative">Iterative Design</span>
+							<span class="tag" data-i18n="skills_enemy">Enemy Design</span>
+							<span class="tag" data-i18n="skills_level">Level Design</span>
+							<span class="tag" data-i18n="skills_narrative">Narrative Design</span>
+							<span class="tag" data-i18n="skills_leadership">Leadership</span>
+							<span class="tag" data-i18n="skills_endToEnd">End-to-end</span>
 						</div>
 
 						<ul class="project-details">
-							<li>Responsabilidad principal (ej: Diseño del sistema de dificultad).</li>
-							<li>Logro importante (ej: Lideré un equipo de 5 personas).</li>
-							<li>Tecnología utilizada (ej: Implementación en C++ y Unreal Engine).</li>
-							<li>Responsabilidad principal (ej: Diseño del sistema de dificultad).</li>
-							<li>Logro importante (ej: Lideré un equipo de 5 personas).</li>
-							<li>Tecnología utilizada (ej: Implementación en C++ y Unreal Engine).</li>
+							<li><strong>Game designer and producer.</strong></li>
+							<li>Leaded my team  as main designer and producer.</li>
+							<li>Designed difficulty, progression and narrative systems.</li>
+							<li>Implemented enemies and encounters.</li>
+							<li>Available on: PS5, PS4, Xbox One, Xbox Series, Nintendo Switch and Steam.</li>
 						</ul>
 
 					</div>
 				</div>
 
+
+
 				<!-- Proyecto 2 -->
 				<div class="row project-entry">
 
 					<div class="col-5 col-12-medium col-12-small image-column">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/QC1Otakvbps?si=5RIs9BhAYUCUYn3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/FJ5CNNaP4vQ?si=z_2PNQoDxg_0qs07" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 
 					<div class="col-7 col-12-medium col-12-small content-column">
 
-						<h3>Título del Proyecto o Puesto de Trabajo</h3>
+						<h3>Bratz: Rhythm and Style (Recotechnology, Outright Games. 2025)</h3>
 
 						<div class="skill-tags project-tags">
-							<span class="tag">Unity/C#</span>
-							<span class="tag">Diseño de Sistemas</span>
-							<span class="tag">Producción</span>
+							<span class="tag">Communication</span>
+							<span class="tag">Agile</span>
+							<span class="tag">Jira</span>
 						</div>
 
 						<ul class="project-details">
-							<li>Responsabilidad principal (ej: Diseño del sistema de dificultad).</li>
-							<li>Logro importante (ej: Lideré un equipo de 5 personas).</li>
-							<li>Tecnología utilizada (ej: Implementación en C++ y Unreal Engine).</li>
-							<li>Responsabilidad principal (ej: Diseño del sistema de dificultad).</li>
-							<li>Logro importante (ej: Lideré un equipo de 5 personas).</li>
-							<li>Tecnología utilizada (ej: Implementación en C++ y Unreal Engine).</li>
+							<li><strong>Post-launch producer.</strong></li>
+
+						</ul>
+
+					</div>
+				</div>
+
+				<div class="col-8 col-12-medium col-12-small row aln-center">
+					<section class="box style5 second">
+						<h3>Personal projects</h3>
+					</section>
+				</div>
+
+				<!-- Proyecto 3 -->
+				<div class="row project-entry">
+
+					<div class="col-5 col-12-medium col-12-small image-column">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/dESIXAj6zrM?si=02OlI8E_HfpWyJO2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+					<div class="col-7 col-12-medium col-12-small content-column">
+
+						<h3>Magefall, a study of iterative design and conceptualization stages in video games (Bachelor's Thesis. 2024)</h3>
+
+						<div class="skill-tags project-tags">
+							<span class="tag">Systems Design</span>
+							<span class="tag">Iterative Design</span>
+							<span class="tag">Prototyping</span>
+							<span class="tag">Playtesting</span>
+						</div>
+
+						<ul class="project-details">
+							<li><strong>Researcher and systems designer.</strong></li>
+							<li>Carried on an in depth investigation about iterative design and advance game design.</li>
+							<li>Used the new adquired knowledge to develop a game idea following an iterative cycle.</li>
+							<li>Created several combat and progression systems and their paper prototypes, leaded playtestings with real players and analized the results to further enhance the systems.</li>
+							<li>Wrote clean and prepared documentation like a GDD, a brief and one-pagers for mechanics.</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!-- Proyecto 4 -->
+				<div class="row project-entry">
+
+					<div class="col-5 col-12-medium col-12-small image-column">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/dESIXAj6zrM?si=02OlI8E_HfpWyJO2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+					<div class="col-7 col-12-medium col-12-small content-column">
+
+						<h3>Space Combat Rush 3D (Game Jam. 2024)</h3>
+
+						<div class="skill-tags project-tags">
+							<span class="tag">Unity Engine / C#</span>
+							<span class="tag">Systems Design</span>
+							<span class="tag">Narrative Design</span>
+							<span class="tag">Prototyping</span>
+						</div>
+
+						<ul class="project-details">
+							<li><strong>Game and narrative designer.</strong></li>
+							<li>Designed the online competitive combat system.</li>
+							<li>Designed and prototyped multiple characters funcionality.</li>
+							<li>Designed and wrote the scalable worldbuilding and character backstories.</li>
+							<li>Programmed several online features in .NET and WebGL.</li>
+							<li>Available on: Itch.io for mobile and pc.</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!-- Proyecto 5 -->
+				<div class="row project-entry">
+
+					<div class="col-5 col-12-medium col-12-small image-column">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/7DWw_tKGcok?si=uheKxrTfZ6hxXilZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+
+					<div class="col-7 col-12-medium col-12-small content-column">
+
+						<h3>Regrets and Complains (Game Jam. 2024)</h3>
+
+						<div class="skill-tags project-tags">
+							<span class="tag">Unity Engine / C#</span>
+							<span class="tag">Visual Design</span>
+							<span class="tag">Communication</span>
+						</div>
+
+						<ul class="project-details">
+							<li><strong>Lead artist.</strong></li>
+							<li>Designed the graphics and visual style.</li>
+							<li>Designed several characters and props.</li>
+							<li>Animated the main character.</li>
+							<li>Awarded, and subsequently exhibited at the Barcelona Indie Dev Day.</li>
+							<li>Available on: Itch.io for pc.</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!-- Proyecto 6 -->
+				<div class="row project-entry">
+
+					<div class="col-5 col-12-medium col-12-small image-column">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/ds75GTA6XdU?si=nrnSYYOC4L6e38ob" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+
+					<div class="col-7 col-12-medium col-12-small content-column">
+
+						<h3>The Inner Doors (Game Jam. 2023)</h3>
+
+						<div class="skill-tags project-tags">
+							<span class="tag">Unity Engine / C#</span>
+							<span class="tag">Narrative Design</span>
+							<span class="tag">Systems Design</span>
+							<span class="tag">Level Design</span>
+						</div>
+
+						<ul class="project-details">
+							<li><strong>Game and narrative designer.</strong></li>
+							<li>Designed the narrative system and wrote the dialogues.</li>
+							<li>Designed the Hotel, the main HUB of the game, including narrative triggers.</li>
+							<li>Programmed and designed a 2D minigame.</li>
+							<li>Awarded, and subsequently exhibited at the Guerrilla Game Festival.</li>
 						</ul>
 
 					</div>
@@ -239,20 +440,33 @@
 		<article id="designProcess" class="wrapper style">
 			<div class="container">
 				<header>
-					<h2>Proceso de diseño</h2>
-					<p>Along my journey, I have worked with several tools and developed my skills to be the best possible professional.</p>
+					<h1>Design Process</h1>
+					<p>My studies and research have effectively improved my capability to engage with game design and manage the iterative process.</p>
 				</header>
 			</div>
 			<div>
 				<ul class="designList">
 					<li class="designItem">
 						<span class="timeline-marker">
-      						<i class="fa-solid fa-a"></i>
+      						<i class="fas fa-exclamation-triangle"></i>
 						</span>
 
 						<div class="designItem-content box style1">
-							<h3>Etapa 1: Investigación</h3>
-							<p>Aquí va la descripción detallada de la primera etapa del proceso.</p>
+
+							<h3>Stage 1: Define the problem</h3>
+
+							<p>Whether it is defining the core player experience, creating new mechanics and systems, or tuning existing ones, the first step is <strong>identifying the problem we need to
+								solve</strong> in the current iteration. </p>
+
+							<br>
+
+
+							<p>In the first stages of <strong>conceptualization</strong>, the objective should be defining our <strong>core experience</strong>. In this case, the problem could be stated as finding the right
+								main mechanics and systems that match a <strong>single statement</strong>: a phrase that conveys the desired experience that the game should provide.
+								Once development has started, iteration objectives range from creating new content and systems for the game to tuning and balancing various existing features.
+							</p>
+
+
 						</div>
 					</li>
 
@@ -262,10 +476,79 @@
 						</span>
 
 						<div class="designItem-content box style1">
-							<h3>Etapa 2: Prototipado</h3>
-							<p>Aquí va la descripción detallada de la segunda etapa del proceso.</p>
+							<h3>Stage 2: Find the solution</h3>
+							<p>There are many solutions for each problem, but finding the correct one is all about <strong>analysis</strong>, <strong>exploring</strong>  different ideas, and seeing the <strong>big picture </strong> of both video game and development needs.</p>
+
+							<br>
+
+							<p>This stage is all about brainstorming and analyzing ideas by using <strong>risk identification</strong> and the <strong>5 Pillars of Game Design</strong>  <br> (Clarity, Satisfaction, Response, Motivation, and Fantasy)
+								to check if they enhance the player experience and if they can be developed correctly.
+								When creating new game systems and mechanics, it is important to know <strong>design patterns </strong> and how to implement them, adapting existing ideas in an innovative way that suits the design needs.
+							</p>
+
+
+							<br>
+							<p>Once we have explored enough options, we choose a solution or a mix of several of them and analyze it
+								once again to validate the final idea or look for another solution that can fit better into th current game.
+							</p>
+
 						</div>
 					</li>
+
+					<li class="designItem">
+						<span class="timeline-marker">
+      						<i class="fas fa-vial"></i>
+						</span>
+
+						<div class="designItem-content box style1">
+							<h3>Stage 3: Test the solution</h3>
+
+							<p>Implementing new features and mechanics starts with creating a quick prototype to find their weaknesses and strengths <strong>as soon as possible</strong>.</p>
+
+							<br>
+
+							<p>To maintain good documentation, we first create a small <strong>one-pager</strong> summarising all the relevant information and objectives of the intended solution.
+								Later, we create a <strong>small sample</strong> of the feature by using paper prototypes, Machinations, or video game engines with simple forms and scripts in a way that they can be easily tested and tunned.</p>
+
+							<br>
+
+							<p>Once the prototype is ready, it should be <strong>tested</strong> with the necessary people. Whether it is the team or external testers depends on the context,
+								but the <strong>target public</strong>  should always be taken into account, and <strong>information recovery strategies</strong>  must be prepared beforehand.</p>
+
+						</div>
+					</li>
+
+					<li class="designItem">
+						<span class="timeline-marker">
+      						<i class="fas fa-balance-scale-left"></i>
+						</span>
+
+						<div class="designItem-content box style1">
+							<h3>Stage 4: Evaluation</h3>
+							<p>
+								After recovering all the <strong>necessary feedback</strong>, the information must be analyzed to determine if the solution can be added to the game, if any upgrades should be made, or if
+								it should be discarded. Whether the solution is approved or not, the evaluation must be <strong>documented</strong> and used to determine new objectives in subsequent iterations.
+							</p>
+
+						</div>
+					</li>
+
+					<li class="designItem">
+						<span class="timeline-marker">
+      						<i class="fas fa-sync-alt"></i>
+						</span>
+
+						<div class="designItem-content box style1">
+							<h3>Repeat</h3>
+							<p>
+								By the end of the iteration, ideas should have been tested and features implemented. Now it is time to gather the team and look for possible upgrades to the process,
+								identify new needs, and plan future features and iterations.
+							</p>
+
+						</div>
+					</li>
+
+
 				</ul>
 			</div>
 		</article>
@@ -304,30 +587,32 @@
 							</form>
 						</div>
 						-->
-						<div class="col-12">
-							<h2>Find me on ...</h2>
+						<div class="col-12 aln-center">
+							<h1 class="social">Contact me</h1>
 							<ul class="social">
 								<li class="social-item-wrapper">
-									<a href="#" class="icon brands fa-twitter"></a>
-									<span class="social-label">Twitter</span>
+									<a href="#" class="icon fas fa-phone-alt" onclick="copyToClipboard('phoneLabel', event)"></a>
+									<span class="social-label" id="phoneLabel">+ 34 696 59 <br>84 73</span>
 								</li>
 
 								<li class="social-item-wrapper">
-									<a href="#" class="icon brands fa-linkedin-in"></a>
-									<span class="social-label">LinkedIn</span>
+									<a href="#" class="icon fas fa-envelope" onclick="copyToClipboard('emailLabel', event)"></a>
+									<span class="social-label" id="emailLabel">jesusbaslop24<br>@gmail.com</span>
 								</li>
 
 								<li class="social-item-wrapper">
-									<a href="#" class="icon brands fa-google-plus"></a>
-									<span class="social-label">Google+</span>
+									<a href="http://www.linkedin.com/in/jesusbl" class="icon brands fa-linkedin-in"></a>
+									<span class="social-label">jesusbl24</span>
 								</li>
+
 							</ul>
 						</div>
 					</div>
 					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
+						<p>
+							&copy; Jesús Bastante López 2025. All rights reserved.
+							Based on Original Design: <a href="https://html5up.net/miniport">HTML5 UP</a>.
+						</p>
 					</footer>
 				</div>
 			</article>
@@ -339,6 +624,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/copyToClipboard.js"></script>
+			<script src="assets/js/switchLanguage.js"></script>
 
 	</body>
 </html>
