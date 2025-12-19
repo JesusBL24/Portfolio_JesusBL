@@ -2706,7 +2706,7 @@ input, select, textarea {
 	border-radius: 10px;
 
 	/* Relleno interno para que el contenido no se pegue a los bordes */
-	padding: 2.5em;
+	padding: 3em;
 
 	/* Margen inferior para separar cada proyecto del siguiente */
 	margin-bottom: 3em !important;
@@ -2717,26 +2717,10 @@ input, select, textarea {
 	/* PROPIEDAD CLAVE: Define el estilo del borde */
 	/* Sintaxis: [grosor] [estilo] [color] */
 	border: 3px solid black;
-}
 
-.project-entry .content-column h3:first-child {
-	margin-top: 0 !important;
-}
-
-.project-entry2 {
-	/* Color de Fondo: Cambia #F0F0F0 por el color que elijas de tu Canva */
-	background-color: #dcd0fe;
-
-	/* Bordes redondeados para el rectángulo */
-
-	/* Relleno interno para que el contenido no se pegue a los bordes */
-	padding: 2.5em;
-
-	/* Margen inferior para separar cada proyecto del siguiente */
-	margin-bottom: 3em !important;
-
-	/* Aseguramos que el contenido dentro de la fila esté alineado verticalmente (arriba) */
-	align-items: flex-start;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 /* Ajustes específicos para los elementos dentro del proyecto */
@@ -2758,17 +2742,25 @@ input, select, textarea {
 	/* Le da espacio al inicio de la lista para separarla de los tags */
 	margin-top: 1em;
 	list-style: disc; /* Vuelve a habilitar las viñetas */
-	padding-left: 1em; /* Ajusta el padding para que las viñetas se vean bien */
+	padding-left: 3em; /* Ajusta el padding para que las viñetas se vean bien */
+	margin-left: 0;
+	justify-content: center;
 }
+
 
 .project-entry .content-column {
 	/* Fuerza la alineación de todo el texto (título, párrafos, lista) a la izquierda */
 	text-align: left;
+	margin-left: -0.8em;
+
 }
 
 .project-entry .project-tags {
 	/* Si ya usaste justify-content: center; en .skill-tags, puedes omitir esta línea */
 	justify-content: left;
+	padding-top: 0;
+	margin-top: 0;
+	padding-left: 2em ;
 	/*
     }
     /*
@@ -2777,34 +2769,33 @@ input, select, textarea {
         */
 }
 
-/*VIDEOS DE EXPERIENCIA*/
+.project-entry  h3 {
+	/* Mantenemos el centrado del texto si limitaste su ancho con margin: 0 auto; */
+	max-width: 50ch;
+	margin: 0 auto;
 
-.video-responsive {
-	position: relative; /* Necesario para posicionar el iframe absoluto */
-	padding-bottom: 56.25%; /* 56.25% de la altura = relación 16:9 (9/16 = 0.5625) */
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden; /* Oculta cualquier cosa que se salga */
-	border-radius: 8px; /* Opcional: para que el borde del video sea redondeado */
-}
+	/* CLAVE A: AÑADIR LA LÍNEA SEPARADORA */
+	border-bottom: 2px solid #ccc; /* Línea sólida de 2px de color gris claro */
 
-/* 2. Estilo para el IFRAME */
-.video-responsive iframe,
-.video-responsive object,
-.video-responsive embed {
-	position: absolute; /* Ocupa la posición del contenedor */
-	top: 0;
-	left: 0;
-	width: 100%; /* Ocupa todo el ancho */
-	height: 100%; /* Ocupa toda la altura (definida por el padding-bottom) */
+	/* CLAVE B: Separación Vertical */
+	padding-bottom: 0.5em; /* Espacio entre el texto del h3 y la línea */
+	margin-bottom: 1.3em; /* Espacio entre la línea y el párrafo siguiente */
+
+	/* Aseguramos que el h3 se comporte como bloque para que el borde se muestre */
+	display: block;
+	text-align: center; /* Centrar el texto del h3 */
+	color: #3e3e3e; /* Color del texto del título */
 }
 
 /* 3. Estilo para la columna del video (para que se vea bien con el borde del proyecto) */
-.project-entry .video-column {
+.project-entry .video-container {
 	/* Si estás usando un borde en .project-entry, podrías querer ajustar el relleno de la columna
        para que el video no se pegue al borde. */
 	padding: 0; /* Aseguramos que el video llene su columna sin relleno interno adicional */
+	justify-content: right;
+
 }
+
 
 #designProcess{
 
