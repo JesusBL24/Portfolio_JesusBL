@@ -129,7 +129,7 @@ const translations = {
 
         'skills_programmer':'Programación',
         'skills_unity':'Unity Engine / C#',
-        'skills_c++':'C++',
+        'skills_c++':'C++ y Python',
         'skills_unreal':'Unreal Engine 5',
         'skills_html':'HTML / CSS',
         'skills_js':'JavaScript',
@@ -296,7 +296,7 @@ const translations = {
 
         'skills_programmer':'Programming',
         'skills_unity':'Unity Engine / C#',
-        'skills_c++':'C++',
+        'skills_c++':'C++ & Python',
         'skills_unreal':'Unreal Engine 5',
         'skills_html':'HTML / CSS',
         'skills_js':'JavaScript',
@@ -387,7 +387,7 @@ const translations = {
         'mini_p1_title':'Space Commander Simulator',
         'mini_p1_desc':'Designed and programmed a <strong>VR</strong> starship strategy prototype featuring a <strong>gesture recognition system</strong>.',
 
-        'mini_p2_desc':'Authored all <strong>in-game dialogue</strong> and <strong>narrative scripts</strong> for this fan-made <br> spin-off.',
+        'mini_p2_desc':'Authored all <strong>in-game dialogue</strong> and <strong>narrative scripts</strong> for our fan-made <br> spin-off.',
 
         'mini_p3_desc':'Designed and developed a 3D platformer using <strong>software design patterns</strong> and <strong>blockouts</strong>.',
 
