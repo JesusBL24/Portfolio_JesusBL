@@ -82,7 +82,7 @@ const translations = {
         'nav_about': 'Sobre mí',
         'nav_skills': 'Habilidades',
         'nav_experience': 'Experiencia',
-        'nav_design_process': 'Proceso de Diseño',
+        'nav_design_process': 'Diseño',
         'nav_contact': 'Contacto',
 
         //HOME
@@ -250,7 +250,7 @@ const translations = {
         'nav_about': 'About me',
         'nav_skills': 'Skills',
         'nav_experience': 'Experience',
-        'nav_design_process': 'Design Process',
+        'nav_design_process': 'Design',
         'nav_contact': 'Contact me',
 
         //HOME
