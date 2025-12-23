@@ -2730,18 +2730,10 @@ input, select, textarea {
 	}
 }
 
-
-.signatures-container {
-	display: flex;         /* Habilita la alineación horizontal */
-	justify-content: space-between; /* Distribuye el espacio entre las dos columnas */
-	gap: 6em;             /* Añade un pequeño espacio entre las columnas (opcional) */
+.subjectsTitles{
+	max-width: 13em;
 }
 
-/* Opcional: Asegurar que las listas ocupen un ancho igual */
-.signatures-container .list-col {
-	flex-basis: 50%; /* Ocupa la mitad del espacio disponible */
-	padding: 0;
-}
 
 
 /* 1. Contenedor Flexbox para centrar horizontalmente */
