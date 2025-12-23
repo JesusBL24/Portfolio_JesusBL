@@ -161,7 +161,7 @@ const translations = {
         'experience_title':'Experiencia y proyectos',
         'experience_description':'Estos son mis proyectos profesionales y personales destacados que ponen muestran mis habilidades en el desarrollo de videojuegos.',
         'experience_professional':'Proyectos profesionales',
-        'project_available_on': 'Disponible en:',
+        'project_available_on': '<strong>Disponible en:<strong>',
         'word_and': 'y',
 
         'el_coco_description':'EL COCO es un juego roguelike de acción en 3D que te sumerge en un mundo de sueños, recuerdos rotos y pesadillas encarnadas. Desciende a Lo Incierto, un lugar tan extraño como peligroso, y lucha por recuperar lo que perdiste… si es que puedes confiar en quien te guía.',
@@ -328,7 +328,7 @@ const translations = {
         'experience_title':'Experience and projects',
         'experience_description':'These are my featured professional and personal projects that highlight my skills on game development.',
         'experience_professional':'Professional projects',
-        'project_available_on': 'Available on:',
+        'project_available_on': '<strong>Available on:</strong>',
         'word_and': 'and',
 
 
