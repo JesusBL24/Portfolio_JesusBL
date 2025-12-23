@@ -1,4 +1,4 @@
-Portfolio developed with HTML/CSS/JS. Features a custom localization system (EN/ES) and responsive video embeds for game showcases.
+Portfolio developed with HTML/CSS/JS by Jesus Bastante Lopez. Features a custom localization system (EN/ES) and responsive video embeds for game showcases.
 
 
 Credits:
