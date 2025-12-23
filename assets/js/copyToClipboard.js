@@ -18,12 +18,17 @@ function copyToClipboard(elementId, event) {
     // 3. Usar la API del Portapapeles (asíncrona)
     navigator.clipboard.writeText(textToCopy).then(() => {
 
-        // 4. Mostrar feedback al usuario (mensaje temporal de "¡Copiado!")
-        showFeedback(element, "¡Copiado!");
+    // 4. Detectar idioma actual y obtener traducción
+    // Asumimos que guardas el idioma en el atributo 'lang' del <html> (ej: <html lang="es">)
+    const currentLang = document.documentElement.lang || 'en';
+    const message = translations[currentLang]['copy_success'];
+
+    showFeedback(element, message);
 
     }).catch(err => {
-        console.error('Error al intentar copiar al portapapeles:', err);
-        showFeedback(element, "Error al copiar");
+        const currentLang = document.documentElement.lang || 'en';
+        const errorMessage = translations[currentLang]['copy_error'];
+        showFeedback(element, errorMessage);
     });
 }
 

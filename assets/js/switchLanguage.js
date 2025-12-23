@@ -17,6 +17,9 @@ function setLanguage(lang) {
 
     if (!dictionary) return;
 
+    // Esto es lo que leerá tu función de copiar al portapapeles
+    document.documentElement.lang = lang;
+
     // Iterar sobre todos los elementos marcados para traducción
     elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
@@ -85,12 +88,12 @@ const translations = {
         //HOME
         "home_roles": 'Game Designer, Programador, Productor',
         "home_description": 'Soy un diseñador de niveles y sistemas, desarrollador, artista y narrador con gran pasión y ambición por crear juegos innovadores.',
-        "home_eslogan": '\'Diseñar experiencias bucle a bucle\'',
+        "home_eslogan": '\'Forjando experiencias, ciclo a ciclo.\'',
 
         //ABOUT ME
         'aboutMe_title': 'Sobre mí',
-        'aboutMe_p1': 'Nacido en 2003, mi interés por los videojuegos comenzó a la edad de tres años, lo que me permitió desarrollar internamente una comprensión intuitiva del porqué funcionan las diferentes mecánicas y los objetivos detrás de las decisiones de diseño enfocadas en la experiencia del jugador. De niño, también pasaba largas tardes jugando con LEGO, imaginando historias y mundos que más tarde me inspiraron a empezar a escribir, programar y cultivar un fuerte interés por la narrativa y el arte.',
-        'aboutMe_p2': 'Recientemente obtuve mi <strong>título de Grado en Diseño y Desarrollo de Videojuegos</strong> por la Universidad Rey Juan Carlos en Madrid. Durante estos años, estudié <strong>diseño de juegos</strong>, <strong>el pipeline de producción de videojuegos</strong>, y programación en <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> y <strong>Unity Engine</strong>. Además, mi deseo de superación me llevó a estudiar diseño de forma independiente y a participar con compañeros en varias game jams como diseñador y guionista (*storyteller*) (e incluso una vez como director de arte). Esta experiencia ha fortalecido significativamente mis habilidades de <strong>comunicación</strong>, <strong>trabajo en equipo</strong>, <strong>análisis</strong> y <strong>resolución de problemas</strong>.',
+        'aboutMe_p1': 'Nacido en 2003, mi interés por los videojuegos comenzó a la edad de tres años, lo que me permitió desarrollar internamente una comprensión intuitiva del <strong>porqué funcionan las diferentes mecánicas y los objetivos detrás de las decisiones de diseño enfocadas en la experiencia del jugador</strong>. De niño, también pasaba largas tardes jugando con LEGO, imaginando historias y mundos que más tarde me inspiraron a empezar a escribir, programar y cultivar un fuerte interés por la narrativa y el arte.',
+        'aboutMe_p2': 'Recientemente obtuve mi <strong>título de Grado en Diseño y Desarrollo de Videojuegos</strong> por la Universidad Rey Juan Carlos en Madrid. Durante estos años, estudié <strong>diseño de juegos</strong>, <strong>el pipeline de producción de videojuegos</strong>, y programación en <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> y <strong>Unity Engine</strong>. Además, mi deseo de superación me llevó a estudiar diseño de forma independiente y a participar con compañeros en varias game jams como <strong>diseñador y storyteller</strong> (e incluso una vez como director de arte). Esta experiencia ha fortalecido significativamente mis habilidades de <strong>comunicación</strong>, <strong>trabajo en equipo</strong>, <strong>análisis</strong> y <strong>resolución de problemas</strong>.',
         'aboutMe_p3': 'Este año se lanzó mi primer proyecto multiplataforma, <strong>\'El Coco\'</strong>, donde colaboré con el equipo de Recotechnology S.L. como Diseñador de Juegos y Productor. Mis responsabilidades incluyeron diseñar <strong>sistemas de dificultad y progresión</strong>, <strong>estructurar la narrativa</strong>, <strong>implementar niveles y enemigos</strong>, <strong>liderar el equipo</strong> en mi rol de productor, y preparar las páginas del juego para todas las plataformas de lanzamiento.',
         'aboutMe_p4':'Esto es solo el comienzo; mi pasión por los videojuegos y mi deseo continuo de aprender me impulsan a buscar nuevos horizontes y a seguir desarrollando mis habilidades profesionales.',
 
@@ -105,6 +108,8 @@ const translations = {
         'aboutMe_subject8':'Pipeline de desarrollo',
         'aboutMe_subject9':'Inteligencia Artificial (IA)',
         'aboutMe_subject10':'Diseño visual',
+        'aboutMe_subject11':'Estadística',
+
 
         //SKILLS
         'skills_title':'Habilidades',
@@ -117,7 +122,7 @@ const translations = {
         'skills_unreal':'Unreal Engine 5',
         'skills_html':'HTML / CSS',
         'skills_js':'JavaScript',
-        'skills_maths':'Mathematics',
+        'skills_visualSc':'Programación visual',
 
         'skills_gameDesign':'Game Design',
         'skills_systems':'Sistemas',
@@ -149,10 +154,10 @@ const translations = {
         'word_and': 'y',
 
         'el_coco_description':'EL COCO es un juego roguelike de acción en 3D que te sumerge en un mundo de sueños, recuerdos rotos y pesadillas encarnadas. Desciende a Lo Incierto, un lugar tan extraño como peligroso, y lucha por recuperar lo que perdiste… si es que puedes confiar en quien te guía.',
-        'el_coco_role': '<strong>Diseñador de Juegos y Productor.</strong>',
+        'el_coco_role': '<strong>Game Designer y Productor.</strong>',
         'el_coco_lead':'Lideré el equipo como diseñador principal y productor, supervisando la visión y ejecución.',
         'el_coco_systems': 'Diseñé los sistemas de dificultad, progresión y narrativa.',
-        'el_coco_enemies': 'Diseñé e implementé diversos tipos de enemigos, jefes y encuentros',
+        'el_coco_enemies': 'Diseñé e implementé diversos tipos de enemigos, jefes y encuentros usando árboles de comportamiento.',
         'el_coco_levels': 'Creé e implementé niveles desde la fase de greybox hasta el pulido final.',
         'el_coco_platforms': 'Plataformas: Disponible en PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch y Steam.',
 
@@ -166,28 +171,28 @@ const translations = {
         'magefall_description':'A lo largo de este proyecto, estudié y desarrollé los elementos esenciales para las etapas de conceptualización de un videojuego. Profundicé mis conocimientos en diseño de juegos mediante la investigación de expertos del sector y logré formalizar un concepto de juego siguiendo un enfoque iterativo y orientado a la resolución de problemas.',
         'magefall_title':'Magefall: Un estudio sobre el diseño iterativo y las etapas de conceptualización de videojuegos (TFG, 2025)',
         'project_magefall_1': '<strong>Investigador y Diseñador de Sistemas.</strong>',
-        'project_magefall_2': 'Realicé una investigación profunda sobre diseño iterativo y de diseño de juego avanzado.',
+        'project_magefall_2': 'Realicé una investigación profunda sobre diseño iterativo y diseño de juego avanzado.',
         'project_magefall_3': 'Apliqué los conocimientos para desarrollar un concepto de juego mediante un ciclo iterativo.',
         'project_magefall_4': 'Diseñé y perfeccioné los sistemas de combate y progresión, asegurando profundidad mecánica.',
         'project_magefall_5': 'Prototipé y simplifiqué mecánicas complejas utilizando técnicas de prototipado en papel.',
         'project_magefall_6': 'Llevé a cabo sesiones de playtesting para identificar y evaluar problemas y fortalezas.',
         'project_magefall_7': 'Redacté documentación clara y versátil, incluyendo un GDD, briefs de proyecto y one-pagers.',
 
-        'SCR3D_description':'Un nuevo hero shooter de naves espaciales en el que eliges a tu personaje, personalizas tus armas y luchas contra tus rivales para dominar la Arena. Cada partida es un encuentro al mejor de tres, donde subes de nivel tu nave para desbloquear potentes impulsores y habilidades especiales.',
-        'SCR3D_1':'<strong>Diseñador de Juego y Narrativa</strong>',
+        'SCR3D_description':'Un nuevo hero shooter de naves espaciales en el que eliges a tu personaje, personalizas tus armas y luchas contra tus rivales para dominar la Arena. Cada partida es un encuentro al mejor de tres, donde subes de nivel tu nave para desbloquear potentes mejoras y habilidades especiales.',
+        'SCR3D_1':'<strong>Director de Juego y diseñador narrativo</strong>',
         'SCR3D_2':'Diseñé el sistema de combate competitivo online y su interacción con otros sistemas.',
-        'SCR3D_3':'Conceptué y prototipé las funcionalidades y el conjunto de habilidades de múltiples personajes.',
+        'SCR3D_3':'Diseñé y prototipé las funcionalidades y el conjunto de habilidades de múltiples personajes.',
         'SCR3D_4':'Equilibré todos los personajes, habilidades y mejoras.',
         'SCR3D_5':'Realicé sesiones de playtesting para validar mecánicas y pulir el balance',
         'SCR3D_6':'Programé diversas funcionalidades online utilizando .NET y WebGL.',
-        'SCR3D_7':'Desarrollé un trasfondo de mundo escalable y las historias de origen de todos los personajes.',
+        'SCR3D_7':'Desarrollé un trasfondo escalable de mundo  y las historias de origen de todos los personajes.',
 
         'RAC_description':'Jóvenes promesas de un futuro brillante tienen algo que contarte. Habla con ellos lo máximo posible para conocer su historia y desvelar todos sus secretos.',
         'RAC_1':'<strong>Artista Principal</strong>',
         'RAC_2':'Definí la identidad visual y el estilo artístico general del proyecto.',
         'RAC_3':'Diseñé e ilustré recursos gráficos y el arte de los escenarios.',
         'RAC_4':'Creé y pulí las animaciones del personaje principal.',
-        'RAC_5':'Premiado y seleccionado para su exhibición en el Barcelona Indie Dev Day.',
+        'RAC_5':'Premiado y seleccionado para su exhibición en el <strong>Barcelona Indie Dev Day</strong>.',
 
         'project_inner_description':'Sumérgete en un mundo futurista de misterio donde todo parece un juego. Sin embargo, tus decisiones acabarán revelando la verdad sobre quién eres realmente.',
         'project_inner_1': '<strong>Director de Juego y Diseñador Narrativo.</strong>',
@@ -196,14 +201,47 @@ const translations = {
         'project_inner_4': 'Redacté todos los diálogos y guiones del juego.',
         'project_inner_5': 'Diseñé y programé minijuegos en 2D.',
         'project_inner_6': 'Diseñé el nivel central (HUB), integrando narrativa ambiental y triggers narrativos.',
-        'project_inner_7': 'Premiado y seleccionado para su exhibición en el Guerrilla Game Festival.',
+        'project_inner_7': 'Premiado y seleccionado para su exhibición en el <strong>Guerrilla Game Festival</strong>.',
 
+        'experience_other': 'Otros proyectos',
+        'mini_p1_title':'Space Commander Simulator',
+        'mini_p1_desc':'Diseñé y programé un prototipo de estrategia de naves espaciales en <strong>VR con reconocimiento de gestos</strong>.',
 
+        'mini_p2_desc':'Redacté todos los <strong>diálogos</strong> y <strong>guiones narrativos</strong> para nuestro propio spin-off.',
+
+        'mini_p3_desc':'Diseñé y desarrollé un prototipo de plataformas en 3D usando <strong>patrones de diseño software</strong> y <strong>blockouts</strong>.',
+
+        'mini_p4_title':'Colonia alien',
+        'mini_p4_desc':'Implementé una colonia de NPCs con sistemas de percepción e interacción utilizando <strong>state machines propios</strong>.',
+
+        'design_process_title': 'Proceso de Diseño',
+        'design_process_description': 'Mi filosofía de diseño se basa en un riguroso marco iterativo de 4 etapas, garantizando que cada mecánica sea validada, equilibrada y esté perfectamente alineada con la experiencia central del jugador.',
+
+        'design_process_stage1_title': 'Etapa 1: Definir el problema',
+        'design_process_stage1_description1': 'Ya sea para definir la experiencia principal del jugador, crear nuevas mecánicas y sistemas, o ajustar los existentes, el primer paso es <br> <strong>identificar el problema</strong> que necesitamos resolver en la iteración actual.',
+        'design_process_stage1_description2': 'Durante las etapas iniciales de conceptualización, el objetivo principal es <strong>definir la experiencia principal</strong>. Esto implica identificar las mecánicas y sistemas que se alineen con una <strong>visión de diseño</strong>: una frase concisa que encapsule la experiencia que se desea transmitir al jugador. Una vez que el desarrollo ha comenzado, los objetivos de iteración evolucionan hacia la creación de contenido y el refinamiento de los sistemas mediante el ajuste y equilibrio de las funciones ya existentes.',
+
+        'design_process_stage2_title':'Etapa 2: Hallar la solución',
+        'design_process_stage2_description1':'Cada problema tiene múltiples soluciones, pero identificar la más efectiva requiere un <strong>análisis profundo</strong>, la <strong>exploración</strong> de diversos conceptos y mantener una <strong>visión global</strong> que equilibre las necesidades del juego con las limitaciones del desarrollo.',
+        'design_process_stage2_description2':'Esta etapa se centra en la <strong>lluvia de ideas</strong> y el <strong>análisis</strong> mediante la <strong>identificación de riesgos</strong> y los <strong>5 Pilares del Diseño de Juegos</strong> (Claridad, Satisfacción, Respuesta, Motivación y Fantasía). Esto asegura que cada función mejore la experiencia del jugador y sea técnicamente viable. Al desarrollar nuevos sistemas, aprovecho los <strong>patrones de diseño</strong> establecidos, adaptándolos e innovando sobre ellos para satisfacer las necesidades específicas del proyecto.',
+        'design_process_stage2_description3':'Una vez exploradas las opciones, selecciono una solución única o un híbrido de varias, analizándola de nuevo para validar el concepto final o cambiar hacia una alternativa que se ajuste mejor al estado actual del juego.',
+
+        'design_process_stage3_title':'Etapa 3: Probar la solución',
+        'design_process_stage3_description1':'La implementación de nuevas funciones y mecánicas comienza con la creación de un <strong>prototipo rápido</strong> para <strong>identificar fortalezas</strong> y <strong>debilidades</strong> lo antes posible.',
+        'design_process_stage3_description2':'Para mantener una documentación sólida, primero redacto un <strong>one-pager</strong> que resume los objetivos y las especificaciones clave de la solución propuesta. Posteriormente, se crea un prototipo rápido utilizando prototipos de papel, Machinations o motores de juego con recursos básicos y scripts sencillos, de modo que puedan <strong>probarse</strong> y <strong>ajustarse fácilmente</strong>.',
+        'design_process_stage3_description3':'Una vez que el prototipo está listo, se somete a <strong>playtesting</strong> con las personas adecuadas. Ya sea con el equipo interno o con testers externos, siempre se tiene en cuenta al <strong>público objetivo</strong> y se preparan de antemano estrategias de recopilación de datos para obtener conclusiones.',
+
+        'design_process_stage4_title':'Etapa 4: Evaluación',
+        'design_process_stage4_description1':'Tras recopilar todo el <strong>feedback necesario</strong>, se <strong>analiza la información</strong> para determinar si la solución debe integrarse en el juego, perfeccionarse mediante nuevas iteraciones o descartarse por completo. Independientemente del resultado, la evaluación se <strong>documenta meticulosamente</strong> y se utiliza para definir nuevos objetivos en los siguientes ciclos de desarrollo. Esto garantiza que <strong>cada prueba contribuya al crecimiento</strong>.',
+
+        'design_process_stage5_title':'Repetir',
+        'design_process_stage5_description1':'Al finalizar la iteración, las ideas habrán sido validadas y las funciones implementadas. Es el momento de reunir al equipo para perfeccionar el proceso de desarrollo, identificar nuevas necesidades y planificar estratégicamente las futuras funciones y las próximas iteraciones.',
 
 
         'contact_title': 'Contáctame',
-        'experience_section_title': 'Experiencia Laboral',
-        // Añade aquí todas las claves de tu web...
+
+        'copy_success':'Copiado',
+        'copy_error': 'Error al copiar',
     },
 
     // ---- INGLÉS (EN) ----
@@ -218,12 +256,12 @@ const translations = {
         //HOME
         "home_roles": 'Game Designer, Programmer, Producer',
         "home_description": 'I am a level and systems designer, developer, artist and storyteller with great passion and ambition for creating innovative games.',
-        "home_eslogan": '\'Handcraft experiences loop by loop\'',
+        "home_eslogan": '\'Handcrafted Experiences, Loop by Loop\'',
 
         //ABOUT ME
         'aboutMe_title': 'About me',
-        'aboutMe_p1': 'Born in 2003, my interest in video games started at the age of three, allowing me to internally develop an intuitive understanding of <strong>why different mechanics work</strong>and the objectives behind design decisions focused on the <strong>player experience</strong> .As a child, I also spent long evenings playing with LEGO, imagining stories and worlds that later inspired me to begin writing, programming, and cultivating a strong interest in storytelling and art.',
-        'aboutMe_p2': 'I recently received my Bachelor\'s degree in Game Design and Development from Rey Juan Carlos University in Madrid. During these years, I  studied <strong>game design</strong>,<strong>the video game production pipeline</strong>, and programming in <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> and <strong>Unity Engine</strong> Furthermore, my desire for improvement led me to independently studying design and participating with colleagues in several game jams as a designer and storyteller (and even once as an art director). This experience has significantly strengthened my <strong>communication</strong>, <strong>team working</strong>, <strong>analysis</strong>, and <strong>problem-solving skills</strong>',
+        'aboutMe_p1': 'Born in 2003, my interest in video games started at the age of three, allowing me to internally develop an intuitive understanding of <strong>why different mechanics work and the objectives behind design decisions focused on the player experience</strong>. As a child, I also spent long evenings playing with LEGO, imagining stories and worlds that later inspired me to begin writing, programming, and cultivating a strong interest in storytelling and art.',
+        'aboutMe_p2': 'I recently received my <strong>Bachelor\'s degree in Game Design and Development</strong> from Rey Juan Carlos University in Madrid. During these years, I  studied <strong>game design</strong>, <strong>the video game production pipeline</strong>, and programming in <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> and <strong>Unity Engine</strong>. Furthermore, my desire for improvement led me to independently studying design and participating with colleagues in several game jams as a <strong>designer</strong> and <strong>storyteller</strong> (and even once as an art director). This experience has significantly strengthened my <strong>communication</strong>, <strong>team working</strong>, <strong>analysis</strong>, and <strong>problem-solving skills</strong>',
         'aboutMe_p3': 'This year, my first multiplatform project, <strong>\'El Coco\'</strong>, was released, where I collaborated with the Recotechnology S.L. team as a Game Designer and Producer. My responsibilities included designing <strong>difficulty and progression systems</strong>, <strong>structuring the narrative</strong>, <strong>implementing levels and enemies</strong>, <strong>leading the team</strong> in my production role, and preparing the game pages for all launch platforms.',
         'aboutMe_p4': 'This is just the beginning; my passion for games and continuous desire to learn drive me to seek new horizons and further develop my professional skills.',
 
@@ -238,6 +276,7 @@ const translations = {
         'aboutMe_subject8':'Development pipeline',
         'aboutMe_subject9':'Artificial Intelligence (AI)',
         'aboutMe_subject10':'Visual design',
+        'aboutMe_subject11':'Statistics',
 
         //SKILLS
         'skills_title':'Skills',
@@ -250,7 +289,7 @@ const translations = {
         'skills_unreal':'Unreal Engine 5',
         'skills_html':'HTML / CSS',
         'skills_js':'JavaScript',
-        'skills_maths':'Matemáticas',
+        'skills_visualSc':'Visual scripting',
 
         'skills_gameDesign':'Game Design',
         'skills_systems':'Systems Design',
@@ -286,7 +325,7 @@ const translations = {
         'el_coco_role': '<strong>Game Designer & Producer.</strong>',
         'el_coco_lead':'Led the team as Lead Designer and Producer, overseeing the project\'s vision and execution.',
         'el_coco_systems': 'Designed core difficulty, progression, and narrative systems.',
-        'el_coco_enemies': 'Architected and implemented diverse enemy types and combat encounters.',
+        'el_coco_enemies': 'Designed and implemented diverse enemy types and combat encounters using Behavior Trees.',
         'el_coco_levels': 'Crafted and technical-implemented levels from greybox to final polish.',
         'el_coco_platforms': 'Platforms: Available on PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch, and Steam.',
 
@@ -308,7 +347,7 @@ const translations = {
         'project_magefall_7':'Authored clear and versatile documentation, including a GDD, project briefs, and one-pagers.',
 
         'SCR3D_description':'A brand-new spaceship hero shooter where you choose your character, customize your weapons, and fight your rivals to dominate the Arena. Each game is a \'best-of-three\' match where you level up your ship to unlock powerful boosters and signature abilities.',
-        'SCR3D_1':'<strong>Game & Narrative Designer.</strong',
+        'SCR3D_1':'<strong>Game Director & Narrative Designer.</strong',
         'SCR3D_2':'Designed the core online competitive combat system and engagement mechanics.',
         'SCR3D_3':'Concepted and prototyped diverse character kits and unique gameplay functionalities.',
         'SCR3D_4':'Balanced all characters, abilities, and upgrade paths to ensure competitive integrity.',
@@ -321,19 +360,55 @@ const translations = {
         'RAC_2':'Defined the overall visual identity and art style of the project.',
         'RAC_3':'Designed and illustrated graphical assets and environment art.',
         'RAC_4':'Created and polished the animations for the main character.',
-        'RAC_5': 'Recognized with an award and selected for exhibition at Barcelona Indie Dev Day.',
+        'RAC_5': 'Recognized with an award and selected for exhibition at <strong>Barcelona Indie Dev Day</strong>.',
 
         'project_inner_description':'Delve into a futuristic world of mystery where everything feels like a game. However, your decisions will ultimately reveal the truth about who you really are.',
-        'project_inner_1': '<strong>Game director and narrative designer.</strong>',
+        'project_inner_1': '<strong>Game Director and narrative designer.</strong>',
         'project_inner_2': 'Led the team in creating an immersive and enigmatic player experience.',
         'project_inner_3': 'Designed the core narrative architecture and progression systems.',
         'project_inner_4': 'Authored all in-game dialogue and narrative scripts.',
         'project_inner_5': 'Designed and programmed 2D minigames to complement the core gameplay.',
         'project_inner_6': 'Architected the central HUB level, focusing on environmental storytelling and narrative triggers.',
-        'project_inner_7': 'Recognized with an award and selected for exhibition at the Guerrilla Game Festival.',
+        'project_inner_7': 'Recognized with an award and selected for exhibition at the <strong>Guerrilla Game Festival</strong>.',
+
+        'experience_other': 'Other projects',
+
+        'mini_p1_title':'Space Commander Simulator',
+        'mini_p1_desc':'Designed and programmed a <strong>VR</strong> starship strategy prototype featuring a <strong>gesture recognition system</strong>.',
+
+        'mini_p2_desc':'Authored all <strong>in-game dialogue</strong> and <strong>narrative scripts</strong> for this fan-made <br> spin-off.',
+
+        'mini_p3_desc':'Designed and developed a 3D platformer using <strong>software design patterns</strong> and <strong>blockouts</strong>.',
+
+        'mini_p4_title':'Alien Colony',
+        'mini_p4_desc':'Engineered a NPC colony featuring <strong>state machines</strong>, perception systems, and complex interaction.',
+
+        'design_process_title': 'Design Process',
+        'design_process_description': 'My design philosophy is built on a rigorous 4-stage iterative framework, ensuring that every mechanic is validated, balanced, and perfectly aligned with the core player experience.',
+
+        'design_process_stage1_title': 'Stage 1: Define the problem',
+        'design_process_stage1_description1': 'Whether it is defining the core player experience, creating new mechanics and systems, or tuning existing ones, the first step is <strong>identifying the problem</strong> we need to solve in the current iteration.',
+        'design_process_stage1_description2': 'In the first stages of conceptualization, the objective should be <strong>defining the core experience</strong>. In this case, the problem could be stated as finding the right main mechanics and systems that match a <strong>single statement</strong>: a phrase that conveys the desired experience that the game should provide. Once development has started, iteration objectives range from creating new content and systems for the game to tuning and balancing various existing features.',
+
+        'design_process_stage2_title':'Stage 2: Finding the Solution',
+        'design_process_stage2_description1':'Every problem has multiple solutions, but identifying the most effective one requires <strong>deep analysis</strong>, <strong>exploring</strong> diverse concepts, and maintaining a <strong>big-picture</strong> perspective of both the game’s vision and development constraints.',
+        'design_process_stage2_description2':'This stage focuses on <strong>brainstorming</strong> and <strong>vetting</strong> ideas through <strong>risk identification</strong> and the <strong>5 Pillars of Game Design</strong> (Clarity, Satisfaction, Response, Motivation, and Fantasy). This ensures that every feature enhances the player experience and is technically feasible. When designing new systems, I leverage established <strong>design patterns</strong>—adapting and innovating upon them to meet the project\'s specific needs.',
+        'design_process_stage2_description3':'Once a range of options has been explored, I select a single solution or a hybrid of several, re-analyzing it to validate the final concept or look for a more effective alternative that aligns with the current build.',
+
+        'design_process_stage3_title':'Stage 3: Testing the Solution',
+        'design_process_stage3_description1':'Implementing new features and mechanics begins with <strong>rapid prototyping</strong> to identify <strong>strengths</strong> and <strong>weaknesses</strong> as early as possible.',
+        'design_process_stage3_description2':'To ensure robust documentation, I first draft a <strong>one-pager</strong> summarizing the solution\'s objectives and key specifications. Subsequently, a prototype is created—using paper prototypes, Machinations, or game engines with placeholder assets and scripts—allowing for <strong>quick testing</strong> and <strong>iteration</strong>.',
+        'design_process_stage3_description3':'Once the prototype is functional, it undergoes <strong>playtesting</strong> with the appropriate audience. Whether testing with the internal team or external participants, the <strong>target audience</strong> remains the priority, and data collection strategies are prepared in advance to extract insights.',
+
+        'design_process_stage4_title':'Stage 4: Evaluation',
+        'design_process_stage4_description1':'Once the <strong>necessary feedback</strong> is collected, the data is <strong>analyzed</strong> to determine if the solution should be integrated into the game, refined through further iterations, or discarded entirely. Regardless of the outcome, the evaluation is <strong>meticulously documented</strong> and used to define new objectives for future development cycles. This ensures that every test contributes to the <strong>project’s growth</strong>.',
+
+        'design_process_stage5_title':'Repeat',
+        'design_process_stage5_description1':'By the end of the iteration, ideas have been validated and features implemented. Now is the time to gather the team to refine the development process, identify emerging needs, and plan future features and upcoming iterations',
 
         'contact_title': 'Contact me', // Mantener igual si ya está en inglés
-        'experience_section_title': 'Work Experience',
-        // Asegúrate de que todas las claves 'es' tengan su versión 'en'
+
+        'copy_success':'Copied',
+        'copy_error': 'Copy error',
     }
 };

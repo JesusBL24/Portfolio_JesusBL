@@ -33,6 +33,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	margin: 0;
+	padding: 0;
 }
 
 ol, ul {
@@ -1965,7 +1967,7 @@ input, select, textarea {
 					background-color: #FE5419;
 				}
 
-				ul.social li a.fa-youtube {
+				ul.social li a.fa-itch-io {
 					background-color: #BF2E25;
 				}
 
@@ -2032,6 +2034,7 @@ input, select, textarea {
 				justify-content: center;
 				align-items: center;
 				margin: auto;
+				flex-wrap: wrap;
 
 				.aboutMeHijo {
 					margin-right: 2em;
@@ -2079,6 +2082,11 @@ input, select, textarea {
 			margin-bottom: 3em;
 			min-width: 60em;
 		}
+			@media screen and (max-width: 980px) { /* El punto donde detectas que empieza a verse mal */
+				.box.style5 {
+					min-width: 30em;
+				}
+			}
 
 /* Icons */
 
@@ -2191,18 +2199,20 @@ input, select, textarea {
 	#nav {
 		background-color: #282828;
 		text-align: center;
-		position: fixed;
-		left: 0;
+		position: sticky;
+		margin-top: -5em;
 		top: 0;
+		left: 0;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
-		height: 3.5em;
+		height: auto;
 		line-height: 3.5em;
 	}
 
+
 		#nav ul {
-			margin-bottom: 0;
+			margin: 0;     /* Cambia el margen a 0 */
 			list-style: none;
 			padding-left: 0;
 		}
@@ -2226,10 +2236,10 @@ input, select, textarea {
 			outline: 0;
 			font-weight: 600;
 			border-radius: 8px;
-			color: #fff;
 			height: 2.5em;
 			line-height: 2.5em;
 			padding: 0 1.25em;
+			cursor: pointer;
 		}
 
 		#nav .container {
@@ -2361,6 +2371,10 @@ input, select, textarea {
 
 	#contact footer {
 		font-size: 0.9em;
+	}
+
+	#contact footer p{
+		margin-top: 3em;
 	}
 
 /* Copyright */
@@ -2624,9 +2638,21 @@ input, select, textarea {
 		/* Nav */
 
 			#nav {
-				height: 44px;
-				line-height: 44px;
+				height: 10em;
+				line-height: 10em;
+				justify-content: center;
+				align-content: center;
+
 			}
+				/* En pantallas pequeñas */
+				@media screen and (max-width: 736px) {
+					#nav {
+						height: 10em;
+						line-height: 5em;
+						justify-content: center;
+						align-content: center;
+					}
+				}
 
 				#nav a {
 					padding: 0 0.75em;
@@ -2684,6 +2710,8 @@ input, select, textarea {
 /* *******************************CUSTOM CLASSES******************************* */
 /* **************************************************************************** */
 
+
+
 .signatures-container {
 	display: flex;         /* Habilita la alineación horizontal */
 	justify-content: space-between; /* Distribuye el espacio entre las dos columnas */
@@ -2696,6 +2724,20 @@ input, select, textarea {
 	padding: 0;
 }
 
+
+#skills .row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+		@media screen and (max-width: 1100px) { /* El punto donde detectas que empieza a verse mal */
+			#skills .col-3, #skills .col-5 {
+				width: 100% !important;
+				max-width: 100%;
+			}
+		}
 
 /* Estilo para el contenedor de cada proyecto */
 .project-entry {
@@ -2757,7 +2799,7 @@ input, select, textarea {
 
 .project-entry .project-tags {
 	/* Si ya usaste justify-content: center; en .skill-tags, puedes omitir esta línea */
-	justify-content: left;
+	justify-content: center;
 	padding-top: 0;
 	margin-top: 0;
 	padding-left: 2em ;
@@ -2796,6 +2838,54 @@ input, select, textarea {
 
 }
 
+.video-responsive {
+	width: 100%;
+	aspect-ratio: 16 / 9; /* Mantiene la proporción perfecta de YouTube */
+	height: auto;        /* Permite que la altura se calcule sola */
+	border-radius: 8px;  /* Opcional: para que combine con tus cuadros */
+}
+
+.mini-project-card {
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	text-align: center;
+	height: 100%; /* Para que todos midan lo mismo en la misma fila */
+	border: black solid 0.2em;
+	padding: 1em 1em 0 1em;
+
+
+	/* ESTO ORGANIZA EL CONTENIDO DENTRO */
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Centra el contenido verticalmente */
+	align-items: center;     /* Centra el contenido horizontalmente */
+
+	transition: transform 0.3s ease;
+	overflow: hidden; /* Evita que el texto se salga si es muy largo */
+}
+
+
+.mini-project-image img {
+	border-radius: 8px;
+	aspect-ratio: 16 / 9; /* Fuerza a todas las imágenes a tener la misma proporción */
+	object-fit: cover; /* Recorta la imagen para que no se deforme */
+	margin-bottom: 1em;
+}
+
+.mini-project-card h3 {
+	font-size: 1.1em;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+}
+
+.mini-project-card p {
+	font-size: 1em;
+	line-height: 1.4;
+	color: black;
+
+}
+
 
 #designProcess{
 
@@ -2803,12 +2893,25 @@ input, select, textarea {
 		padding: 0 12em 0 12em;
 	}
 
+
 	li.designItem{
 		list-style: none;
 		border-left: 0.1em dashed black;
 		min-height: 15em;
 		position: relative;
 
+	}
+
+
+	@media screen and (max-width: 980px) { /* El punto donde detectas que empieza a verse mal */
+		ul.designList{
+			padding: 0 2em 0 2em;
+		}
+
+		li.designItem {
+			min-height: 5em;    /* REDUCCIÓN CLAVE: Mucho menos espacio vertical */
+			padding-bottom: 1em; /* Menos aire entre un ítem y el siguiente */
+		}
 	}
 
 	li.designItem span{
