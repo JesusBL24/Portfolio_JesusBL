@@ -208,59 +208,6 @@ input, select, textarea {
 		margin-bottom: 2em;
 	}
 
-/* 1. Contenedor Flexbox para centrar horizontalmente */
-.skill-tags {
-	/* Activa Flexbox */
-	display: flex;
-
-	/* Centra los elementos hijos (los tags) horizontalmente */
-	justify-content: center;
-
-	/* Permite que los tags salten a la siguiente línea si no caben */
-	flex-wrap: wrap;
-
-	/* Espaciado entre etiquetas (0.5em en todas las direcciones) */
-	gap: 0.5em;
-
-	/* Margen superior para separarlo del párrafo */
-	margin-top: 1em;
-}
-
-/* 2. Estilo para las etiquetas individuales (el mismo que antes) */
-.tag {
-	/* Mantenemos el display inline-block para que los tags funcionen bien con el padding,
-       pero con display:flex en el padre, también funcionaría si fuera display:block */
-	/* **PROPIEDADES CLAVE PARA LA UNIFORMIDAD** */
-
-	/* 1. Ancho y Alto fijos (Ajusta estos valores según tus necesidades visuales) */
-	width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
-	height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
-
-	/* 2. Propiedades para Centrar el Texto Verticalmente y Horizontalmente */
-	display: flex; /* Lo convertimos en un contenedor Flex para alinear su contenido (el texto) */
-	align-items: center; /* Centra el texto verticalmente */
-	justify-content: center; /* Centra el texto horizontalmente */
-
-	/* 3. Propiedades de Estilo y Forma */
-	border-radius: 15px; /* Más redondeado para un look de píldora, ajusta si deseas menos */
-	padding: 0; /* Eliminamos el padding, ya que el ancho y alto son fijos */
-
-	background-color: #dcd0fe;
-	color: black !important;
-
-	font-size: 0.8em;
-	font-weight: 600;
-	text-transform: uppercase;
-
-	/* 4. Aseguramos que el texto muy largo no cause problemas */
-	overflow: hidden; /* Oculta el texto que exceda el ancho/alto */
-	text-overflow: ellipsis; /* Añade puntos suspensivos si el texto se corta (si el texto no cabe) */
-	white-space: nowrap;
-}
-
-.tag.some {
-	border: 0.2em dashed black;
-}
 
 	header {
 		margin: 0 0 5em 0;
@@ -2029,20 +1976,42 @@ input, select, textarea {
 				color: black;
 			}
 
-			.aboutMePadre{
+			.aboutMeParent{
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				margin: auto;
 				flex-wrap: wrap;
 
-				.aboutMeHijo {
+				.aboutMeChild {
 					margin-right: 2em;
 					max-width: 60em;
 				}
 				.aboutMeHijo2 {
 					margin-right: 2em;
 					margin-bottom: 2em;
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+				/* Forzamos a que la fila no tenga márgenes negativos extraños */
+				.aboutMeParent {
+					margin-left: 0 !important;
+					width: 100% !important;
+					display: block !important; /* Evita que flexbox descuadre los hijos */
+				}
+
+				/* Ajustamos el hijo para que ocupe el centro real */
+				.aboutMeChild {
+					padding-left: 0 !important;
+					margin-bottom: 2em; /* Espacio de separación con el siguiente cuadro */
+					width: 100% !important;
+				}
+
+				/* Aseguramos que la caja interior esté alineada */
+				.aboutMeTextSection {
+					margin: 0 auto !important;
+					width: 100% !important;
 				}
 			}
 
@@ -2164,6 +2133,13 @@ input, select, textarea {
 		.wrapper.style3 {
 			background-color: #f4f4f4;
 			padding: 8em 8em 8em 8em;
+		}
+
+		@media screen and (max-width: 736px){
+			.wrapper.style3 {
+				background-color: #f4f4f4;
+				padding: 8em 3em 8em 3em;
+			}
 		}
 
 		.wrapper.style4 {
@@ -2725,6 +2701,66 @@ input, select, textarea {
 }
 
 
+/* 1. Contenedor Flexbox para centrar horizontalmente */
+.skill-tags {
+	/* Activa Flexbox */
+	display: flex;
+
+	/* Centra los elementos hijos (los tags) horizontalmente */
+	justify-content: center;
+
+	/* Permite que los tags salten a la siguiente línea si no caben */
+	flex-wrap: wrap;
+
+	/* Espaciado entre etiquetas (0.5em en todas las direcciones) */
+	gap: 0.5em;
+
+	/* Margen superior para separarlo del párrafo */
+	margin-top: 1em;
+}
+
+/* 2. Estilo para las etiquetas individuales (el mismo que antes) */
+.tag {
+	/* Mantenemos el display inline-block para que los tags funcionen bien con el padding,
+       pero con display:flex en el padre, también funcionaría si fuera display:block */
+	/* **PROPIEDADES CLAVE PARA LA UNIFORMIDAD** */
+
+	/* 1. Ancho y Alto fijos (Ajusta estos valores según tus necesidades visuales) */
+	width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
+	height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
+
+	/* 2. Propiedades para Centrar el Texto Verticalmente y Horizontalmente */
+	display: flex; /* Lo convertimos en un contenedor Flex para alinear su contenido (el texto) */
+	align-items: center; /* Centra el texto verticalmente */
+	justify-content: center; /* Centra el texto horizontalmente */
+
+	/* 3. Propiedades de Estilo y Forma */
+	border-radius: 15px; /* Más redondeado para un look de píldora, ajusta si deseas menos */
+	padding: 0; /* Eliminamos el padding, ya que el ancho y alto son fijos */
+
+	background-color: #dcd0fe;
+	color: black !important;
+
+	font-size: 0.8em;
+	font-weight: 600;
+	text-transform: uppercase;
+
+	/* 4. Aseguramos que el texto muy largo no cause problemas */
+	overflow: hidden; /* Oculta el texto que exceda el ancho/alto */
+	text-overflow: ellipsis; /* Añade puntos suspensivos si el texto se corta (si el texto no cabe) */
+	white-space: nowrap;
+}
+@media screen and (max-width: 736px) {
+	.tag{
+		width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
+		height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
+		font-size: 1em;
+	}
+}
+.tag.some {
+	border: 0.2em dashed black;
+}
+
 #skills .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -2732,7 +2768,14 @@ input, select, textarea {
 }
 
 
-		@media screen and (max-width: 1100px) { /* El punto donde detectas que empieza a verse mal */
+		@media screen and (max-width: 1100px) {
+			#skills .col-3, #skills .col-5 {
+				width: 100% !important;
+				max-width: 100%;
+			}
+		}
+
+		@media screen and (max-width: 736px){
 			#skills .col-3, #skills .col-5 {
 				width: 100% !important;
 				max-width: 100%;
