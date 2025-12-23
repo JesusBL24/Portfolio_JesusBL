@@ -30,6 +30,17 @@ function setLanguage(lang) {
         }
     });
 
+    // 1. Quitar la clase 'active-lang' de TODOS los botones
+    document.querySelectorAll('.lang-button').forEach(btn => {
+        btn.classList.remove('active-lang');
+    });
+
+    // 2. Añadir la clase 'active-lang' solo al botón del idioma seleccionado
+    const activeBtn = document.getElementById(`lang-${lang}`);
+    if (activeBtn) {
+        activeBtn.classList.add('active-lang');
+    }
+
     localStorage.setItem('websiteLang', lang);
 
     // CLAVE: Aquí es donde llamamos y pasamos el idioma como argumento

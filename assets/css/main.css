@@ -109,6 +109,8 @@ input, select, textarea {
 		font-size: 13pt;
 	}
 
+
+
 	a {
 		-moz-transition: color .2s ease-in-out;
 		-webkit-transition: color .2s ease-in-out;
@@ -2057,6 +2059,12 @@ input, select, textarea {
 				}
 			}
 
+			@media screen and (max-width: 736px) { /* El punto donde detectas que empieza a verse mal */
+				.box.style5 {
+					min-width: 20em;
+				}
+			}
+
 /* Icons */
 
 	.icon {
@@ -2179,6 +2187,7 @@ input, select, textarea {
 		margin-top: -5em;
 		top: 0;
 		left: 0;
+		right: 0;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -2190,14 +2199,14 @@ input, select, textarea {
 		#nav ul {
 			margin: 0;     /* Cambia el margen a 0 */
 			list-style: none;
-			padding-left: 0;
+			padding: 0;
 		}
 
 
 
 		#nav li {
 			display: inline-block;
-			padding-left: 0;
+			padding: 0;
 		}
 
 		#nav a {
@@ -2223,6 +2232,7 @@ input, select, textarea {
 			justify-content: center; /* Esto centra el grupo principal de enlaces */
 			align-items: center;
 			padding: 0;
+			width: 100%;
 		}
 
 		/* 2. Regla CLAVE: Empujar el botón de idioma a la izquierda */
@@ -2255,11 +2265,16 @@ input, select, textarea {
 			/* ... */
 		}
 
+		.lang-button {
+			border: 2px solid white; /* El borde blanco para los NO seleccionados */
+			border-radius: 4px;
+		}
+
 		#nav ul.container a.active-lang {
 			background-color: white; /* Fondo blanco */
 			color: black !important; /* Texto negro para contraste */
 
-			/* Opcional: Asegúrate de que no se apliquen estilos de hover cuando esté activo */
+			/* No se apliquen estilos de hover cuando esté activo */
 			pointer-events: none; /* Deshabilita el click en el botón ya activo */
 			cursor: default;
 		}
@@ -2686,6 +2701,34 @@ input, select, textarea {
 /* *******************************CUSTOM CLASSES******************************* */
 /* **************************************************************************** */
 
+/*CONTROL DE TODOS LOS TAMAÑOS DE TEXTO EN MOVIL*/
+@media screen and (max-width: 736px) {
+	p,li {
+		font-size: 1.1rem !important; /* Un pelín más grande que el estándar */
+		line-height: 1.5 !important;   /* Más compacto para pantallas estrechas */
+		margin-bottom: 1.2rem !important; /* Espacio entre párrafos */
+	}
+
+	h2{
+		font-size: 1.5em !important;
+	}
+	nav li{
+		font-size: 1em !important;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	.mini-project-card p {
+		font-size: 1.1rem !important;
+		line-height: 1.3;
+	}
+
+ 	.mini-project-card h3 {
+		font-size: 1.5rem !important;
+	}
+}
 
 
 .signatures-container {
@@ -2750,13 +2793,13 @@ input, select, textarea {
 	text-overflow: ellipsis; /* Añade puntos suspensivos si el texto se corta (si el texto no cabe) */
 	white-space: nowrap;
 }
-@media screen and (max-width: 736px) {
-	.tag{
-		width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
-		height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
-		font-size: 1em;
+	@media screen and (max-width: 736px) {
+		.tag{
+			width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
+			height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
+			font-size: 1em;
+		}
 	}
-}
 .tag.some {
 	border: 0.2em dashed black;
 }
@@ -2837,8 +2880,8 @@ input, select, textarea {
 	/* Fuerza la alineación de todo el texto (título, párrafos, lista) a la izquierda */
 	text-align: left;
 	margin-left: -0.8em;
-
 }
+
 
 .project-entry .project-tags {
 	/* Si ya usaste justify-content: center; en .skill-tags, puedes omitir esta línea */
@@ -2852,6 +2895,34 @@ input, select, textarea {
     .project-entry .tag{
         background-color: white;
         */
+}
+
+@media screen and (max-width: 736px) {
+	/* 1. Resetear el contenedor de la columna para que no empuje el contenido */
+	.project-entry .content-column {
+		margin-left: 0 ;
+		text-align: center !important; /* Centramos el texto base en móvil */
+		width: 100% ;
+		padding: 0 1em !important; /* Un poco de margen de seguridad a los lados */
+	}
+
+	/* 2. Centrar los tags y quitar el padding lateral */
+	.project-entry .project-tags {
+		display: flex ;
+		flex-wrap: wrap ;
+		justify-content: center !important; /* Centrado horizontal real */
+		padding-left: 0 !important; /* Eliminamos el desplazamiento a la derecha */
+		margin: 1em 0 ;
+		width: 100% ;
+	}
+
+	/* 3. Ajustar la lista de detalles para que no se vea desparramada */
+	.project-details {
+		text-align: left !important; /* El texto de la lista mejor a la izquierda */
+		display: inline-block; /* Permite que el bloque se centre pero el texto no */
+		padding-left: 1.5em !important; /* Espacio justo para los puntos (dots) */
+		margin: 0 auto !important;
+	}
 }
 
 .project-entry  h3 {
