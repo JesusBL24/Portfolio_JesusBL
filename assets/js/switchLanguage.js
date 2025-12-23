@@ -125,7 +125,7 @@ const translations = {
         //SKILLS
         'skills_title':'Habilidades',
         'skills_description':'A lo largo de mi trayectoria, he trabajado con diversas herramientas y he desarrollado mis habilidades para ser el mejor profesional posible.',
-        'skills_some_experience':'Poca experiencia',
+        'skills_some_experience':' = Poca experiencia',
 
         'skills_programmer':'Programación',
         'skills_unity':'Unity Engine / C#',
@@ -292,7 +292,7 @@ const translations = {
         //SKILLS
         'skills_title':'Skills',
         'skills_description':'Along my journey, I have worked with several tools and developed my skills to be the best possible professional.',
-        'skills_some_experience':'Some experience',
+        'skills_some_experience':' <strong>=</strong> Some experience',
 
         'skills_programmer':'Programming',
         'skills_unity':'Unity Engine / C#',
