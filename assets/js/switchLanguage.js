@@ -30,6 +30,16 @@ function setLanguage(lang) {
         }
     });
 
+    // 4. CAMBIAR VIDEOS
+    if (dictionary.videos) {
+        for (const id in dictionary.videos) {
+            const iframe = document.getElementById(id);
+            if (iframe) {
+                iframe.src = dictionary.videos[id];
+            }
+        }
+    }
+
     // 1. Quitar la clase 'active-lang' de TODOS los botones
     document.querySelectorAll('.lang-button').forEach(btn => {
         btn.classList.remove('active-lang');
@@ -151,7 +161,7 @@ const translations = {
 
         'skills_producing':'Producción',
         'skills_communication':'Comunicación',
-        'skills_agile':'Agile',
+        'skills_agile':'Met.Ágiles',
         'skills_leadership':'Liderazgo',
         'skills_endToEnd':'Principio a fin',
         'skills_jira':'Jira',
@@ -159,7 +169,7 @@ const translations = {
 
         //EXPERIENCE
         'experience_title':'Experiencia y proyectos',
-        'experience_description':'Estos son mis proyectos profesionales y personales destacados que ponen muestran mis habilidades en el desarrollo de videojuegos.',
+        'experience_description':'Estos son mis proyectos profesionales y personales destacados que muestran mis habilidades en el desarrollo de videojuegos.',
         'experience_professional':'Proyectos profesionales',
         'project_available_on': '<strong>Disponible en:<strong>',
         'word_and': 'y',
@@ -184,7 +194,7 @@ const translations = {
         'project_magefall_1': '<strong>Investigador y Diseñador de Sistemas.</strong>',
         'project_magefall_2': 'Realicé una investigación profunda sobre diseño iterativo y diseño de juego avanzado.',
         'project_magefall_3': 'Apliqué los conocimientos para desarrollar un concepto de juego mediante un ciclo iterativo.',
-        'project_magefall_4': 'Diseñé y perfeccioné los sistemas de combate y progresión, asegurando profundidad mecánica.',
+        'project_magefall_4': 'Diseñé y perfeccioné los sistemas de combate y progresión, asegurando su profundidad.',
         'project_magefall_5': 'Prototipé y simplifiqué mecánicas complejas utilizando técnicas de prototipado en papel.',
         'project_magefall_6': 'Llevé a cabo sesiones de playtesting para identificar y evaluar problemas y fortalezas.',
         'project_magefall_7': 'Redacté documentación clara y versátil, incluyendo un GDD, briefs de proyecto y one-pagers.',
@@ -253,6 +263,13 @@ const translations = {
 
         'copy_success':'Copiado',
         'copy_error': 'Error al copiar',
+
+        //VIDEOS
+        'videos':{
+            'video_Coco':'https://www.youtube.com/embed/-PS4w2wODa0?si=vrvYJoYqCKpjT4C5',
+            'video_Bratz':'https://www.youtube.com/embed/QC1Otakvbps?si=ydC9rhXK7vRLCETI'
+        }
+
     },
 
     // ---- INGLÉS (EN) ----
@@ -292,7 +309,7 @@ const translations = {
         //SKILLS
         'skills_title':'Skills',
         'skills_description':'Along my journey, I have worked with several tools and developed my skills to be the best possible professional.',
-        'skills_some_experience':' <strong>=</strong> Some experience',
+        'skills_some_experience':' = Some experience',
 
         'skills_programmer':'Programming',
         'skills_unity':'Unity Engine / C#',
@@ -401,12 +418,12 @@ const translations = {
         'design_process_stage1_description1': 'Whether it is defining the core player experience, creating new mechanics and systems, or tuning existing ones, the first step is <strong>identifying the problem</strong> we need to solve in the current iteration.',
         'design_process_stage1_description2': 'In the first stages of conceptualization, the objective should be <strong>defining the core experience</strong>. In this case, the problem could be stated as finding the right main mechanics and systems that match a <strong>single statement</strong>: a phrase that conveys the desired experience that the game should provide. Once development has started, iteration objectives range from creating new content and systems for the game to tuning and balancing various existing features.',
 
-        'design_process_stage2_title':'Stage 2: Finding the Solution',
+        'design_process_stage2_title':'Stage 2: Find the Solution',
         'design_process_stage2_description1':'Every problem has multiple solutions, but identifying the most effective one requires <strong>deep analysis</strong>, <strong>exploring</strong> diverse concepts, and maintaining a <strong>big-picture</strong> perspective of both the game’s vision and development constraints.',
         'design_process_stage2_description2':'This stage focuses on <strong>brainstorming</strong> and <strong>vetting</strong> ideas through <strong>risk identification</strong> and the <strong>5 Pillars of Game Design</strong> (Clarity, Satisfaction, Response, Motivation, and Fantasy). This ensures that every feature enhances the player experience and is technically feasible. When designing new systems, I leverage established <strong>design patterns</strong>—adapting and innovating upon them to meet the project\'s specific needs.',
         'design_process_stage2_description3':'Once a range of options has been explored, I select a single solution or a hybrid of several, re-analyzing it to validate the final concept or look for a more effective alternative that aligns with the current build.',
 
-        'design_process_stage3_title':'Stage 3: Testing the Solution',
+        'design_process_stage3_title':'Stage 3: Test the Solution',
         'design_process_stage3_description1':'Implementing new features and mechanics begins with <strong>rapid prototyping</strong> to identify <strong>strengths</strong> and <strong>weaknesses</strong> as early as possible.',
         'design_process_stage3_description2':'To ensure robust documentation, I first draft a <strong>one-pager</strong> summarizing the solution\'s objectives and key specifications. Subsequently, a prototype is created—using paper prototypes, Machinations, or game engines with placeholder assets and scripts—allowing for <strong>quick testing</strong> and <strong>iteration</strong>.',
         'design_process_stage3_description3':'Once the prototype is functional, it undergoes <strong>playtesting</strong> with the appropriate audience. Whether testing with the internal team or external participants, the <strong>target audience</strong> remains the priority, and data collection strategies are prepared in advance to extract insights.',
@@ -419,7 +436,15 @@ const translations = {
 
         'contact_title': 'Contact me', // Mantener igual si ya está en inglés
 
+        //COPIA
         'copy_success':'Copied',
         'copy_error': 'Copy error',
+
+        //VIDEOS
+        'videos':{
+            'video_Coco':'https://www.youtube.com/embed/w1VXgXGJoMo?si=kQGGENqdgGSA5-C-',
+            'video_Bratz':'https://www.youtube.com/embed/FJ5CNNaP4vQ?si=z_2PNQoDxg_0qs07'
+        }
+
     }
 };

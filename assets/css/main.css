@@ -2886,17 +2886,36 @@ input, select, textarea {
 			white-space: nowrap;
 		}
 
-		@media screen and (max-width: 736px) {
-			.tag {
-				width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
-				height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
-				font-size: 1em;
-			}
-		}
 
 		.tag.some {
 			border: 0.2em dashed black;
 		}
+
+		.tag.some.example {
+			border: 0.2em dashed black;
+			border-radius: 22px;
+			width: 240px; /* <--- Ancho Fijo  */
+			height: 60px; /* <--- Altura Fija  */
+
+			font-size: 0.9em;
+		}
+
+@media screen and (max-width: 736px) {
+	.tag {
+		width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
+		height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
+		font-size: 1em;
+	}
+
+	.tag.some.example {
+		border: 0.2em dashed black;
+		border-radius: 22px;
+		width: 240px; /* <--- Ancho Fijo  */
+		height: 60px; /* <--- Altura Fija  */
+
+		font-size: 1.1em;
+	}
+}
 
 		#skills .row {
 			display: flex;
@@ -3099,7 +3118,7 @@ input, select, textarea {
 		}
 
 
-		#designProcess {
+#designProcess {
 
 			ul.designList {
 				padding: 0 12em 0 12em;
@@ -3228,7 +3247,43 @@ input, select, textarea {
 				max-height: 80%;
 				object-fit: contain; /* Asegura que la imagen se vea bien dentro del círculo */
 			}
-		}
+}
+
+@media screen and (max-width: 736px) {
+	/* 1. Ajustar el contenedor de la lista para ganar espacio lateral */
+	#designProcess ul.designList {
+		padding: 0 0 0 0 !important; /* Reducimos el padding lateral al mínimo */
+	}
+
+	/* 2. Asegurar que la línea baje hasta el final */
+	#designProcess li.designItem {
+		/*border-left: 0.15em dashed black !important;  Un poco más gruesa para que se vea bien */
+		border-left: none !important; /* Un poco más gruesa para que se vea bien */
+		/*margin-left: 1em !important;  Desplazamos todo el bloque a la derecha */
+		padding-bottom: 0.5em !important; /* Aumentamos el espacio inferior para que la línea respire */
+		min-height: auto !important;
+	}
+
+	/* 3. Hacer las bolas (iconos) más pequeñas */
+	#designProcess .timeline-marker {
+		width: 0 !important; /* Reducido de 3em */
+		height: 0!important; /* Reducido de 3em */
+		left: 0 !important; /* Alineado exacto con la línea */
+		transform: translate(-55%, -20%) !important; /* Ajuste fino de centrado sobre la línea */
+	}
+
+	/* 4. Reducir el tamaño del icono dentro de la bola */
+	#designProcess .timeline-marker i {
+		font-size: 0em !important; /* Reducido de 1.5em */
+	}
+
+	/* 5. Ajustar el contenido para que no esté tan lejos de la línea */
+	#designProcess .designItem-content {
+		width: 95% !important; /* Aprovechamos el ancho del móvil */
+		padding: 1em 1em !important; /* Menos padding interno en la caja */
+		margin-bottom: 0.3em !important;
+	}
+}
 
 		.explanationSkills {
 			display: flex; /* Habilita Flexbox */
