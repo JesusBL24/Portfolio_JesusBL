@@ -179,7 +179,7 @@ const translations = {
         'el_coco_lead':'Lideré el equipo como diseñador principal y productor, supervisando la visión y ejecución.',
         'el_coco_systems': 'Diseñé los sistemas de dificultad, progresión y narrativa.',
         'el_coco_enemies': 'Diseñé e implementé diversos tipos de enemigos, jefes y encuentros usando árboles de comportamiento.',
-        'el_coco_levels': 'Creé e implementé niveles desde la fase de greybox hasta el pulido final.',
+        'el_coco_levels': 'Diseñé niveles utilizando módulos.',
         'el_coco_platforms': 'Plataformas: Disponible en PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch y Steam.',
 
         'bratz_description':'¡Domina la pasarela y súbete al escenario con el Bratz Pack! Personaliza estilos rompedores, baila al ritmo de canciones del Universo Bratz como \'So Good\' y viaja a ciudades icónicas. Supera a la malvada Burdine Maxwell y a las gemelas Tweevil en épicas batallas de moda, ya sea en solitario o con amigos.',
@@ -354,7 +354,7 @@ const translations = {
         'el_coco_lead':'Led the team as Lead Designer and Producer, overseeing the project\'s vision and execution.',
         'el_coco_systems': 'Designed core difficulty, progression, and narrative systems.',
         'el_coco_enemies': 'Designed and implemented diverse enemy types and combat encounters using Behavior Trees.',
-        'el_coco_levels': 'Crafted and technical-implemented levels from greybox to final polish.',
+        'el_coco_levels': 'Designed levels using modules.',
         'el_coco_platforms': 'Platforms: Available on PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch, and Steam.',
 
         'bratz_description':'Rule the runway and take the stage with the Bratz Pack! Customize fierce fashions, groove to songs from the Bratz Universe like ‘So Good’, and jet off to iconic cities. <br>Outshine mean Burdine and the Tweevil Twins in epic fashion battles—solo or with friends.',
