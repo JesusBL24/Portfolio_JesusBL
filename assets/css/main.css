@@ -1682,7 +1682,7 @@ input, select, textarea {
 	input[type="reset"],
 	button,
 	.button {
-		background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+		/*background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 		background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 		background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 		background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
@@ -1760,192 +1760,193 @@ input, select, textarea {
 			button.alt:active,
 			.button.alt:active {
 				background-color: #3f3f3f;
+				*/
 			}
 
-/* List */
+		/* List */
 
-	ul {
-		list-style: disc;
-		padding-left: 1em;
-	}
+		ul {
+			list-style: disc;
+			padding-left: 1em;
+		}
 
 		ul li {
 			padding-left: 0.5em;
 		}
 
-	ol {
-		list-style: decimal;
-		padding-left: 1.25em;
-	}
+		ol {
+			list-style: decimal;
+			padding-left: 1.25em;
+		}
 
 		ol li {
 			padding-left: 0.25em;
 		}
 
-/* Social */
+		/* Social */
 
-	ul.social {
-		cursor: default;
-		margin: 0;
-		list-style: none;
-		padding-left: 0;
+		ul.social {
+			cursor: default;
+			margin: 0;
+			list-style: none;
+			padding-left: 0;
 
-		/* Flexbox para centrar los LI dentro del UL */
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center; /* Centra los LI internamente */
-		gap: 5em;
+			/* Flexbox para centrar los LI dentro del UL */
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center; /* Centra los LI internamente */
+			gap: 5em;
 
-		/* CLAVE A: Forzar que el UL no ocupe más espacio del que necesita */
-		width: fit-content;
+			/* CLAVE A: Forzar que el UL no ocupe más espacio del que necesita */
+			width: fit-content;
 
-		/* CLAVE B: Centrar el UL horizontalmente en su contenedor padre */
-		margin-left: auto;
-		margin-right: auto;
+			/* CLAVE B: Centrar el UL horizontalmente en su contenedor padre */
+			margin-left: auto;
+			margin-right: auto;
 
-		/* Asegurar que el margin: 0; inicial no anule el auto */
-		margin-top: 0;
-		margin-bottom: 0;
-	}
+			/* Asegurar que el margin: 0; inicial no anule el auto */
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 
-			ul.social li.social-item-wrapper { /* Asegúrate de usar esta clase en tu HTML <li> */
-				position: relative;
+		ul.social li.social-item-wrapper { /* Asegúrate de usar esta clase en tu HTML <li> */
+			position: relative;
 
-				/* CAMBIO CLAVE: Usa Flexbox en columna para apilar Círculo sobre Etiqueta */
-				display: flex;
-				flex-direction: column;
-				align-items: center; /* Centra el círculo y la etiqueta uno sobre el otro */
+			/* CAMBIO CLAVE: Usa Flexbox en columna para apilar Círculo sobre Etiqueta */
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* Centra el círculo y la etiqueta uno sobre el otro */
 
-				margin: 0;
-				top: 0;
-				padding-left: 0;
-			}
+			margin: 0;
+			top: 0;
+			padding-left: 0;
+		}
 
-			ul.social li a {
-				-moz-transition: top .2s ease-in-out;
-				-webkit-transition: top .2s ease-in-out;
-				-ms-transition: top .2s ease-in-out;
-				transition: top .2s ease-in-out;
-				display: block;
-				width: 200px;
-				height: 200px;
-				top: 1em;
-				position: relative;
-				border-radius: 50%; /* Mantenido aquí para el área de enlace */
-			}
+		ul.social li a {
+			-moz-transition: top .2s ease-in-out;
+			-webkit-transition: top .2s ease-in-out;
+			-ms-transition: top .2s ease-in-out;
+			transition: top .2s ease-in-out;
+			display: block;
+			width: 200px;
+			height: 200px;
+			top: 1em;
+			position: relative;
+			border-radius: 50%; /* Mantenido aquí para el área de enlace */
+		}
 
-			.social-label {
-				display: block;
-				margin-top: 1em; /* Espacio entre el círculo y el texto */
-				color: white; /* Color oscuro para el texto (ajusta al de tu diseño) */
-				font-size: 2em;
-				font-weight: 600;
-				text-align: center;
-			}
+		.social-label {
+			display: block;
+			margin-top: 1em; /* Espacio entre el círculo y el texto */
+			color: white; /* Color oscuro para el texto (ajusta al de tu diseño) */
+			font-size: 2em;
+			font-weight: 600;
+			text-align: center;
+		}
 
-				ul.social li a:before {
-					/*
-					background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));*/
-					-moz-transition: background-color .2s ease-in-out;
-					-webkit-transition: background-color .2s ease-in-out;
-					-ms-transition: background-color .2s ease-in-out;
-					transition: background-color .2s ease-in-out;
-					/*background-color: #444;*/
-					border-radius: 50%;
-					box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
-					color: #2E2E2E !important;
-					display: block;
-					font-size: 5em;
-					line-height: 200px;
-					text-align: center;
-					outline: 0;
-					overflow: hidden;
-					text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
-					width: 200px;
-					height: 200px;
-				}
+		ul.social li a:before {
+			/*
+            background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+            background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+            background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+            background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));*/
+			-moz-transition: background-color .2s ease-in-out;
+			-webkit-transition: background-color .2s ease-in-out;
+			-ms-transition: background-color .2s ease-in-out;
+			transition: background-color .2s ease-in-out;
+			/*background-color: #444;*/
+			border-radius: 50%;
+			box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
+			color: #2E2E2E !important;
+			display: block;
+			font-size: 5em;
+			line-height: 200px;
+			text-align: center;
+			outline: 0;
+			overflow: hidden;
+			text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+			width: 200px;
+			height: 200px;
+		}
 
-				ul.social li a.fa-phone-alt {
-					background-color: #C4376B;
-				}
+		ul.social li a.fa-phone-alt {
+			background-color: #C4376B;
+		}
 
-				ul.social li a.fa-facebook-f {
-					background-color: #3C5A98;
-				}
+		ul.social li a.fa-facebook-f {
+			background-color: #3C5A98;
+		}
 
-				ul.social li a.fa-dribbble {
-					background-color: #C4376B;
-				}
+		ul.social li a.fa-dribbble {
+			background-color: #C4376B;
+		}
 
-				ul.social li a.fa-linkedin-in {
-					background-color: #006599;
-				}
+		ul.social li a.fa-linkedin-in {
+			background-color: #006599;
+		}
 
-				ul.social li a.fa-tumblr {
-					background-color: #51718A;
-				}
+		ul.social li a.fa-tumblr {
+			background-color: #51718A;
+		}
 
-				ul.social li a.fa-envelope {
-					background-color: #FAFAFA;
-				}
+		ul.social li a.fa-envelope {
+			background-color: #FAFAFA;
+		}
 
-				ul.social li a.fa-github {
-					background-color: #FAFAFA;
-				}
+		ul.social li a.fa-github {
+			background-color: #FAFAFA;
+		}
 
-				ul.social li a.fa-rss {
-					background-color: #F2600B;
-				}
+		ul.social li a.fa-rss {
+			background-color: #F2600B;
+		}
 
-				ul.social li a.fa-instagram {
-					background-color: #E0D7C8;
-				}
+		ul.social li a.fa-instagram {
+			background-color: #E0D7C8;
+		}
 
-				ul.social li a.fa-foursquare {
-					background-color: #39A3D4;
-				}
+		ul.social li a.fa-foursquare {
+			background-color: #39A3D4;
+		}
 
-				ul.social li a.fa-skype {
-					background-color: #10BEF1;
-				}
+		ul.social li a.fa-skype {
+			background-color: #10BEF1;
+		}
 
-				ul.social li a.fa-soundcloud {
-					background-color: #FE5419;
-				}
+		ul.social li a.fa-soundcloud {
+			background-color: #FE5419;
+		}
 
-				ul.social li a.fa-itch-io {
-					background-color: #BF2E25;
-				}
+		ul.social li a.fa-itch-io {
+			background-color: #BF2E25;
+		}
 
-				ul.social li a.fa-blogger {
-					background-color: #FF6501;
-				}
+		ul.social li a.fa-blogger {
+			background-color: #FF6501;
+		}
 
-				ul.social li a.fa-flickr {
-					background-color: #0062DB;
-				}
+		ul.social li a.fa-flickr {
+			background-color: #0062DB;
+		}
 
-				ul.social li a.fa-vimeo {
-					background-color: #4C8AB0;
-				}
+		ul.social li a.fa-vimeo {
+			background-color: #4C8AB0;
+		}
 
-				ul.social li a:hover {
-					top: -5px;
-				}
+		ul.social li a:hover {
+			top: -5px;
+		}
 
-					ul.social li a:hover:before {
-						background-color: transparent;
-					}
+		ul.social li a:hover:before {
+			background-color: transparent;
+		}
 
-/* Actions */
+		/* Actions */
 
-	ul.actions {
-		list-style: none;
-		padding-left: 0;
-	}
+		ul.actions {
+			list-style: none;
+			padding-left: 0;
+		}
 
 		ul.actions li {
 			display: inline-block;
@@ -1953,85 +1954,87 @@ input, select, textarea {
 			padding-left: 0;
 		}
 
-			ul.actions li:first-child {
-				margin-left: 0;
-			}
+		ul.actions li:first-child {
+			margin-left: 0;
+		}
 
-/* Box */
+		/* Box */
 
 
-	.box {
-		background: #fff;
-		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-		text-align: center;
-		padding: 2em;
-	}
+		.box {
+			background: #fff;
+			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			padding: 2em;
+		}
 
 		.box.style1 {
 			padding: 2em 1em 3em 2em;
 			margin-top: 0.5em;
 		}
-			#aboutMe section.box.style1 {
-				background: #dcd0fe;
-				/* Opcional: Si el texto es negro (como en tu plantilla original),
-			       debes cambiar el color del texto a blanco para que se vea */
-				color: black;
-			}
 
-			.aboutMeParent{
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				margin: auto;
-				flex-wrap: wrap;
-
-				.aboutMeChild {
-					margin-right: 2em;
-					max-width: 60em;
-				}
-				.aboutMeHijo2 {
-					margin-right: 2em;
-					margin-bottom: 2em;
-				}
-			}
-
-			@media screen and (max-width: 736px) {
-				/* Forzamos a que la fila no tenga márgenes negativos extraños */
-				.aboutMeParent {
-					margin-left: 0 !important;
-					width: 100% !important;
-					display: block !important; /* Evita que flexbox descuadre los hijos */
-				}
-
-				/* Ajustamos el hijo para que ocupe el centro real */
-				.aboutMeChild {
-					padding-left: 0 !important;
-					margin-bottom: 2em; /* Espacio de separación con el siguiente cuadro */
-					width: 100% !important;
-				}
-
-				/* Aseguramos que la caja interior esté alineada */
-				.aboutMeTextSection {
-					margin: 0 auto !important;
-					width: 100% !important;
-				}
-			}
-
-			#aboutMe section.aboutMeTextSection {
+		#aboutMe section.box.style1 {
+			background: #dcd0fe;
 			/* Opcional: Si el texto es negro (como en tu plantilla original),
                debes cambiar el color del texto a blanco para que se vea */
-				color: black;
-				margin-top: 0.5em;
+			color: black;
+		}
+
+		.aboutMeParent {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+			flex-wrap: wrap;
+
+			.aboutMeChild {
+				margin-right: 2em;
+				max-width: 60em;
 			}
 
-			.box.style1 h3 {
-				margin-bottom: 1em;
+			.aboutMeHijo2 {
+				margin-right: 2em;
+				margin-bottom: 2em;
+			}
+		}
+
+		@media screen and (max-width: 736px) {
+			/* Forzamos a que la fila no tenga márgenes negativos extraños */
+			.aboutMeParent {
+				margin-left: 0 !important;
+				width: 100% !important;
+				display: block !important; /* Evita que flexbox descuadre los hijos */
 			}
 
-			.box.style1 li {
-				text-align: left;
-				margin-bottom: 0em;
+			/* Ajustamos el hijo para que ocupe el centro real */
+			.aboutMeChild {
+				padding-left: 0 !important;
+				margin-bottom: 2em; /* Espacio de separación con el siguiente cuadro */
+				width: 100% !important;
 			}
+
+			/* Aseguramos que la caja interior esté alineada */
+			.aboutMeTextSection {
+				margin: 0 auto !important;
+				width: 100% !important;
+			}
+		}
+
+		#aboutMe section.aboutMeTextSection {
+			/* Opcional: Si el texto es negro (como en tu plantilla original),
+               debes cambiar el color del texto a blanco para que se vea */
+			color: black;
+			margin-top: 0.5em;
+		}
+
+		.box.style1 h3 {
+			margin-bottom: 1em;
+		}
+
+		.box.style1 li {
+			text-align: left;
+			margin-bottom: 0em;
+		}
 
 		.box.style2 h3 {
 			margin-bottom: 0.25em;
@@ -2045,7 +2048,7 @@ input, select, textarea {
 			width: auto;
 		}
 
-		.box.style5{
+		.box.style5 {
 			background: #dcd0fe;
 			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 			text-align: center;
@@ -2053,24 +2056,27 @@ input, select, textarea {
 			margin-bottom: 3em;
 			min-width: 60em;
 		}
-			@media screen and (max-width: 980px) { /* El punto donde detectas que empieza a verse mal */
-				.box.style5 {
-					min-width: 30em;
-				}
+
+		@media screen and (max-width: 980px) {
+			/* El punto donde detectas que empieza a verse mal */
+			.box.style5 {
+				min-width: 30em;
 			}
+		}
 
-			@media screen and (max-width: 736px) { /* El punto donde detectas que empieza a verse mal */
-				.box.style5 {
-					min-width: 20em;
-				}
+		@media screen and (max-width: 736px) {
+			/* El punto donde detectas que empieza a verse mal */
+			.box.style5 {
+				min-width: 20em;
 			}
+		}
 
-/* Icons */
+		/* Icons */
 
-	.icon {
-		text-decoration: none;
-		text-decoration: none;
-	}
+		.icon {
+			text-decoration: none;
+			text-decoration: none;
+		}
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -2088,6 +2094,7 @@ input, select, textarea {
 		}
 
 		/* Para Iconos de Marca (Brands) - Como LinkedIn */
+
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands'; /* CLAVE: Familia de fuente correcta */
 		}
@@ -2115,19 +2122,19 @@ input, select, textarea {
 			cursor: default;
 		}
 
-			.icon.featured:before {
-				font-size: 6em;
-			}
+		.icon.featured:before {
+			font-size: 6em;
+		}
 
-/* Wrappers */
+		/* Wrappers */
 
-	.wrapper {
-		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-		padding: 8em 0em 8em 0em;
-		text-align: center;
-		background-image: url(images/bg.png);
-		text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-	}
+		.wrapper {
+			box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+			padding: 8em 0em 8em 0em;
+			text-align: center;
+			background-image: url(images/bg.png);
+			text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+		}
 
 		.wrapper.style1 {
 			background-image: none;
@@ -2143,7 +2150,7 @@ input, select, textarea {
 			padding: 8em 8em 8em 8em;
 		}
 
-		@media screen and (max-width: 736px){
+		@media screen and (max-width: 736px) {
 			.wrapper.style3 {
 				background-color: #f4f4f4;
 				padding: 8em 2em 8em 2em;
@@ -2158,50 +2165,55 @@ input, select, textarea {
 			align-items: center;
 		}
 
-			.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
-				color: #fff;
-				margin-bottom: 2em;
-			}
+		.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
+			color: #fff;
+			margin-bottom: 2em;
+		}
 
-			.wrapper.style4 form input[type=text],
-			.wrapper.style4 form input[type=password],
-			.wrapper.style4 form select,
-			.wrapper.style4 form textarea {
-				border: none;
-				background: #282828;
-			}
+		.wrapper.style4 form input[type=text],
+		.wrapper.style4 form input[type=password],
+		.wrapper.style4 form select,
+		.wrapper.style4 form textarea {
+			border: none;
+			background: #282828;
+		}
 
-				.wrapper.style4 form input[type=text]:focus,
-				.wrapper.style4 form input[type=password]:focus,
-				.wrapper.style4 form select:focus,
-				.wrapper.style4 form textarea:focus {
-					background: #252525;
-				}
+		.wrapper.style4 form input[type=text]:focus,
+		.wrapper.style4 form input[type=password]:focus,
+		.wrapper.style4 form select:focus,
+		.wrapper.style4 form textarea:focus {
+			background: #252525;
+		}
 
-/* Nav */
+		/* Nav */
 
-	#nav {
-		background-color: #282828;
-		text-align: center;
-		position: sticky;
-		margin-top: -5em;
-		top: 0;
-		left: 0;
-		right: 0;
-		width: 100%;
-		z-index: 10000;
-		cursor: default;
-		height: auto;
-		line-height: 3.5em;
-	}
+		#nav {
+			background-color: #282828;
+			text-align: center;
+			position: sticky;
+			/* 1. ELIMINA el margin-top negativo que lo sube demasiado */
+			margin-top: -5em;
+
+			/* 2. El top: 0 hará que cuando hagas scroll, el nav se pegue al borde superior.
+               Si quieres que la barra morada TAMBIÉN se quede pegada, el top del nav
+               debería ser el alto de la barra morada (ej. 40px). */
+			top: 0;
+
+			left: 0;
+			right: 0;
+			width: 100%;
+			z-index: 10000;
+			cursor: default;
+			height: auto;
+			line-height: 3.5em;
+		}
 
 
 		#nav ul {
-			margin: 0;     /* Cambia el margen a 0 */
+			margin: 0; /* Cambia el margen a 0 */
 			list-style: none;
 			padding: 0;
 		}
-
 
 
 		#nav li {
@@ -2229,25 +2241,26 @@ input, select, textarea {
 			cursor: pointer;
 		}
 
-				@media screen and (max-width: 736px) {
-					#nav a {
-						border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
-					}
+		@media screen and (max-width: 736px) {
+			#nav a {
+				border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+			}
 
-					#nav li {
-						display: inline-block;
-						position :relative;
-						margin: -10px 0!important;
-						padding: 0px !important;
-					}
+			#nav li {
+				display: inline-block;
+				position: relative;
+				margin: -10px 0 !important;
+				padding: 0px !important;
+			}
 
-					#nav a:active {
-						background-color: rgba(255, 255, 255, 0.2) !important;
-					}
-				}
+			#nav a:active {
+				background-color: rgba(255, 255, 255, 0.2) !important;
+			}
+		}
 
 		#nav .container {
-			/*display: flex;*/ !important;
+			/*display: flex;*/
+		!important;
 			justify-content: center; /* Esto centra el grupo principal de enlaces */
 			align-items: center;
 			padding: 0;
@@ -2255,6 +2268,7 @@ input, select, textarea {
 		}
 
 		/* 2. Regla CLAVE: Empujar el botón de idioma a la izquierda */
+
 		#nav #lang-switch {
 			/* Esto toma todo el espacio horizontal disponible entre el
 		       botón de idioma y el resto de los enlaces, empujándolo al extremo izquierdo. */
@@ -2265,11 +2279,13 @@ input, select, textarea {
 		}
 
 		/* 3. Ajuste Opcional para el Botón (igualar estilos) */
+
 		#nav #lang-switch a {
 			/* Asegúrate de que el enlace del botón de idioma se vea como los otros enlaces */
 			padding: 0.5em 1em; /* Ejemplo de padding */
 			display: inline-block;
 		}
+
 		#nav ul.container a {
 			/* Si tienes una altura (height) definida para el botón,
 		       line-height debe coincidir para centrar el texto. */
@@ -2298,53 +2314,56 @@ input, select, textarea {
 			cursor: default;
 		}
 
-			#nav a:hover {
-				color: #fff !important;
-				background: #383838;
-			}
+		#nav a:hover {
+			color: #fff !important;
+			background: #383838;
+		}
 
-			#nav a#contactMe{
-				background-color: #946cff ;
-			}
+		#nav a#contactMe {
+			background-color: #946cff;
+		}
 
-			#nav a#contactMe:hover{
-				color: #fff !important;
-				background: #383838;
-			}
+		#nav a#contactMe:hover {
+			color: #fff !important;
+			background: #383838;
+		}
 
 
-			#nav a.active {
-				background: #484848;
-			}
+		#nav a.active {
+			background: #484848;
+		}
 
-				#nav a.active:before {
-					content: '';
-					display: block;
-					position: absolute;
-					bottom: -0.6em;
-					left: 50%;
-					margin-left: -0.75em;
-					border-left: solid 0.75em transparent;
-					border-right: solid 0.75em transparent;
-					border-top: solid 0.6em #282828;
-				}
+		#nav a.active:before {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -0.6em;
+			left: 50%;
+			margin-left: -0.75em;
+			border-left: solid 0.75em transparent;
+			border-right: solid 0.75em transparent;
+			border-top: solid 0.6em #282828;
+		}
 
+		/*
 		#nav ul.container li:nth-last-child(3) {
 			border-right: 1px solid #444;
 			padding-right: 1.5em;
 			margin-right: 1em;
 		}
+		*/
 
-/* Articles */
 
-	body > article {
-		margin-bottom: 0;
-	}
+		/* Articles */
 
-	#top {
-		padding: 10em 0 10em 0;
-		text-align: left;
-	}
+		body > article {
+			margin-bottom: 0;
+		}
+
+		#top {
+			padding: 10em 0 10em 0;
+			text-align: left;
+		}
 
 		#top .image {
 			border-radius: 100%;
@@ -2353,13 +2372,14 @@ input, select, textarea {
 			margin: 0;
 		}
 
-			#top .image img {
-				border-radius: 100%;
-			}
+		#top .image img {
+			border-radius: 100%;
+		}
 
-		#top header{
+		#top header {
 			margin: 0 0 3em 0;
 		}
+
 		#top h1 {
 			margin-top: 0.35em;
 		}
@@ -2375,28 +2395,28 @@ input, select, textarea {
 			line-height: 1.75em;
 		}
 
-			#top p a {
-				color: inherit;
-			}
+		#top p a {
+			color: inherit;
+		}
 
-	#contact footer {
-		font-size: 0.9em;
-	}
+		#contact footer {
+			font-size: 0.9em;
+		}
 
-	#contact footer p{
-		margin-top: 3em;
-	}
+		#contact footer p {
+			margin-top: 3em;
+		}
 
-/* Copyright */
+		/* Copyright */
 
-	#copyright {
-		color: #666;
-		font-size: 1em;
-		line-height: 1em;
-		list-style: none;
-		padding-left: 0;
-		margin-bottom: 0;
-	}
+		#copyright {
+			color: #666;
+			font-size: 1em;
+			line-height: 1em;
+			list-style: none;
+			padding-left: 0;
+			margin-bottom: 0;
+		}
 
 		#copyright li {
 			display: inline-block;
@@ -2406,12 +2426,12 @@ input, select, textarea {
 			margin: 0 0 0 1em;
 		}
 
-			#copyright li:first-child {
-				border: 0;
-				box-shadow: none;
-				padding-left: 0;
-				margin-left: 0;
-			}
+		#copyright li:first-child {
+			border: 0;
+			box-shadow: none;
+			padding-left: 0;
+			margin-left: 0;
+		}
 
 		#copyright a {
 			-moz-transition: color .2s ease-in-out;
@@ -2421,16 +2441,15 @@ input, select, textarea {
 			color: inherit;
 		}
 
-			#copyright a:hover {
-				color: #777;
-			}
+		#copyright a:hover {
+			color: #777;
+		}
 
-/* Large */
+		/* Large */
 
-	@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1280px) {
 
-		/* Basic */
-
+			/* Basic */
 			body {
 				font-size: 11pt;
 			}
@@ -2443,55 +2462,51 @@ input, select, textarea {
 				margin: 0 0 4em 0;
 			}
 
-		/* Wrappers */
-
+			/* Wrappers */
 			.wrapper {
 				padding: 5em 0 5em 0;
 				text-align: center;
 			}
 
-				.wrapper.style4 .row-special {
-					margin: 2em 0 0 0;
-					padding: 2em 0 2em 0;
-				}
+			.wrapper.style4 .row-special {
+				margin: 2em 0 0 0;
+				padding: 2em 0 2em 0;
+			}
 
-		/* Articles */
-
+			/* Articles */
 			#top {
 				padding: 8em 0;
 			}
 
-				#top .image {
-					width: 24em;
-					height: 24em;
-					margin: 0;
-				}
+			#top .image {
+				width: 24em;
+				height: 24em;
+				margin: 0;
+			}
 
-	}
+		}
 
-/* Medium */
+		/* Medium */
 
-	@media screen and (max-width: 980px) {
+		@media screen and (max-width: 980px) {
 
-		/* Articles */
-
+			/* Articles */
 			#top {
 				text-align: center;
 				padding: 5em 0;
 			}
 
-				#top .image {
-					margin: 0 auto 2em auto;
-				}
+			#top .image {
+				margin: 0 auto 2em auto;
+			}
 
-	}
+		}
 
-/* Small */
+		/* Small */
 
-	@media screen and (max-width: 736px) {
+		@media screen and (max-width: 736px) {
 
-		/* Basic */
-
+			/* Basic */
 			body {
 				padding-top: 44px;
 			}
@@ -2516,30 +2531,28 @@ input, select, textarea {
 				margin: 0 0 2em 0;
 			}
 
-				header > p {
-					font-size: 1.25em;
-				}
+			header > p {
+				font-size: 1.25em;
+			}
 
 			footer {
 				margin: 2.5em 0 0 0;
 			}
 
-				footer > p {
-					font-size: 1.25em;
-				}
+			footer > p {
+				font-size: 1.25em;
+			}
 
 			hr {
 				margin: 1.5em 0 2em 0;
 			}
 
-		/* Section/Article */
-
+			/* Section/Article */
 			section, article {
 				clear: both;
 			}
 
-		/* Button */
-
+			/* Button */
 			input[type="button"],
 			input[type="submit"],
 			input[type="reset"],
@@ -2551,17 +2564,16 @@ input, select, textarea {
 				padding: 1em 0 1em 0;
 			}
 
-				input[type="button"].large,
-				input[type="submit"].large,
-				input[type="reset"].large,
-				button.large,
-				.button.large {
-					font-size: 1.2em;
-					letter-spacing: 0;
-				}
+			input[type="button"].large,
+			input[type="submit"].large,
+			input[type="reset"].large,
+			button.large,
+			.button.large {
+				font-size: 1.2em;
+				letter-spacing: 0;
+			}
 
-		/* Social */
-
+			/* Social */
 			ul.social {
 				padding: 1em 0.5em 0 0.5em;
 
@@ -2573,80 +2585,76 @@ input, select, textarea {
 				justify-content: center;
 			}
 
-				ul.social li {
-					display: flex;
-					flex-direction: column;
-					align-items: center; /* CLAVE: Esto centra el círculo sobre la etiqueta */
-					margin: 0.5em 0.5em 0.5em 0.5em;
-				}
+			ul.social li {
+				display: flex;
+				flex-direction: column;
+				align-items: center; /* CLAVE: Esto centra el círculo sobre la etiqueta */
+				margin: 0.5em 0.5em 0.5em 0.5em;
+			}
 
-					ul.social li a {
-						top: 0 !important;
-					}
+			ul.social li a {
+				top: 0 !important;
+			}
 
-						ul.social li a:before {
-							background-color: transparent !important;
-						}
+			ul.social li a:before {
+				background-color: transparent !important;
+			}
 
-		/* Actions */
-
+			/* Actions */
 			ul.actions {
 				margin: 0;
 			}
 
-				ul.actions li {
-					display: block;
-					margin: 15px 0 0 0;
-				}
+			ul.actions li {
+				display: block;
+				margin: 15px 0 0 0;
+			}
 
-					ul.actions li:first-child {
-						margin-top: 0;
-					}
+			ul.actions li:first-child {
+				margin-top: 0;
+			}
 
-		/* Box */
-
+			/* Box */
 			.box {
 				padding: 30px 20px 30px 20px;
 				margin: 0 0 20px 0 !important;
 			}
 
-				.box h3 {
-					margin-bottom: 0.25em;
-				}
+			.box h3 {
+				margin-bottom: 0.25em;
+			}
 
-				.box .image.centered {
-					margin-bottom: 1em;
-				}
+			.box .image.centered {
+				margin-bottom: 1em;
+			}
 
-				.box .image.featured {
-					position: relative;
-					left: 20px;
-					top: 20px;
-					margin: -50px 0 50px -40px;
-					width: auto;
-				}
+			.box .image.featured {
+				position: relative;
+				left: 20px;
+				top: 20px;
+				margin: -50px 0 50px -40px;
+				width: auto;
+			}
 
-				.box.style1 {
-					max-width: 32em;
-					margin-left: auto !important;
-					margin-right: auto !important;
-				}
+			.box.style1 {
+				max-width: 32em;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
 
-				.box.style2 {
-					max-width: 32em;
-					margin-left: auto !important;
-					margin-right: auto !important;
-				}
+			.box.style2 {
+				max-width: 32em;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
 
-		/* Wrappers */
-
+			/* Wrappers */
 			.wrapper {
 				padding: 3em 0;
 				text-align: center;
 			}
 
-		/* Nav */
-
+			/* Nav */
 			#nav {
 				height: 10em;
 				line-height: 10em;
@@ -2654,172 +2662,247 @@ input, select, textarea {
 				align-content: center;
 
 			}
-				/* En pantallas pequeñas */
-				@media screen and (max-width: 736px) {
-					#nav {
-						height: 10em;
-						line-height: 5em;
-						justify-content: center;
-						align-content: center;
-					}
+
+			/* En pantallas pequeñas */
+			@media screen and (max-width: 736px) {
+				#nav {
+					height: 10em;
+					line-height: 5em;
+					justify-content: center;
+					align-content: center;
 				}
+			}
 
-				#nav a {
-					padding: 0 0.75em;
-					height: inherit;
-					line-height: inherit;
-					border-radius: 0;
-				}
+			#nav a {
+				padding: 0 0.75em;
+				height: inherit;
+				line-height: inherit;
+				border-radius: 0;
+			}
 
-					#nav a:hover {
-						background-color: transparent;
-					}
+			#nav a:hover {
+				background-color: transparent;
+			}
 
 
-		/* Articles */
-
+			/* Articles */
 			#top {
 				padding: 3em 0;
 			}
 
-				#top .image {
-					width: 15em;
-					height: 15em;
-					margin-bottom: 0;
-				}
+			#top .image {
+				width: 15em;
+				height: 15em;
+				margin-bottom: 0;
+			}
 
-				#top p {
-					font-size: 1em;
-				}
+			#top p {
+				font-size: 1em;
+			}
 
 			#contact footer {
 				margin: 0;
 			}
 
-		/* Copyright */
-
+			/* Copyright */
 			#copyright {
 				font-size: 1em;
 				margin: 0;
 			}
 
-				#copyright li {
-					display: block;
-					margin: 1em 0 0 0;
-					padding: 0;
-					box-shadow: none;
-					border-left: 0;
-				}
+			#copyright li {
+				display: block;
+				margin: 1em 0 0 0;
+				padding: 0;
+				box-shadow: none;
+				border-left: 0;
+			}
 
-					#copyright li:first-child {
-						margin-top: 0;
-					}
+			#copyright li:first-child {
+				margin-top: 0;
+			}
 
-	}
-/* **************************************************************************** */
-/* *******************************CUSTOM CLASSES******************************* */
-/* **************************************************************************** */
+		}
+		/* **************************************************************************** */
+		/* *******************************CUSTOM CLASSES******************************* */
+		/* **************************************************************************** */
 
-/*CONTROL DE TODOS LOS TAMAÑOS DE TEXTO EN MOVIL*/
-@media screen and (max-width: 736px) {
-	p,li {
-		font-size: 1.1rem !important; /* Un pelín más grande que el estándar */
-		line-height: 1.5 !important;   /* Más compacto para pantallas estrechas */
-		margin-bottom: 1.2rem !important; /* Espacio entre párrafos */
-	}
+		/* Barra superior de idioma */
 
-	h2{
-		font-size: 1.5em !important;
-	}
-	nav li{
-		font-size: 1em !important;
-	}
+		#language-bar {
+			background-color: #946cff;
+			width: 100%;
+			position: relative;
+			padding: 10px 0;
+			top: 1.5em;
+		}
 
-	h3 {
-		font-size: 1.5rem;
-	}
+		.language-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 2em;
 
-	.mini-project-card p {
-		font-size: 1.1rem !important;
-		line-height: 1.3;
-	}
+		}
 
- 	.mini-project-card h3 {
-		font-size: 1.5rem !important;
-	}
-}
+		/* Estilo de los botones */
 
-.subjectsTitles{
-	max-width: 13em;
-}
-
-
-
-/* 1. Contenedor Flexbox para centrar horizontalmente */
-.skill-tags {
-	/* Activa Flexbox */
-	display: flex;
-
-	/* Centra los elementos hijos (los tags) horizontalmente */
-	justify-content: center;
-
-	/* Permite que los tags salten a la siguiente línea si no caben */
-	flex-wrap: wrap;
-
-	/* Espaciado entre etiquetas (0.5em en todas las direcciones) */
-	gap: 0.5em;
-
-	/* Margen superior para separarlo del párrafo */
-	margin-top: 1em;
-}
-
-/* 2. Estilo para las etiquetas individuales (el mismo que antes) */
-.tag {
-	/* Mantenemos el display inline-block para que los tags funcionen bien con el padding,
-       pero con display:flex en el padre, también funcionaría si fuera display:block */
-	/* **PROPIEDADES CLAVE PARA LA UNIFORMIDAD** */
-
-	/* 1. Ancho y Alto fijos (Ajusta estos valores según tus necesidades visuales) */
-	width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
-	height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
-
-	/* 2. Propiedades para Centrar el Texto Verticalmente y Horizontalmente */
-	display: flex; /* Lo convertimos en un contenedor Flex para alinear su contenido (el texto) */
-	align-items: center; /* Centra el texto verticalmente */
-	justify-content: center; /* Centra el texto horizontalmente */
-
-	/* 3. Propiedades de Estilo y Forma */
-	border-radius: 15px; /* Más redondeado para un look de píldora, ajusta si deseas menos */
-	padding: 0; /* Eliminamos el padding, ya que el ancho y alto son fijos */
-
-	background-color: #dcd0fe;
-	color: black !important;
-
-	font-size: 0.8em;
-	font-weight: 600;
-	text-transform: uppercase;
-
-	/* 4. Aseguramos que el texto muy largo no cause problemas */
-	overflow: hidden; /* Oculta el texto que exceda el ancho/alto */
-	text-overflow: ellipsis; /* Añade puntos suspensivos si el texto se corta (si el texto no cabe) */
-	white-space: nowrap;
-}
-	@media screen and (max-width: 736px) {
-		.tag{
-			width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
-			height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
+		.lang-button {
+			background-color: #2E2E2E; /* Fondo transparente por defecto */
+			border: 2px solid white !important; /* Borde blanco para los NO seleccionados */
+			color: white;
+			/*padding: 5px 15px;*/
+			margin: 2px 5px;
+			cursor: pointer;
+			border-radius: 10px !important;
+			transition: all 0.3s ease;
+			font-weight: bold;
+			padding: 0.5em 2.35em 0.5em 2.35em;
 			font-size: 1em;
 		}
-	}
-.tag.some {
-	border: 0.2em dashed black;
-}
 
-#skills .row {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
+		/* El seleccionado (clase que gestionaremos con JS) */
+
+		.lang-button.active-lang {
+			background-color: white !important; /* Se rellena de blanco */
+			color: black !important; /* El texto toma el color morado de la barra */
+			opacity: 1 !important; /* Sin transparencia */
+			transform: scale(1.05); /* Un pequeño realce */
+			border: 2px solid black !important;
+
+			/* ESTO DESACTIVA EL CLIC */
+			pointer-events: none;
+
+			/* Cambia el cursor para indicar que no es clicable */
+			cursor: default;
+		}
+
+		.lang-button:hover {
+			opacity: 1 !important;
+			background-color: rgba(255, 255, 255, 0.8);
+			color: #2E2E2E !important;
+			border: 2px solid black !important;
+		}
+
+		/* Ajustes para Móvil */
+		@media screen and (max-width: 736px) {
+			.language-container {
+				justify-content: center; /* Centrado en móviles */
+				padding: 0;
+			}
+
+			#language-bar {
+				font-size: 0.9em;
+				padding: 10px 0;
+			}
+		}
+
+		/*CONTROL DE TODOS LOS TAMAÑOS DE TEXTO EN MOVIL*/
+		@media screen and (max-width: 736px) {
+			p, li {
+				font-size: 1.1rem !important; /* Un pelín más grande que el estándar */
+				line-height: 1.5 !important; /* Más compacto para pantallas estrechas */
+				margin-bottom: 1.2rem !important; /* Espacio entre párrafos */
+			}
+
+			h2 {
+				font-size: 1.5em !important;
+			}
+
+			nav li {
+				font-size: 1em !important;
+			}
+
+			h3 {
+				font-size: 1.5rem;
+			}
+
+			.mini-project-card p {
+				font-size: 1.1rem !important;
+				line-height: 1.3;
+			}
+
+			.mini-project-card h3 {
+				font-size: 1.5rem !important;
+			}
+		}
+
+		.subjectsTitles {
+			max-width: 13em;
+		}
+
+
+		/* 1. Contenedor Flexbox para centrar horizontalmente */
+
+		.skill-tags {
+			/* Activa Flexbox */
+			display: flex;
+
+			/* Centra los elementos hijos (los tags) horizontalmente */
+			justify-content: center;
+
+			/* Permite que los tags salten a la siguiente línea si no caben */
+			flex-wrap: wrap;
+
+			/* Espaciado entre etiquetas (0.5em en todas las direcciones) */
+			gap: 0.5em;
+
+			/* Margen superior para separarlo del párrafo */
+			margin-top: 1em;
+		}
+
+		/* 2. Estilo para las etiquetas individuales (el mismo que antes) */
+
+		.tag {
+			/* Mantenemos el display inline-block para que los tags funcionen bien con el padding,
+               pero con display:flex en el padre, también funcionaría si fuera display:block */
+			/* **PROPIEDADES CLAVE PARA LA UNIFORMIDAD** */
+
+			/* 1. Ancho y Alto fijos (Ajusta estos valores según tus necesidades visuales) */
+			width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
+			height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
+
+			/* 2. Propiedades para Centrar el Texto Verticalmente y Horizontalmente */
+			display: flex; /* Lo convertimos en un contenedor Flex para alinear su contenido (el texto) */
+			align-items: center; /* Centra el texto verticalmente */
+			justify-content: center; /* Centra el texto horizontalmente */
+
+			/* 3. Propiedades de Estilo y Forma */
+			border-radius: 15px; /* Más redondeado para un look de píldora, ajusta si deseas menos */
+			padding: 0; /* Eliminamos el padding, ya que el ancho y alto son fijos */
+
+			background-color: #dcd0fe;
+			color: black !important;
+
+			font-size: 0.8em;
+			font-weight: 600;
+			text-transform: uppercase;
+
+			/* 4. Aseguramos que el texto muy largo no cause problemas */
+			overflow: hidden; /* Oculta el texto que exceda el ancho/alto */
+			text-overflow: ellipsis; /* Añade puntos suspensivos si el texto se corta (si el texto no cabe) */
+			white-space: nowrap;
+		}
+
+		@media screen and (max-width: 736px) {
+			.tag {
+				width: 180px; /* <--- Ancho Fijo (Ejemplo: 100 píxeles) */
+				height: 40px; /* <--- Altura Fija (Ejemplo: 30 píxeles) */
+				font-size: 1em;
+			}
+		}
+
+		.tag.some {
+			border: 0.2em dashed black;
+		}
+
+		#skills .row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 
 
 		@media screen and (max-width: 1100px) {
@@ -2829,322 +2912,329 @@ input, select, textarea {
 			}
 		}
 
-		@media screen and (max-width: 736px){
+		@media screen and (max-width: 736px) {
 			#skills .col-3, #skills .col-5 {
 				width: 100% !important;
 				max-width: 100%;
 			}
 		}
 
-/* Estilo para el contenedor de cada proyecto */
-.project-entry {
-	/* Color de Fondo: Cambia #F0F0F0 por el color que elijas de tu Canva */
-	background-color: white;
+		/* Estilo para el contenedor de cada proyecto */
 
-	/* Bordes redondeados para el rectángulo */
-	border-radius: 10px;
+		.project-entry {
+			/* Color de Fondo: Cambia #F0F0F0 por el color que elijas de tu Canva */
+			background-color: white;
 
-	/* Relleno interno para que el contenido no se pegue a los bordes */
-	padding: 3em;
+			/* Bordes redondeados para el rectángulo */
+			border-radius: 10px;
 
-	/* Margen inferior para separar cada proyecto del siguiente */
-	margin-bottom: 3em !important;
+			/* Relleno interno para que el contenido no se pegue a los bordes */
+			padding: 3em;
 
-	/* Aseguramos que el contenido dentro de la fila esté alineado verticalmente (arriba) */
-	align-items: flex-start;
+			/* Margen inferior para separar cada proyecto del siguiente */
+			margin-bottom: 3em !important;
 
-	/* PROPIEDAD CLAVE: Define el estilo del borde */
-	/* Sintaxis: [grosor] [estilo] [color] */
-	border: 3px solid black;
+			/* Aseguramos que el contenido dentro de la fila esté alineado verticalmente (arriba) */
+			align-items: flex-start;
 
-	width: 100%;
-	margin-left: 0;
-	margin-right: 0;
-}
+			/* PROPIEDAD CLAVE: Define el estilo del borde */
+			/* Sintaxis: [grosor] [estilo] [color] */
+			border: 3px solid black;
 
-/* Ajustes específicos para los elementos dentro del proyecto */
-
-/* 1. Imagen */
-.project-image img {
-	/* Asegura que la imagen tenga el mismo borde redondeado que el contenedor */
-	border-radius: 8px;
-	/* Evita que la imagen se estire demasiado en pantallas grandes */
-	max-height: 350px;
-	max-width: 350px;
-	width: 100%;
-	object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-	border: 1em solid black;
-}
-
-/* 2. Lista de responsabilidades */
-.project-details {
-	/* Le da espacio al inicio de la lista para separarla de los tags */
-	margin-top: 1em;
-	list-style: disc; /* Vuelve a habilitar las viñetas */
-	padding-left: 3em; /* Ajusta el padding para que las viñetas se vean bien */
-	margin-left: 0;
-	justify-content: center;
-}
-
-
-.project-entry .content-column {
-	/* Fuerza la alineación de todo el texto (título, párrafos, lista) a la izquierda */
-	text-align: left;
-	margin-left: -0.8em;
-}
-
-
-.project-entry .project-tags {
-	/* Si ya usaste justify-content: center; en .skill-tags, puedes omitir esta línea */
-	justify-content: center;
-	padding-top: 0;
-	margin-top: 0;
-	padding-left: 2em ;
-	/*
-    }
-    /*
-    .project-entry .tag{
-        background-color: white;
-        */
-}
-
-@media screen and (max-width: 736px) {
-	/* 1. Resetear el contenedor de la columna para que no empuje el contenido */
-	.project-entry .content-column {
-		margin-left: 0 ;
-		text-align: center !important; /* Centramos el texto base en móvil */
-		width: 100% ;
-		padding: 0 1em !important; /* Un poco de margen de seguridad a los lados */
-	}
-
-	/* 2. Centrar los tags y quitar el padding lateral */
-	.project-entry .project-tags {
-		display: flex ;
-		flex-wrap: wrap ;
-		justify-content: center !important; /* Centrado horizontal real */
-		padding-left: 0 !important; /* Eliminamos el desplazamiento a la derecha */
-		margin: 1em 0 ;
-		width: 100% ;
-	}
-
-	/* 3. Ajustar la lista de detalles para que no se vea desparramada */
-	.project-details {
-		text-align: left !important; /* El texto de la lista mejor a la izquierda */
-		display: inline-block; /* Permite que el bloque se centre pero el texto no */
-		padding-left: 1.5em !important; /* Espacio justo para los puntos (dots) */
-		margin: 0 auto !important;
-	}
-}
-
-.project-entry  h3 {
-	/* Mantenemos el centrado del texto si limitaste su ancho con margin: 0 auto; */
-	max-width: 50ch;
-	margin: 0 auto;
-
-	/* CLAVE A: AÑADIR LA LÍNEA SEPARADORA */
-	border-bottom: 2px solid #ccc; /* Línea sólida de 2px de color gris claro */
-
-	/* CLAVE B: Separación Vertical */
-	padding-bottom: 0.5em; /* Espacio entre el texto del h3 y la línea */
-	margin-bottom: 1.3em; /* Espacio entre la línea y el párrafo siguiente */
-
-	/* Aseguramos que el h3 se comporte como bloque para que el borde se muestre */
-	display: block;
-	text-align: center; /* Centrar el texto del h3 */
-	color: #3e3e3e; /* Color del texto del título */
-}
-
-/* 3. Estilo para la columna del video (para que se vea bien con el borde del proyecto) */
-.project-entry .video-container {
-	/* Si estás usando un borde en .project-entry, podrías querer ajustar el relleno de la columna
-       para que el video no se pegue al borde. */
-	padding: 0; /* Aseguramos que el video llene su columna sin relleno interno adicional */
-	justify-content: right;
-
-}
-
-.video-responsive {
-	width: 100%;
-	aspect-ratio: 16 / 9; /* Mantiene la proporción perfecta de YouTube */
-	height: auto;        /* Permite que la altura se calcule sola */
-	border-radius: 8px;  /* Opcional: para que combine con tus cuadros */
-}
-
-.mini-project-card {
-	background: #fff;
-	border-radius: 8px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-	text-align: center;
-	height: 100%; /* Para que todos midan lo mismo en la misma fila */
-	border: black solid 0.2em;
-	padding: 1em 1em 0 1em;
-
-
-	/* ESTO ORGANIZA EL CONTENIDO DENTRO */
-	display: flex;
-	flex-direction: column;
-	justify-content: center; /* Centra el contenido verticalmente */
-	align-items: center;     /* Centra el contenido horizontalmente */
-
-	transition: transform 0.3s ease;
-	overflow: hidden; /* Evita que el texto se salga si es muy largo */
-}
-
-
-.mini-project-image img {
-	border-radius: 8px;
-	aspect-ratio: 16 / 9; /* Fuerza a todas las imágenes a tener la misma proporción */
-	object-fit: cover; /* Recorta la imagen para que no se deforme */
-	margin-bottom: 1em;
-}
-
-.mini-project-card h3 {
-	font-size: 1.1em;
-	margin-bottom: 0.5em;
-	font-weight: bold;
-}
-
-.mini-project-card p {
-	font-size: 1em;
-	line-height: 1.4;
-	color: black;
-
-}
-
-
-#designProcess{
-
-	ul.designList{
-		padding: 0 12em 0 12em;
-	}
-
-
-	li.designItem{
-		list-style: none;
-		border-left: 0.1em dashed black;
-		min-height: 15em;
-		position: relative;
-
-	}
-
-
-	@media screen and (max-width: 980px) { /* El punto donde detectas que empieza a verse mal */
-		ul.designList{
-			padding: 0 2em 0 2em;
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
 		}
 
-		li.designItem {
-			min-height: 5em;    /* REDUCCIÓN CLAVE: Mucho menos espacio vertical */
-			padding-bottom: 1em; /* Menos aire entre un ítem y el siguiente */
+		/* Ajustes específicos para los elementos dentro del proyecto */
+
+		/* 1. Imagen */
+
+		.project-image img {
+			/* Asegura que la imagen tenga el mismo borde redondeado que el contenedor */
+			border-radius: 8px;
+			/* Evita que la imagen se estire demasiado en pantallas grandes */
+			max-height: 350px;
+			max-width: 350px;
+			width: 100%;
+			object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+			border: 1em solid black;
 		}
-	}
 
-	li.designItem span{
-		list-style: none;
-	}
+		/* 2. Lista de responsabilidades */
 
-	li.designItem::before {
-
-		position: absolute;
-		content: none;/* Desactivamos el círculo creado por pseudoelemento */
-		border: 0.5em solid purple;
-		/* Movemos el círculo para que quede DENTRO del padding-left: 7em */
-		left: 4.55em; /* Posición horizontal del círculo */
-		height: 4em;
-		width: 4em;
-		border-radius: 50%; /* Añadimos border-radius para que sea un círculo */
-		transform: translateY(-10%); /* Lo centramos verticalmente con el contenido */
-		background: white; /* Relleno blanco para tapar la línea punteada */
-		z-index: 10;
-	}
-
-	/* NUEVA REGLA: Elimina la línea en el último <li> de la lista */
-	li.designItem:last-child {
-		border-left: none;
-		/* Opcional: Puede ajustar la altura mínima para el último elemento */
-		min-height: auto;
-	}
-
-	.designItem-content {
-		/* Mantenemos el margen izquierdo que ya habías ajustado para evitar la línea y el círculo */
-		margin-left: 4em;
-
-		/* PROPIEDAD CLAVE: Define el ancho máximo del recuadro */
-		/* Lo establecemos al 60% del espacio disponible (puedes ajustar este valor) */
-		width: 90%;
-
-		justify-content: center;
-		border: 0.2em solid black;
-		border-radius: 8px;
+		.project-details {
+			/* Le da espacio al inicio de la lista para separarla de los tags */
+			margin-top: 1em;
+			list-style: disc; /* Vuelve a habilitar las viñetas */
+			padding-left: 3em; /* Ajusta el padding para que las viñetas se vean bien */
+			margin-left: 0;
+			justify-content: center;
+		}
 
 
-		/* Ya no necesitamos margin-right: 7em; si usamos width: 60%; */
-	}
-
-	.designItem-content p {
-		/* CLAVE: Establece un ancho máximo de 65 caracteres (puedes ajustar este número) */
-		width: 90%;
-		/* Nota: Esto NO reducirá la caja, solo el texto dentro de ella */
-		margin: 0 auto;
-	}
-
-	.designItem-content h3 {
-		/* Mantenemos el centrado del texto si limitaste su ancho con margin: 0 auto; */
-		max-width: 50ch;
-		margin: 0 auto;
-
-		/* CLAVE A: AÑADIR LA LÍNEA SEPARADORA */
-		border-bottom: 2px solid #ccc; /* Línea sólida de 2px de color gris claro */
-
-		/* CLAVE B: Separación Vertical */
-		padding-bottom: 0.5em; /* Espacio entre el texto del h3 y la línea */
-		margin-bottom: 1.3em; /* Espacio entre la línea y el párrafo siguiente */
-
-		/* Aseguramos que el h3 se comporte como bloque para que el borde se muestre */
-		display: block;
-		text-align: center; /* Centrar el texto del h3 */
-		color: #3e3e3e; /* Color del texto del título */
-	}
+		.project-entry .content-column {
+			/* Fuerza la alineación de todo el texto (título, párrafos, lista) a la izquierda */
+			text-align: left;
+			margin-left: -0.8em;
+		}
 
 
-	/* 2. Estilo del Círculo (contenedor de la imagen/icono) */
-	.timeline-marker {
-		position: absolute;
-		/*left: -0em; /* Misma posición de la línea punteada */
-		top: 1em;
-		transform: translate(-70%, -50%); /* Centrado vertical y horizontal en el eje de la línea */
+		.project-entry .project-tags {
+			/* Si ya usaste justify-content: center; en .skill-tags, puedes omitir esta línea */
+			justify-content: center;
+			padding-top: 0;
+			margin-top: 0;
+			padding-left: 2em;
+			/*
+            }
+            /*
+            .project-entry .tag{
+                background-color: white;
+                */
+		}
 
-		width: 3em;
-		height: 3em;
-		border-radius: 50%;
-		background-color: #dcd0fe; /* Relleno blanco para tapar la línea */
-		z-index: 10;
+		@media screen and (max-width: 736px) {
+			/* 1. Resetear el contenedor de la columna para que no empuje el contenido */
+			.project-entry .content-column {
+				margin-left: 0;
+				text-align: center !important; /* Centramos el texto base en móvil */
+				width: 100%;
+				padding: 0 1em !important; /* Un poco de margen de seguridad a los lados */
+			}
 
-		/* CLAVE: Flexbox para centrar el icono/imagen DENTRO del círculo */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+			/* 2. Centrar los tags y quitar el padding lateral */
+			.project-entry .project-tags {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center !important; /* Centrado horizontal real */
+				padding-left: 0 !important; /* Eliminamos el desplazamiento a la derecha */
+				margin: 1em 0;
+				width: 100%;
+			}
 
-	/* 3. Estilo para el Icono o la Imagen */
-	.timeline-marker i {
-		font-size: 1.5em; /* Tamaño del icono */
-		color: black;
-	}
+			/* 3. Ajustar la lista de detalles para que no se vea desparramada */
+			.project-details {
+				text-align: left !important; /* El texto de la lista mejor a la izquierda */
+				display: inline-block; /* Permite que el bloque se centre pero el texto no */
+				padding-left: 1.5em !important; /* Espacio justo para los puntos (dots) */
+				margin: 0 auto !important;
+			}
+		}
 
-	.timeline-marker img {
-		max-width: 80%; /* La imagen no debe llenar completamente el círculo */
-		max-height: 80%;
-		object-fit: contain; /* Asegura que la imagen se vea bien dentro del círculo */
-	}
-}
+		.project-entry h3 {
+			/* Mantenemos el centrado del texto si limitaste su ancho con margin: 0 auto; */
+			max-width: 50ch;
+			margin: 0 auto;
 
-.explanationSkills {
-	display: flex; /* Habilita Flexbox */
-	justify-content: center; /* Centra horizontalmente el contenido (el span) */
-	margin-top: 1em;
-	margin-bottom: 1.5em;
+			/* CLAVE A: AÑADIR LA LÍNEA SEPARADORA */
+			border-bottom: 2px solid #ccc; /* Línea sólida de 2px de color gris claro */
+
+			/* CLAVE B: Separación Vertical */
+			padding-bottom: 0.5em; /* Espacio entre el texto del h3 y la línea */
+			margin-bottom: 1.3em; /* Espacio entre la línea y el párrafo siguiente */
+
+			/* Aseguramos que el h3 se comporte como bloque para que el borde se muestre */
+			display: block;
+			text-align: center; /* Centrar el texto del h3 */
+			color: #3e3e3e; /* Color del texto del título */
+		}
+
+		/* 3. Estilo para la columna del video (para que se vea bien con el borde del proyecto) */
+
+		.project-entry .video-container {
+			/* Si estás usando un borde en .project-entry, podrías querer ajustar el relleno de la columna
+               para que el video no se pegue al borde. */
+			padding: 0; /* Aseguramos que el video llene su columna sin relleno interno adicional */
+			justify-content: right;
+
+		}
+
+		.video-responsive {
+			width: 100%;
+			aspect-ratio: 16 / 9; /* Mantiene la proporción perfecta de YouTube */
+			height: auto; /* Permite que la altura se calcule sola */
+			border-radius: 8px; /* Opcional: para que combine con tus cuadros */
+		}
+
+		.mini-project-card {
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+			text-align: center;
+			height: 100%; /* Para que todos midan lo mismo en la misma fila */
+			border: black solid 0.2em;
+			padding: 1em 1em 0 1em;
 
 
-}
+			/* ESTO ORGANIZA EL CONTENIDO DENTRO */
+			display: flex;
+			flex-direction: column;
+			justify-content: center; /* Centra el contenido verticalmente */
+			align-items: center; /* Centra el contenido horizontalmente */
+
+			transition: transform 0.3s ease;
+			overflow: hidden; /* Evita que el texto se salga si es muy largo */
+		}
+
+
+		.mini-project-image img {
+			border-radius: 8px;
+			aspect-ratio: 16 / 9; /* Fuerza a todas las imágenes a tener la misma proporción */
+			object-fit: cover; /* Recorta la imagen para que no se deforme */
+			margin-bottom: 1em;
+		}
+
+		.mini-project-card h3 {
+			font-size: 1.1em;
+			margin-bottom: 0.5em;
+			font-weight: bold;
+		}
+
+		.mini-project-card p {
+			font-size: 1em;
+			line-height: 1.4;
+			color: black;
+
+		}
+
+
+		#designProcess {
+
+			ul.designList {
+				padding: 0 12em 0 12em;
+			}
+
+
+			li.designItem {
+				list-style: none;
+				border-left: 0.1em dashed black;
+				min-height: 15em;
+				position: relative;
+
+			}
+
+
+			@media screen and (max-width: 980px) {
+				/* El punto donde detectas que empieza a verse mal */
+				ul.designList {
+					padding: 0 2em 0 2em;
+				}
+
+				li.designItem {
+					min-height: 5em; /* REDUCCIÓN CLAVE: Mucho menos espacio vertical */
+					padding-bottom: 1em; /* Menos aire entre un ítem y el siguiente */
+				}
+			}
+
+			li.designItem span {
+				list-style: none;
+			}
+
+			li.designItem::before {
+
+				position: absolute;
+				content: none; /* Desactivamos el círculo creado por pseudoelemento */
+				border: 0.5em solid purple;
+				/* Movemos el círculo para que quede DENTRO del padding-left: 7em */
+				left: 4.55em; /* Posición horizontal del círculo */
+				height: 4em;
+				width: 4em;
+				border-radius: 50%; /* Añadimos border-radius para que sea un círculo */
+				transform: translateY(-10%); /* Lo centramos verticalmente con el contenido */
+				background: white; /* Relleno blanco para tapar la línea punteada */
+				z-index: 10;
+			}
+
+			/* NUEVA REGLA: Elimina la línea en el último <li> de la lista */
+
+			li.designItem:last-child {
+				border-left: none;
+				/* Opcional: Puede ajustar la altura mínima para el último elemento */
+				min-height: auto;
+			}
+
+			.designItem-content {
+				/* Mantenemos el margen izquierdo que ya habías ajustado para evitar la línea y el círculo */
+				margin-left: 4em;
+
+				/* PROPIEDAD CLAVE: Define el ancho máximo del recuadro */
+				/* Lo establecemos al 60% del espacio disponible (puedes ajustar este valor) */
+				width: 90%;
+
+				justify-content: center;
+				border: 0.2em solid black;
+				border-radius: 8px;
+
+
+				/* Ya no necesitamos margin-right: 7em; si usamos width: 60%; */
+			}
+
+			.designItem-content p {
+				/* CLAVE: Establece un ancho máximo de 65 caracteres (puedes ajustar este número) */
+				width: 90%;
+				/* Nota: Esto NO reducirá la caja, solo el texto dentro de ella */
+				margin: 0 auto;
+			}
+
+			.designItem-content h3 {
+				/* Mantenemos el centrado del texto si limitaste su ancho con margin: 0 auto; */
+				max-width: 50ch;
+				margin: 0 auto;
+
+				/* CLAVE A: AÑADIR LA LÍNEA SEPARADORA */
+				border-bottom: 2px solid #ccc; /* Línea sólida de 2px de color gris claro */
+
+				/* CLAVE B: Separación Vertical */
+				padding-bottom: 0.5em; /* Espacio entre el texto del h3 y la línea */
+				margin-bottom: 1.3em; /* Espacio entre la línea y el párrafo siguiente */
+
+				/* Aseguramos que el h3 se comporte como bloque para que el borde se muestre */
+				display: block;
+				text-align: center; /* Centrar el texto del h3 */
+				color: #3e3e3e; /* Color del texto del título */
+			}
+
+
+			/* 2. Estilo del Círculo (contenedor de la imagen/icono) */
+
+			.timeline-marker {
+				position: absolute;
+				/*left: -0em; /* Misma posición de la línea punteada */
+				top: 1em;
+				transform: translate(-70%, -50%); /* Centrado vertical y horizontal en el eje de la línea */
+
+				width: 3em;
+				height: 3em;
+				border-radius: 50%;
+				background-color: #dcd0fe; /* Relleno blanco para tapar la línea */
+				z-index: 10;
+
+				/* CLAVE: Flexbox para centrar el icono/imagen DENTRO del círculo */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			/* 3. Estilo para el Icono o la Imagen */
+
+			.timeline-marker i {
+				font-size: 1.5em; /* Tamaño del icono */
+				color: black;
+			}
+
+			.timeline-marker img {
+				max-width: 80%; /* La imagen no debe llenar completamente el círculo */
+				max-height: 80%;
+				object-fit: contain; /* Asegura que la imagen se vea bien dentro del círculo */
+			}
+		}
+
+		.explanationSkills {
+			display: flex; /* Habilita Flexbox */
+			justify-content: center; /* Centra horizontalmente el contenido (el span) */
+			margin-top: 1em;
+			margin-bottom: 1.5em;
+
+		}
 
