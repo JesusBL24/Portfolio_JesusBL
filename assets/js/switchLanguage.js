@@ -174,10 +174,10 @@ const translations = {
         'project_available_on': '<strong>Disponible en:<strong>',
         'word_and': 'y',
 
-        'el_coco_description':'EL COCO es un juego roguelike de acción en 3D que te sumerge en un mundo de sueños, recuerdos rotos y pesadillas encarnadas. Desciende a Lo Incierto, un lugar tan extraño como peligroso, y lucha por recuperar lo que perdiste… si es que puedes confiar en quien te guía.',
+        'el_coco_description':'EL COCO es un juego roguelike de acción que te sumerge en un mundo de sueños, recuerdos rotos y pesadillas encarnadas. Desciende a Lo Incierto, un lugar tan extraño como peligroso, y lucha por recuperar lo que perdiste… si es que puedes confiar en quien te guía.',
         'el_coco_role': '<strong>Game Designer y Productor.</strong>',
         'el_coco_lead':'Lideré el equipo como diseñador principal y productor, supervisando la visión y ejecución.',
-        'el_coco_systems': 'Diseñé los sistemas de dificultad, progresión y narrativa.',
+        'el_coco_systems': 'Diseñé los sistemas de niveles, progresión y narrativa.',
         'el_coco_enemies': 'Diseñé e implementé diversos tipos de enemigos, jefes y encuentros usando árboles de comportamiento.',
         'el_coco_levels': 'Diseñé niveles utilizando módulos.',
         'el_coco_platforms': 'Plataformas: Disponible en PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch y Steam.',
@@ -349,10 +349,10 @@ const translations = {
         'word_and': 'and',
 
 
-        'el_coco_description': 'EL COCO is a 3D action roguelike that plunges you into a world of dreams, broken memories, and living nightmares. Descend into The Uncertain, a place as strange as it is dangerous, and fight to recover what you’ve lost—if you can trust your guide.',
+        'el_coco_description': 'EL COCO is an action roguelike that plunges you into a world of dreams, broken memories, and living nightmares. Descend into The Uncertain, a place as strange as it is dangerous, and fight to recover what you’ve lost—if you can trust your guide.',
         'el_coco_role': '<strong>Game Designer & Producer.</strong>',
         'el_coco_lead':'Led the team as Lead Designer and Producer, overseeing the project\'s vision and execution.',
-        'el_coco_systems': 'Designed core difficulty, progression, and narrative systems.',
+        'el_coco_systems': 'Designed core level, progression, and narrative systems.',
         'el_coco_enemies': 'Designed and implemented diverse enemy types and combat encounters using Behavior Trees.',
         'el_coco_levels': 'Designed levels using modules.',
         'el_coco_platforms': 'Platforms: Available on PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch, and Steam.',
