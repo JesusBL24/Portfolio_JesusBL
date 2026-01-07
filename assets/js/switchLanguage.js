@@ -93,6 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(savedLang);
 });
 
+// Función que sirve de puente
+function handleGalleryOpen(projectKey) {
+    // CAMBIO CLAVE: Usar 'websiteLang' para que coincida con setLanguage
+    const lang = localStorage.getItem('websiteLang') || 'en';
+
+    // Verificamos que existan las imágenes para ese idioma y proyecto
+    if (translations[lang] && translations[lang][projectKey]) {
+        const images = translations[lang][projectKey];
+        openGallery(images);
+    } else {
+        console.error(`No se encontraron imágenes para: ${lang} -> ${projectKey}`);
+    }
+}
+
 // OBJETO DE TRADUCCIONES (DICTIONARY)
 const translations = {
     // ---- ESPAÑOL (ES) ----
@@ -172,7 +186,7 @@ const translations = {
         'experience_description':'Estos son mis proyectos profesionales y personales destacados que muestran mis habilidades en el desarrollo de videojuegos.',
         'experience_professional':'Proyectos profesionales',
         'project_available_on': '<strong>Disponible en:<strong>',
-        'word_and': 'y',
+        'knowMore': 'Mira mi trabajo',
 
         'el_coco_description':'EL COCO es un juego roguelike de acción que te sumerge en un mundo de sueños, recuerdos rotos y pesadillas encarnadas. Desciende a Lo Incierto, un lugar tan extraño como peligroso, y lucha por recuperar lo que perdiste… si es que puedes confiar en quien te guía.',
         'el_coco_role': '<strong>Game Designer y Productor.</strong>',
@@ -268,7 +282,15 @@ const translations = {
         'videos':{
             'video_Coco':'https://www.youtube.com/embed/-PS4w2wODa0?si=vrvYJoYqCKpjT4C5',
             'video_Bratz':'https://www.youtube.com/embed/QC1Otakvbps?si=ydC9rhXK7vRLCETI'
-        }
+        },
+
+        'Coco_One_Pagers': [
+            'images/Coco/es_Intro.jpg',
+            'images/Coco/es_Combat System.jpg',
+            'images/Coco/es_Level System.jpg',
+            'images/Coco/es_Progression System.jpg',
+            'images/Coco/es_Narrative System.jpg'
+        ]
 
     },
 
@@ -346,7 +368,7 @@ const translations = {
         'experience_description':'These are my featured professional and personal projects that highlight my skills on game development.',
         'experience_professional':'Professional projects',
         'project_available_on': '<strong>Available on:</strong>',
-        'word_and': 'and',
+        'knowMore': 'See my work',
 
 
         'el_coco_description': 'EL COCO is an action roguelike that plunges you into a world of dreams, broken memories, and living nightmares. Descend into The Uncertain, a place as strange as it is dangerous, and fight to recover what you’ve lost—if you can trust your guide.',
@@ -444,7 +466,15 @@ const translations = {
         'videos':{
             'video_Coco':'https://www.youtube.com/embed/w1VXgXGJoMo?si=kQGGENqdgGSA5-C-',
             'video_Bratz':'https://www.youtube.com/embed/FJ5CNNaP4vQ?si=z_2PNQoDxg_0qs07'
-        }
+        },
+
+        'Coco_One_Pagers': [
+            'images/Coco/en_Intro.jpg',
+            'images/Coco/en_Combat System.jpg',
+            'images/Coco/en_Level System.jpg',
+            'images/Coco/en_Progression System.jpg',
+            'images/Coco/en_Narrative System.jpg'
+        ]
 
     }
 };
