@@ -1833,6 +1833,7 @@ input, select, textarea {
 			top: 1em;
 			position: relative;
 			border-radius: 50%; /* Mantenido aquí para el área de enlace */
+			animation: contact-glow 2s infinite ease-in-out;
 		}
 
 		.social-label {
@@ -1867,6 +1868,12 @@ input, select, textarea {
 			text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
 			width: 200px;
 			height: 200px;
+		}
+
+		ul.social li a:hover {
+			animation: none; /* Detiene el brillo al poner el ratón */
+			box-shadow: none !important;
+			border-color: transparent;
 		}
 
 		ul.social li a.fa-phone-alt {
@@ -1939,6 +1946,31 @@ input, select, textarea {
 
 		ul.social li a:hover:before {
 			background-color: transparent;
+		}
+
+		/* LinkedIn - Brillo azul */
+		ul.social li a.fa-linkedin-in {
+			background-color: #0091da;
+			--glow-color: rgba(0, 225, 255, 0.6);
+		}
+
+		/* Email - Brillo blanco/gris */
+		ul.social li a.fa-envelope {
+			background-color: #FAFAFA;
+			--glow-color: rgba(255, 255, 255, 0.8);
+			color: black !important; /* Para que el sobre se vea bien */
+		}
+
+		/* Teléfono - Brillo rosa/fucsia */
+		ul.social li a.fa-phone-alt {
+			background-color: #C4376B;
+			--glow-color: rgba(196, 55, 107, 0.6);
+		}
+
+		/* Itch.io - Brillo rojo */
+		ul.social li a.fa-itch-io {
+			background-color: #BF2E25;
+			--glow-color: rgba(191, 46, 37, 0.6);
 		}
 
 		/* Actions */
@@ -3125,6 +3157,20 @@ input, select, textarea {
 		0 0 10px rgba(220, 208, 254, 0.2);
 	}
 }
+
+	@keyframes contact-glow {
+		0% {
+			box-shadow: 0 0 5px var(--glow-color);
+		}
+		50% {
+			/* Aumentamos el resplandor en el punto medio */
+			box-shadow: 0 0 7px var(--glow-color), 0 0 10px var(--glow-color);
+			filter: brightness(0.8); /* Hace que el botón entero "luzca" más */
+		}
+		100% {
+			box-shadow: 0 0 5px var(--glow-color);
+		}
+	}
 
 .gallery-overlay {
 	position: fixed;
