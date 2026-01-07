@@ -4,17 +4,20 @@ let pz;
 
 function openGallery(imagesArray) {
     if (!imagesArray || imagesArray.length === 0) return;
-    currentGallery = imagesArray;
+
+    // Reset total del estado de la galería
+    currentGallery = [...imagesArray]; // Copiamos el array para evitar referencias raras
     currentIndex = 0;
 
-    document.getElementById('gallery-overlay').style.display = 'flex';
+    // 1. Mostrar el overlay
+    const overlay = document.getElementById('gallery-overlay');
+    overlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 
-    // 1. Inicializar la imagen primero
-    const img = document.getElementById('gallery-img');
-    img.src = currentGallery[currentIndex];
+    // 2. Actualizar imagen y contador INMEDIATAMENTE
+    updateGalleryImage();
 
-    // 2. Esperar un instante a que la imagen cargue para inicializar Panzoom
+    // 3. Inicializar Panzoom
     setTimeout(initPanzoom, 50);
 }
 
@@ -79,15 +82,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function updateGalleryImage() {
     const img = document.getElementById('gallery-img');
+    const counter = document.getElementById('gallery-counter');
+
+    // Cambiamos la imagen
     img.src = currentGallery[currentIndex];
 
+    // ACTUALIZAMOS EL CONTADOR (Esto arregla el error de 3 de 5)
+    if (counter) {
+        counter.innerText = `${currentIndex + 1} / ${currentGallery.length}`;
+    }
+
     if (pz) {
-        // Reset absoluto al cambiar de imagen
+        // Reset de posición para que la nueva imagen no herede el zoom de la anterior
         pz.zoomAbs(0, 0, 1);
         pz.moveTo(0, 0);
         img.style.cursor = 'zoom-in';
     }
-    document.getElementById('gallery-counter').innerText = `${currentIndex + 1} / ${currentGallery.length}`;
 }
 
 function changeImage(step) {
@@ -100,11 +110,13 @@ function changeImage(step) {
 function closeGallery() {
     document.getElementById('gallery-overlay').style.display = 'none';
     document.body.style.overflow = 'auto';
+    currentIndex = 0; // Limpieza preventiva
     if (pz) {
         pz.dispose();
         pz = null;
     }
 }
+
 // Atajos de teclado
 document.addEventListener('keydown', (e) => {
     const overlay = document.getElementById('gallery-overlay');

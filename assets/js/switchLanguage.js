@@ -95,11 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Función que sirve de puente
 function handleGalleryOpen(projectKey) {
-    const lang = localStorage.getItem('preferredLanguage') || 'en';
-    const images = translations[lang][projectKey];
+    // CAMBIO CLAVE: Usar 'websiteLang' para que coincida con setLanguage
+    const lang = localStorage.getItem('websiteLang') || 'en';
 
-    // Llamamos a la función del otro archivo JS
-    openGallery(images);
+    // Verificamos que existan las imágenes para ese idioma y proyecto
+    if (translations[lang] && translations[lang][projectKey]) {
+        const images = translations[lang][projectKey];
+        openGallery(images);
+    } else {
+        console.error(`No se encontraron imágenes para: ${lang} -> ${projectKey}`);
+    }
 }
 
 // OBJETO DE TRADUCCIONES (DICTIONARY)
@@ -280,10 +285,11 @@ const translations = {
         },
 
         'Coco_One_Pagers': [
-            'images/Magefall.png',
-            'images/bg.png',
-            'images/Magefall.png'
-
+            'images/Coco/es_Intro.jpg',
+            'images/Coco/es_Combat System.jpg',
+            'images/Coco/es_Level System.jpg',
+            'images/Coco/es_Progression System.jpg',
+            'images/Coco/es_Narrative System.jpg'
         ]
 
     },
@@ -463,9 +469,11 @@ const translations = {
         },
 
         'Coco_One_Pagers': [
-            'images/Magefall.png',
-            'images/bg.png',
-            'images/Expo_idea.png'
+            'images/Coco/en_Intro.jpg',
+            'images/Coco/en_Combat System.jpg',
+            'images/Coco/en_Level System.jpg',
+            'images/Coco/en_Progression System.jpg',
+            'images/Coco/en_Narrative System.jpg'
         ]
 
     }
