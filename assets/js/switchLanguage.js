@@ -386,7 +386,7 @@ const translations = {
 
         'experience_personal': 'Personal projects',
 
-        'magefall_description': 'Throughout this project, I studied and developed the essential elements for the conceptualization stages of a video game. I deepened my knowledge of game design by researching industry experts and successfully formalized a game concept by following an iterative, problem-oriented approach',
+        'magefall_description': 'Throughout this project, I studied and developed the essential elements for the conceptualization stages of a video game. I deepened my knowledge of game design by researching industry experts and successfully formalized a game concept by following an iterative, problem-oriented approach.',
         'magefall_title':'Magefall: A study of iterative design and video game conceptualization stages (Bachelor\'s Thesis, 2025)',
         'project_magefall_1':'<strong>Researcher & Systems Designer</strong>',
         'project_magefall_2':'Carried out an in-depth investigation into iterative design and advanced game design.',
