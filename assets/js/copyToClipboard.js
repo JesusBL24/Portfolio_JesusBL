@@ -5,20 +5,20 @@
  * @param {Event} [event] - The click event object to prevent default anchor behavior.
  */
 function copyToClipboard(elementId, event) {
-    // 1. Prevent default behavior if an event is provided
+    // Prevent default behavior if an event is provided
     if (event) {
         event.preventDefault();
     }
 
-    // 2. Retrieve content to copy
+    // Retrieve content to copy
     const element = document.getElementById(elementId);
     if (!element) return;
 
     const textToCopy = element.textContent.trim();
 
-    // 3. Use the asynchronous Clipboard API
+    // Use the asynchronous Clipboard API
     navigator.clipboard.writeText(textToCopy).then(() => {
-        // 4. Handle success: Detect language and fetch translation
+        // Handle success: Detect language and fetch translation
         const currentLang = document.documentElement.lang || 'en';
         const message = translations[currentLang]['copy_success'];
 

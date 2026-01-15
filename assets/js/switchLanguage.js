@@ -1,36 +1,28 @@
 /**
- * Función que maneja el cambio de idioma de la página.
- * * Itera sobre todos los elementos HTML que contienen el atributo 'data-i18n'
- * y actualiza su contenido de texto con la traducción correspondiente
- * almacenada en el objeto 'translations' para el idioma seleccionado.
- * * También guarda la preferencia de idioma en el almacenamiento local del navegador (localStorage).
- * * @param {string} lang - El código del idioma al que se debe cambiar la página (e.g., 'es', 'en').
+ * Main function to handle the website's language switching.
+ * It updates text content, video sources, active UI states, and persists the choice.
+ * * @param {string} lang - The language code to apply (e.g., 'en', 'es').
  */
-
-
-
-
-// FUNCIÓN PRINCIPAL PARA CAMBIAR EL IDIOMA
 function setLanguage(lang) {
     const elements = document.querySelectorAll('[data-i18n]');
     const dictionary = translations[lang];
 
     if (!dictionary) return;
 
-    // Esto es lo que leerá tu función de copiar al portapapeles
+    // Update the document's language attribute for SEO and accessibility
     document.documentElement.lang = lang;
 
-    // Iterar sobre todos los elementos marcados para traducción
+    // Iterate through all elements marked for translation
     elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
 
         if (dictionary[key]) {
-            // CLAVE: CAMBIAR AQUÍ DE textContent A innerHTML
+            // Using innerHTML to allow formatted text (bold, links, etc.)
             element.innerHTML = dictionary[key];
         }
     });
 
-    // 4. CAMBIAR VIDEOS
+    // Handle Video Internationalization (iframes)
     if (dictionary.videos) {
         for (const id in dictionary.videos) {
             const iframe = document.getElementById(id);
@@ -40,12 +32,12 @@ function setLanguage(lang) {
         }
     }
 
-    // 1. Quitar la clase 'active-lang' de TODOS los botones
+    // Reset and update visual state of language buttons
     document.querySelectorAll('.lang-button').forEach(btn => {
         btn.classList.remove('active-lang');
     });
 
-    // 2. Añadir la clase 'active-lang' solo al botón del idioma seleccionado
+    // Persist user preference in local storage
     const activeBtn = document.getElementById(`lang-${lang}`);
     if (activeBtn) {
         activeBtn.classList.add('active-lang');
@@ -53,28 +45,26 @@ function setLanguage(lang) {
 
     localStorage.setItem('websiteLang', lang);
 
-    // CLAVE: Aquí es donde llamamos y pasamos el idioma como argumento
-    updateLanguageButtons(lang);// <--- 'lang' se pasa como argumento 'activeLangCode'
+    // Sync other UI components with the current language
+    updateLanguageButtons(lang);
 }
 
 
 /**
- * Añade la clase 'active-lang' al botón de idioma seleccionado y la elimina de los demás.
- * @param {string} activeLangCode - El código del idioma activo (e.g., 'es' o 'en').
+ * Synchronizes the active state of language buttons by parsing their onclick attributes.
+ * @param {string} activeLangCode - The current active language code.
  */
 function updateLanguageButtons(activeLangCode) {
-    // Esto selecciona todos los enlaces, incluidos los del menú (Top, About me, etc.)
+
     const allLinks = document.querySelectorAll('#nav ul.container li a');
 
     allLinks.forEach(button => {
-        // 1. Obtener el valor del atributo onclick. Puede ser una cadena o null.
+
         const onclickAttr = button.getAttribute('onclick');
 
-        // 2. CLAVE: Comprobar si el atributo existe (es decir, no es null) Y
-        //    si contiene la función 'setLanguage' (para asegurarnos de que es un botón de idioma)
+        // Check if the link is specifically a language switcher button
         if (onclickAttr && onclickAttr.includes('setLanguage')) {
 
-            // 3. Si llega aquí, es un botón de idioma. Comprobamos si es el activo.
             const isButtonActive = onclickAttr.includes(`'${activeLangCode}'`);
 
             if (isButtonActive) {
@@ -83,22 +73,25 @@ function updateLanguageButtons(activeLangCode) {
                 button.classList.remove('active-lang');
             }
         }
-        // Si no tiene el atributo onclick o no es un botón de idioma, simplemente se salta.
     });
 }
 
-// FUNCIÓN PARA CARGAR EL IDIOMA AL INICIAR LA PÁGINA
+/**
+ * Initialization on page load. Fetches saved language or defaults to English.
+ */
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('websiteLang') || 'en';
     setLanguage(savedLang);
 });
 
-// Función que sirve de puente
+/**
+ * Bridge function to open the gallery with localized project images.
+ * @param {string} projectKey - The key representing the project in the translations object.
+ */
 function handleGalleryOpen(projectKey) {
-    // CAMBIO CLAVE: Usar 'websiteLang' para que coincida con setLanguage
+
     const lang = localStorage.getItem('websiteLang') || 'en';
 
-    // Verificamos que existan las imágenes para ese idioma y proyecto
     if (translations[lang] && translations[lang][projectKey]) {
         const images = translations[lang][projectKey];
         openGallery(images);
@@ -107,7 +100,7 @@ function handleGalleryOpen(projectKey) {
     }
 }
 
-// OBJETO DE TRADUCCIONES (DICTIONARY)
+// Lang dictionaries
 const translations = {
     // ---- ESPAÑOL (ES) ----
     'es': {
