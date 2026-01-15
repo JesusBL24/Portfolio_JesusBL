@@ -242,7 +242,7 @@ const translations = {
         'mini_p1_title':'Space Commander Simulator',
         'mini_p1_desc':'Diseñé y programé un prototipo de estrategia de naves espaciales en <strong>VR con reconocimiento de gestos</strong>.',
 
-        'mini_p2_desc':'Redacté todos los <strong>diálogos</strong> y <strong>guiones narrativos</strong> para nuestro propio spin-off.',
+        'mini_p2_desc':'Redacté todos los <strong>diálogos</strong> y <strong>guiones narrativos</strong> para nuestro propio juego spin-off.',
 
         'mini_p3_desc':'Diseñé y desarrollé un prototipo de plataformas en 3D usando <strong>patrones de diseño software</strong> y <strong>blockouts</strong>.',
 
@@ -290,6 +290,11 @@ const translations = {
             'images/Coco/es_Level System.jpg',
             'images/Coco/es_Progression System.jpg',
             'images/Coco/es_Narrative System.jpg'
+        ],
+
+        'SCR_One_Pagers': [
+            'images/SCR/en_Intro.jpg',
+            'images/SCR/es_combat.jpg',
         ]
 
     },
@@ -374,7 +379,7 @@ const translations = {
         'el_coco_description': 'EL COCO is an action roguelike that plunges you into a world of dreams, broken memories, and living nightmares. Descend into The Uncertain, a place as strange as it is dangerous, and fight to recover what you’ve lost—if you can trust your guide.',
         'el_coco_role': '<strong>Game Designer & Producer.</strong>',
         'el_coco_lead':'Led the team as Lead Designer and Producer, overseeing the project\'s vision and execution.',
-        'el_coco_systems': 'Designed core level, progression, and narrative systems.',
+        'el_coco_systems': 'Designed scalable level, progression, and narrative systems.',
         'el_coco_enemies': 'Designed and implemented diverse enemy types and combat encounters using Behavior Trees.',
         'el_coco_levels': 'Designed levels using modules.',
         'el_coco_platforms': 'Platforms: Available on PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch, and Steam.',
@@ -398,8 +403,8 @@ const translations = {
 
         'SCR3D_description':'A brand-new spaceship hero shooter where you choose your character, customize your weapons, and fight your rivals to dominate the Arena. Each game is a \'best-of-three\' match where you level up your ship to unlock powerful boosters and signature abilities.',
         'SCR3D_1':'<strong>Game Director & Narrative Designer.</strong',
-        'SCR3D_2':'Designed the core online competitive combat system and engagement mechanics.',
-        'SCR3D_3':'Concepted and prototyped diverse character kits and unique gameplay functionalities.',
+        'SCR3D_2':'Designed the core online competitive combat system and progression mechanics.',
+        'SCR3D_3':'Conceptualized and prototyped diverse character kits and unique gameplay functionalities.',
         'SCR3D_4':'Balanced all characters, abilities, and upgrade paths to ensure competitive integrity.',
         'SCR3D_5':'Conducted playtesting sessions to validate mechanics, refine balance, and improve player feel.',
         'SCR3D_6':'Programmed several online features and systems using .NET and WebGL.',
@@ -474,6 +479,11 @@ const translations = {
             'images/Coco/en_Level System.jpg',
             'images/Coco/en_Progression System.jpg',
             'images/Coco/en_Narrative System.jpg'
+        ],
+
+        'SCR_One_Pagers': [
+            'images/SCR/en_Intro.jpg',
+            'images/SCR/en_combat.jpg',
         ]
 
     }

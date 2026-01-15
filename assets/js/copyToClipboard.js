@@ -1,31 +1,30 @@
 /**
- * Función que maneja la copia de texto al portapapeles.
- * * @param {string} elementId - El ID del elemento que contiene el texto a copiar (e.g., 'phoneLabel').
- * @param {Event} event - El evento click (necesario para prevenir la navegación por el enlace #).
+ * Handles copying text content from a specific DOM element to the system clipboard.
+ * Supports internationalization by fetching messages from switchLanguage.
+ * * @param {string} elementId - The unique ID of the element containing the text to copy.
+ * @param {Event} [event] - The click event object to prevent default anchor behavior.
  */
 function copyToClipboard(elementId, event) {
-    // 1. Prevenir que el navegador siga el enlace "#"
+    // 1. Prevent default behavior if an event is provided
     if (event) {
         event.preventDefault();
     }
 
-    // 2. Obtener el contenido a copiar
+    // 2. Retrieve content to copy
     const element = document.getElementById(elementId);
     if (!element) return;
 
     const textToCopy = element.textContent.trim();
 
-    // 3. Usar la API del Portapapeles (asíncrona)
+    // 3. Use the asynchronous Clipboard API
     navigator.clipboard.writeText(textToCopy).then(() => {
+        // 4. Handle success: Detect language and fetch translation
+        const currentLang = document.documentElement.lang || 'en';
+        const message = translations[currentLang]['copy_success'];
 
-    // 4. Detectar idioma actual y obtener traducción
-    // Asumimos que guardas el idioma en el atributo 'lang' del <html> (ej: <html lang="es">)
-    const currentLang = document.documentElement.lang || 'en';
-    const message = translations[currentLang]['copy_success'];
-
-    showFeedback(element, message);
-
+        showFeedback(element, message);
     }).catch(err => {
+        // Handle error (e.g., permission denied)
         const currentLang = document.documentElement.lang || 'en';
         const errorMessage = translations[currentLang]['copy_error'];
         showFeedback(element, errorMessage);
@@ -33,14 +32,15 @@ function copyToClipboard(elementId, event) {
 }
 
 /**
- * Función auxiliar para mostrar un mensaje temporal de confirmación.
+ * Creates and displays a temporary floating UI element to provide user feedback.
+ * * @param {HTMLElement} targetElement - The element used as a reference point for the feedback.
+ * @param {string} message - The text content to be displayed in the feedback bubble.
  */
 function showFeedback(targetElement, message) {
-    // Creamos un nuevo elemento flotante
     const feedback = document.createElement('div');
     feedback.textContent = message;
 
-    // Estilos para el feedback flotante (asegúrate de que el <li> padre tenga position: relative)
+    // Apply styles via CSS-in-JS (Ensure the parent has 'position: relative')
     feedback.style.cssText = `
         position: absolute;
         top: -30px; 
@@ -51,23 +51,22 @@ function showFeedback(targetElement, message) {
         padding: 5px 10px;
         border-radius: 4px;
         font-size: 1.5em;
-        font-family: 'Roboto', sans-serif; /* REEMPLAZA 'Roboto' con tu fuente principal */
+        font-family: 'Roboto', sans-serif;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
         z-index: 9999;
-        pointer-events: none; /* Ignorar clicks en el mensaje */
+        pointer-events: none;
     `;
 
-    // El <li> (contenedor padre del <a> y <span>) debe ser el que contenga el feedback
-    // El padre del elemento a copiar (targetElement, que es el <span>) es el <li>.
+    // Append to the parent container (typically an <li>)
     targetElement.parentNode.appendChild(feedback);
 
-    // Mostrar el mensaje
+    // Trigger transition
     setTimeout(() => {
         feedback.style.opacity = 1;
     }, 10);
 
-    // Ocultar y remover el mensaje después de 1.5 segundos
+    // Auto-remove the element after the animation
     setTimeout(() => {
         feedback.style.opacity = 0;
         feedback.addEventListener('transitionend', () => feedback.remove());
