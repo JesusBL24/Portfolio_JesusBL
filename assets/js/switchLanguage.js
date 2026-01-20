@@ -191,6 +191,7 @@ const translations = {
 
         'bratz_description':'¡Domina la pasarela y súbete al escenario con el Bratz Pack! Personaliza estilos rompedores, baila al ritmo de canciones del Universo Bratz como \'So Good\' y viaja a ciudades icónicas. Supera a la malvada Burdine Maxwell y a las gemelas Tweevil en épicas batallas de moda, ya sea en solitario o con amigos.',
         'project_bratz_role': '<strong>Productor de Post-lanzamiento.</strong>',
+        'project_bratz_info1':'Lideré las reuniones y la comunicación con stakeholders.',
         'project_bratz_updates': 'Gestión de actualizaciones post-lanzamiento.',
         'project_bratz_info': 'Los demás detalles del proyecto están sujetos a un acuerdo de confidencialidad (NDA).',
 
@@ -379,6 +380,7 @@ const translations = {
 
         'bratz_description':'Rule the runway and take the stage with the Bratz Pack! Customize fierce fashions, groove to songs from the Bratz Universe like ‘So Good’, and jet off to iconic cities. <br>Outshine mean Burdine and the Tweevil Twins in epic fashion battles—solo or with friends.',
         'project_bratz_role': '<strong>Post-launch Producer.</strong>',
+        'project_bratz_info1':'Led meetings and communication with stakeholders.',
         'project_bratz_updates':'Managed post-launch updates.',
         'project_bratz_info': 'Further details are subject to a Non-Disclosure Agreement (NDA).',
 
