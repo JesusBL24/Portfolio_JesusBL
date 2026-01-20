@@ -287,8 +287,9 @@ const translations = {
         ],
 
         'SCR_One_Pagers': [
-            'images/SCR/en_Intro.jpg',
+            'images/SCR/es_Intro.jpg',
             'images/SCR/es_combat.jpg',
+            'images/SCR/es_characters.jpg'
         ]
 
     },
@@ -479,6 +480,7 @@ const translations = {
         'SCR_One_Pagers': [
             'images/SCR/en_Intro.jpg',
             'images/SCR/en_combat.jpg',
+            'images/SCR/en_characters.jpg'
         ]
 
     }
