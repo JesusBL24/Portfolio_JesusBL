@@ -115,13 +115,13 @@ const translations = {
 
         //HOME
         "home_roles": 'Game Designer, Programador, Productor',
-        "home_description": 'Soy un diseñador de niveles y sistemas, desarrollador, artista y narrador con gran pasión y ambición por crear juegos innovadores.',
+        "home_description": 'Soy un diseñador y desarrollador de gameplay y sistemas, productor y narrador con gran pasión y ambición por crear juegos innovadores.',
         "home_eslogan": '\'Forjando experiencias, ciclo a ciclo.\'',
 
         //ABOUT ME
         'aboutMe_title': 'Sobre mí',
         'aboutMe_p1': 'Nacido en 2003, mi interés por los videojuegos comenzó a la edad de tres años, lo que me permitió desarrollar internamente una comprensión intuitiva del <strong>porqué funcionan las diferentes mecánicas y los objetivos detrás de las decisiones de diseño enfocadas en la experiencia del jugador</strong>. De niño, también pasaba largas tardes jugando con LEGO, imaginando historias y mundos que más tarde me inspiraron a empezar a escribir, programar y cultivar un fuerte interés por la narrativa y el arte.',
-        'aboutMe_p2': 'Recientemente obtuve mi <strong>título de Grado en Diseño y Desarrollo de Videojuegos</strong> por la Universidad Rey Juan Carlos en Madrid. Durante estos años, estudié <strong>diseño de juegos</strong>, <strong>el pipeline de producción de videojuegos</strong>, y programación en <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> y <strong>Unity Engine</strong>. Además, mi deseo de superación me llevó a estudiar diseño de forma independiente y a participar con compañeros en varias game jams como <strong>diseñador y storyteller</strong> (e incluso una vez como director de arte). Esta experiencia ha fortalecido significativamente mis habilidades de <strong>comunicación</strong>, <strong>trabajo en equipo</strong>, <strong>análisis</strong> y <strong>resolución de problemas</strong>.',
+        'aboutMe_p2': 'Reciéntemente obtuve mi <strong>título de Grado en Diseño y Desarrollo de Videojuegos</strong> por la Universidad Rey Juan Carlos en Madrid. Durante estos años, estudié <strong>diseño de juegos</strong>, <strong>el pipeline de producción de videojuegos</strong>, y programación en <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> y <strong>Unity Engine</strong>. Además, mi deseo de superación me llevó a estudiar diseño de forma independiente y a participar con compañeros en varias game jams como <strong>diseñador y storyteller</strong> (e incluso una vez como director de arte). Esta experiencia ha fortalecido significativamente mis habilidades de <strong>comunicación</strong>, <strong>trabajo en equipo</strong>, <strong>análisis</strong> y <strong>resolución de problemas</strong>.',
         'aboutMe_p3': 'Este año se lanzó mi primer proyecto multiplataforma, <strong>\'El Coco\'</strong>, donde colaboré con el equipo de Recotechnology S.L. como Diseñador de Juegos y Productor. Mis responsabilidades incluyeron diseñar <strong>sistemas de dificultad y progresión</strong>, <strong>estructurar la narrativa</strong>, <strong>implementar niveles y enemigos</strong>, <strong>liderar el equipo</strong> en mi rol de productor, y preparar las páginas del juego para todas las plataformas de lanzamiento.',
         'aboutMe_p4':'Esto es solo el comienzo; mi pasión por los videojuegos y mi deseo continuo de aprender me impulsan a buscar nuevos horizontes y a seguir desarrollando mis habilidades profesionales.',
 
@@ -183,15 +183,15 @@ const translations = {
 
         'el_coco_description':'EL COCO es un juego roguelike de acción que te sumerge en un mundo de sueños, recuerdos rotos y pesadillas encarnadas. Desciende a Lo Incierto, un lugar tan extraño como peligroso, y lucha por recuperar lo que perdiste… si es que puedes confiar en quien te guía.',
         'el_coco_role': '<strong>Game Designer y Productor.</strong>',
-        'el_coco_lead':'Lideré el equipo como diseñador principal y productor, supervisando la visión y ejecución.',
-        'el_coco_systems': 'Diseñé los sistemas de niveles, progresión y narrativa.',
-        'el_coco_enemies': 'Diseñé e implementé diversos tipos de enemigos, jefes y encuentros usando árboles de comportamiento.',
-        'el_coco_levels': 'Diseñé niveles utilizando módulos.',
+        'el_coco_lead':'Lideré el equipo como diseñador principal y productor, supervisando la visión y ejecución para conseguir el mejor producto en el tiempo establecido mediante metodologías ágiles.',
+        'el_coco_systems': 'Diseñé los sistemas de niveles, progresión y narrativa para conseguir escalabilidad de retos, power-ups y enemigos a la vez que el jugador progresa con un correcto pathing.',
+        'el_coco_enemies': 'Diseñé e implementé diversos tipos de enemigos, jefes y encuentros usando árboles de comportamiento adaptados a los niveles y las habilidades del jugador.',
         'el_coco_platforms': 'Plataformas: Disponible en PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch y Steam.',
 
         'bratz_description':'¡Domina la pasarela y súbete al escenario con el Bratz Pack! Personaliza estilos rompedores, baila al ritmo de canciones del Universo Bratz como \'So Good\' y viaja a ciudades icónicas. Supera a la malvada Burdine Maxwell y a las gemelas Tweevil en épicas batallas de moda, ya sea en solitario o con amigos.',
-        'project_bratz_role': '<strong>Productor de Post-lanzamiento.</strong>',
+        'project_bratz_role': '<strong>Productor</strong>',
         'project_bratz_info1':'Lideré las reuniones y la comunicación con stakeholders.',
+        'project_bratz_info2':'Administré las tareas del equipo y eliminé bloqueadores',
         'project_bratz_updates': 'Gestión de actualizaciones post-lanzamiento.',
         'project_bratz_info': 'Los demás detalles del proyecto están sujetos a un acuerdo de confidencialidad (NDA).',
 
@@ -305,7 +305,7 @@ const translations = {
 
         //HOME
         "home_roles": 'Game Designer, Programmer, Producer',
-        "home_description": 'I am a level and systems designer, developer, artist and storyteller with great passion and ambition for creating innovative games.',
+        "home_description": 'I am a gameplay and systems designer and developer, producer and storyteller with great passion and ambition for creating innovative games.',
         "home_eslogan": '\'Handcrafted Experiences, Loop by Loop\'',
 
         //ABOUT ME
@@ -373,15 +373,16 @@ const translations = {
 
         'el_coco_description': 'EL COCO is an action roguelike that plunges you into a world of dreams, broken memories, and living nightmares. Descend into The Uncertain, a place as strange as it is dangerous, and fight to recover what you’ve lost—if you can trust your guide.',
         'el_coco_role': '<strong>Game Designer & Producer.</strong>',
-        'el_coco_lead':'Led the team as Lead Designer and Producer, overseeing the project\'s vision and execution.',
-        'el_coco_systems': 'Designed scalable level, progression, and narrative systems.',
-        'el_coco_enemies': 'Designed and implemented diverse enemy types and combat encounters using Behavior Trees.',
+        'el_coco_lead':'Led the team as Lead Designer and Producer, overseeing the project\'s vision and execution to achieve the best possible product in the established time using Agile methodologies.',
+        'el_coco_systems': 'Designed scalable level, progression, and narrative systems based on challenges, power-ups and enemies, providing players with a rewarding pathing experience.',
+        'el_coco_enemies': 'Designed and implemented diverse enemy types, bosses and combat encounters using Behavior Trees adapted to rogue-like levels and player varied ability kits.',
         'el_coco_levels': 'Designed levels using modules.',
         'el_coco_platforms': 'Platforms: Available on PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch, and Steam.',
 
         'bratz_description':'Rule the runway and take the stage with the Bratz Pack! Customize fierce fashions, groove to songs from the Bratz Universe like ‘So Good’, and jet off to iconic cities. <br>Outshine mean Burdine and the Tweevil Twins in epic fashion battles—solo or with friends.',
-        'project_bratz_role': '<strong>Post-launch Producer.</strong>',
+        'project_bratz_role': '<strong>Producer.</strong>',
         'project_bratz_info1':'Led meetings and communication with stakeholders.',
+        'project_bratz_info2':'Managed team objetives and removed blockers.',
         'project_bratz_updates':'Managed post-launch updates.',
         'project_bratz_info': 'Further details are subject to a Non-Disclosure Agreement (NDA).',
 
