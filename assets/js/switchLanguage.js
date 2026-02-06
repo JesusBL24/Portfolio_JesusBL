@@ -121,7 +121,7 @@ const translations = {
         //ABOUT ME
         'aboutMe_title': 'Sobre mí',
         'aboutMe_p1': 'Nacido en 2003, mi interés por los videojuegos comenzó a la edad de tres años, lo que me permitió desarrollar internamente una comprensión intuitiva del <strong>porqué funcionan las diferentes mecánicas y los objetivos detrás de las decisiones de diseño enfocadas en la experiencia del jugador</strong>. De niño, también pasaba largas tardes jugando con LEGO, imaginando historias y mundos que más tarde me inspiraron a empezar a escribir, programar y cultivar un fuerte interés por la narrativa y el arte.',
-        'aboutMe_p2': 'Reciéntemente obtuve mi <strong>título de Grado en Diseño y Desarrollo de Videojuegos</strong> por la Universidad Rey Juan Carlos en Madrid. Durante estos años, estudié <strong>diseño de juegos</strong>, <strong>el pipeline de producción de videojuegos</strong>, y programación en <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> y <strong>Unity Engine</strong>. Además, mi deseo de superación me llevó a estudiar diseño de forma independiente y a participar con compañeros en varias game jams como <strong>diseñador y storyteller</strong> (e incluso una vez como director de arte). Esta experiencia ha fortalecido significativamente mis habilidades de <strong>comunicación</strong>, <strong>trabajo en equipo</strong>, <strong>análisis</strong> y <strong>resolución de problemas</strong>.',
+        'aboutMe_p2': 'Reciéntemente obtuve mi <strong>título de Grado en Diseño y Desarrollo de Videojuegos</strong> por la Universidad Rey Juan Carlos en Madrid. Durante estos años, estudié <strong>diseño de juegos</strong>, <strong>el pipeline de producción de videojuegos</strong>, dirección de equipos usando <strong>metodologías ágiles</strong> y programación en <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> y <strong>Unity Engine</strong>. Además, mi deseo de superación me llevó a estudiar diseño de forma independiente y a participar con compañeros en varias game jams como <strong>diseñador y storyteller</strong> (e incluso una vez como director de arte). Esta experiencia ha fortalecido significativamente mis habilidades de <strong>comunicación</strong>, <strong>trabajo en equipo</strong>, <strong>análisis</strong> y <strong>resolución de problemas</strong>.',
         'aboutMe_p3': 'Este año se lanzó mi primer proyecto multiplataforma, <strong>\'El Coco\'</strong>, donde colaboré con el equipo de Recotechnology S.L. como Diseñador de Juegos y Productor. Mis responsabilidades incluyeron diseñar <strong>sistemas de dificultad y progresión</strong>, <strong>estructurar la narrativa</strong>, <strong>implementar niveles y enemigos</strong>, <strong>liderar el equipo</strong> en mi rol de productor, y preparar las páginas del juego para todas las plataformas de lanzamiento.',
         'aboutMe_p4':'Esto es solo el comienzo; mi pasión por los videojuegos y mi deseo continuo de aprender me impulsan a buscar nuevos horizontes y a seguir desarrollando mis habilidades profesionales.',
 
@@ -137,6 +137,7 @@ const translations = {
         'aboutMe_subject9':'Inteligencia Artificial (IA)',
         'aboutMe_subject10':'Diseño visual',
         'aboutMe_subject11':'Estadística',
+        'aboutMe_subject12':'Scrum y Kanban',
 
 
         //SKILLS
@@ -168,7 +169,7 @@ const translations = {
 
         'skills_producing':'Producción',
         'skills_communication':'Comunicación',
-        'skills_agile':'Met.Ágiles',
+        'skills_agile':'Met. Ágiles',
         'skills_leadership':'Liderazgo',
         'skills_endToEnd':'Principio a fin',
         'skills_jira':'Jira',
@@ -183,7 +184,7 @@ const translations = {
 
         'el_coco_description':'EL COCO es un juego roguelike de acción que te sumerge en un mundo de sueños, recuerdos rotos y pesadillas encarnadas. Desciende a Lo Incierto, un lugar tan extraño como peligroso, y lucha por recuperar lo que perdiste… si es que puedes confiar en quien te guía.',
         'el_coco_role': '<strong>Game Designer y Productor.</strong>',
-        'el_coco_lead':'Lideré el equipo como diseñador principal y productor, supervisando la visión y ejecución para conseguir el mejor producto en el tiempo establecido mediante metodologías ágiles.',
+        'el_coco_lead':'Lideré el equipo como diseñador principal y productor, supervisando la visión y la ejecución usando Kanban, estableciendo cronogramas y eliminando bloqueadores.',
         'el_coco_systems': 'Diseñé los sistemas de niveles, progresión y narrativa para conseguir escalabilidad de retos, power-ups y enemigos a la vez que el jugador progresa con un correcto pathing.',
         'el_coco_enemies': 'Diseñé e implementé diversos tipos de enemigos, jefes y encuentros usando árboles de comportamiento adaptados a los niveles y las habilidades del jugador.',
         'el_coco_platforms': 'Plataformas: Disponible en PS5, PS4, Xbox One, Xbox Series X|S, Nintendo Switch y Steam.',
@@ -311,7 +312,7 @@ const translations = {
         //ABOUT ME
         'aboutMe_title': 'About me',
         'aboutMe_p1': 'Born in 2003, my interest in video games started at the age of three, allowing me to internally develop an intuitive understanding of <strong>why different mechanics work and the objectives behind design decisions focused on the player experience</strong>. As a child, I also spent long evenings playing with LEGO, imagining stories and worlds that later inspired me to begin writing, programming, and cultivating a strong interest in storytelling and art.',
-        'aboutMe_p2': 'I recently received my <strong>Bachelor\'s degree in Game Design and Development</strong> from Rey Juan Carlos University in Madrid. During these years, I  studied <strong>game design</strong>, <strong>the video game production pipeline</strong>, and programming in <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> and <strong>Unity Engine</strong>. Furthermore, my desire for improvement led me to independently studying design and participating with colleagues in several game jams as a <strong>designer</strong> and <strong>storyteller</strong> (and even once as an art director). This experience has significantly strengthened my <strong>communication</strong>, <strong>team working</strong>, <strong>analysis</strong>, and <strong>problem-solving skills</strong>',
+        'aboutMe_p2': 'I recently received my <strong>Bachelor\'s degree in Game Design and Development</strong> from Rey Juan Carlos University in Madrid. During these years, I  studied <strong>game design</strong>, <strong>the video game production pipeline</strong>, directing teams using <strong>Agile Methodologies</strong> and programming in <strong>C#</strong>, <strong>C++</strong>, <strong>javascript</strong> and <strong>Unity Engine</strong>. Furthermore, my desire for improvement led me to independently studying design and participating with colleagues in several game jams as a <strong>designer</strong> and <strong>storyteller</strong> (and even once as an art director). This experience has significantly strengthened my <strong>communication</strong>, <strong>team working</strong>, <strong>analysis</strong>, and <strong>problem-solving skills</strong>',
         'aboutMe_p3': 'This year, my first multiplatform project, <strong>\'El Coco\'</strong>, was released, where I collaborated with the Recotechnology S.L. team as a Game Designer and Producer. My responsibilities included designing <strong>difficulty and progression systems</strong>, <strong>structuring the narrative</strong>, <strong>implementing levels and enemies</strong>, <strong>leading the team</strong> in my production role, and preparing the game pages for all launch platforms.',
         'aboutMe_p4': 'This is just the beginning; my passion for games and continuous desire to learn drive me to seek new horizons and further develop my professional skills.',
 
@@ -327,6 +328,7 @@ const translations = {
         'aboutMe_subject9':'Artificial Intelligence (AI)',
         'aboutMe_subject10':'Visual design',
         'aboutMe_subject11':'Statistics',
+        'aboutMe_subject12':'Scrum and Kanban',
 
         //SKILLS
         'skills_title':'Skills',
@@ -373,7 +375,7 @@ const translations = {
 
         'el_coco_description': 'EL COCO is an action roguelike that plunges you into a world of dreams, broken memories, and living nightmares. Descend into The Uncertain, a place as strange as it is dangerous, and fight to recover what you’ve lost—if you can trust your guide.',
         'el_coco_role': '<strong>Game Designer & Producer.</strong>',
-        'el_coco_lead':'Led the team as Lead Designer and Producer, overseeing the project\'s vision and execution to achieve the best possible product in the established time using Agile methodologies.',
+        'el_coco_lead':'Led the team as Lead Designer and Producer, overseeing the project\'s vision and execution using Kanban, setting schedules and clearing impediments.',
         'el_coco_systems': 'Designed scalable level, progression, and narrative systems based on challenges, power-ups and enemies, providing players with a rewarding pathing experience.',
         'el_coco_enemies': 'Designed and implemented diverse enemy types, bosses and combat encounters using Behavior Trees adapted to rogue-like levels and player varied ability kits.',
         'el_coco_levels': 'Designed levels using modules.',
