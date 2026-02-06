@@ -192,7 +192,7 @@ const translations = {
         'bratz_description':'¡Domina la pasarela y súbete al escenario con el Bratz Pack! Personaliza estilos rompedores, baila al ritmo de canciones del Universo Bratz como \'So Good\' y viaja a ciudades icónicas. Supera a la malvada Burdine Maxwell y a las gemelas Tweevil en épicas batallas de moda, ya sea en solitario o con amigos.',
         'project_bratz_role': '<strong>Productor</strong>',
         'project_bratz_info1':'Lideré las reuniones y la comunicación con stakeholders.',
-        'project_bratz_info2':'Administré las tareas del equipo y eliminé bloqueadores',
+        'project_bratz_info2':'Administré las tareas del equipo y eliminé bloqueadores.',
         'project_bratz_updates': 'Gestión de actualizaciones post-lanzamiento.',
         'project_bratz_info': 'Los demás detalles del proyecto están sujetos a un acuerdo de confidencialidad (NDA).',
 
