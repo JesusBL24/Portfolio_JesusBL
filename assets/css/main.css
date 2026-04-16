@@ -1919,22 +1919,23 @@ input, select, textarea {
 		}
 
 		#aboutMe section.box.style1 {
-			background: #dcd0fe;
 			/* Opcional: Si el texto es negro (como en tu plantilla original),
                debes cambiar el color del texto a blanco para que se vea */
 			color: black;
+			margin-right: 2em;
+			/*max-width: 25em;*/
 		}
 
 		.aboutMeParent {
 			display: flex;
 			justify-content: center;
-			align-items: center;
+			/*align-items: center;*/
 			margin: auto;
 			flex-wrap: wrap;
 
 			.aboutMeChild {
 				margin-right: 2em;
-				max-width: 60em;
+				/*max-width: 60em*/;
 			}
 
 			.aboutMeHijo2 {
@@ -1949,6 +1950,7 @@ input, select, textarea {
 				margin-left: 0 !important;
 				width: 100% !important;
 				display: block !important; /* Evita que flexbox descuadre los hijos */
+				justify-content: center;
 			}
 
 			/* Ajustamos el hijo para que ocupe el centro real */
@@ -1957,7 +1959,11 @@ input, select, textarea {
 				margin-bottom: 2em; /* Espacio de separación con el siguiente cuadro */
 				width: 100% !important;
 			}
-
+			.box.style1 {
+				margin-left: auto !important;
+				margin-right: auto !important;
+				width: 100% !important;
+			}
 			/* Aseguramos que la caja interior esté alineada */
 			.aboutMeTextSection {
 				margin: 0 auto !important;
@@ -1974,6 +1980,10 @@ input, select, textarea {
 
 		.box.style1 h3 {
 			margin-bottom: 1em;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 15em;
+			text-align: center !important;
 		}
 
 		.box.style1 li {
@@ -2552,7 +2562,7 @@ input, select, textarea {
 			}
 
 			.box.style1 {
-				max-width: 32em;
+				/*max-width: 32em;*/
 				margin-left: auto !important;
 				margin-right: auto !important;
 			}
@@ -2747,6 +2757,7 @@ input, select, textarea {
 
 .subjectsTitles {
 	max-width: 13em;
+	text-align: center;
 }
 
 
