@@ -349,7 +349,7 @@ const translations = {
         'aboutMe_bootcamp3':'Acquiring a better understanding of <strong>collaborative processes</strong> between systems and mechanics design and other disciplines.',
         'aboutMe_bootcamp4':'Enhancing <strong>soft skills</strong> including productive disagreement and conflict resolution.',
         'aboutMe_bootcamp5':'Improving <strong>iterative skills</strong>: Feedback gathering, analysis, problem-solving and implementation.',
-        'aboutMe_bootcamp6':'Practicing with <strong>international teams</strong> in several workshops.',
+        'aboutMe_bootcamp6':'Practicing with <strong>international teams</strong> in several workshops.<br>',
 
         //SKILLS
         'skills_title':'Skills',

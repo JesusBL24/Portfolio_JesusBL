@@ -32,3 +32,14 @@
 		});
 
 })(jQuery);
+
+function openModal() {
+	// Usamos 'flex' en lugar de 'block' para mantener el centrado
+	document.getElementById("textModal").style.display = "flex";
+	document.body.classList.add("no-scroll");
+}
+
+function closeModal() {
+	document.getElementById("textModal").style.display = "none";
+	document.body.classList.remove("no-scroll");
+}
