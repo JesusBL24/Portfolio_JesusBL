@@ -43,3 +43,14 @@ function closeModal() {
 	document.getElementById("textModal").style.display = "none";
 	document.body.classList.remove("no-scroll");
 }
+
+function openImage(element) {
+	const modal = document.getElementById("imageModal");
+	const fullImg = document.getElementById("fullImage");
+	fullImg.src = element.src; // Copia la imagen
+	modal.style.display = "flex";
+}
+
+function closeImage() {
+	document.getElementById("imageModal").style.display = "none";
+}

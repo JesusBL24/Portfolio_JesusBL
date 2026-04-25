@@ -125,7 +125,7 @@ const translations = {
         'aboutMe_p3': 'En 2025 se lanzó mi primer proyecto multiplataforma, ‘El Coco’, en el cual colaboré con el equipo de Recotechnology S.L. como Game Designer y Productor mientras terminaba mi TFG. Mis responsabilidades incluyeron la gestión de los objetivos y tareas del equipo, además de actuar como Game Designer 360° con un fuerte enfoque en el diseño de contenido y progresión. Actualmente, participo en el bootcamp internacional <strong><a href="https://gamedesignskills.com/courses/mechanics-bootcamp-scale-depth-alexander-brazie/ ">‘Mastering Game Mechanics’</a></strong> de Game Design Skills para perfeccionar el diseño de mecánicas profesional y los flujos de trabajo colaborativos con otros diseñadores. Al mismo tiempo, estoy desarrollando ‘Magefall’, mi propio prototipo de acción y aventura, para aprender más sobre Unreal Engine 5 y poner en práctica mis nuevos conocimientos.',
         'aboutMe_p4': 'Esto es solo el comienzo; mi pasión por los videojuegos y mi deseo continuo de aprender me impulsan a buscar nuevos horizontes y una oportunidad profesional en la industria para seguir desarrollando mis habilidades.',
 
-        'aboutMe_subjects':'Grado en Diseño y Desarrollo de videojuegos (2020-2025)',
+        'aboutMe_subjects':'Grado en Diseño y Desarrollo de videojuegos (2021-2025)',
         'aboutMe_subject1':'Analicé <strong>economías</strong> de juego y estudié <strong>principios</strong> y <strong>frameworks</strong> de <strong>diseño</strong>.',
         'aboutMe_subject2':'Diseñé el <strong>gameplay</strong> y <strong>equilibré</strong> mecánicas en varios juegos pequeños.',
         'aboutMe_subject3':'<strong>Lideré el desarrollo</strong> gestionando tareas y objetivos en game jams y proyectos académicos.',
@@ -163,7 +163,7 @@ const translations = {
 
         'skills_gameDesign':'Game Design',
         'skills_coop':'Co-op',
-        'skills_gameplay':'Gameplay Design',
+        'skills_gameplay':'Mechanics Design',
         'skills_designPvP':'PvP',
         'skills_enemy':'Enemy Design',
         'skills_iterative':'Iterative Design',
@@ -210,13 +210,14 @@ const translations = {
 
         'experience_personal': 'Proyectos personales',
 
-        'magefall_description':'A lo largo de este proyecto, estudié y desarrollé los elementos esenciales para las etapas de conceptualización de un videojuego. Profundicé mis conocimientos en diseño de juegos mediante la investigación de expertos del sector y logré formalizar un concepto de juego siguiendo un enfoque iterativo y orientado a la resolución de problemas.',
-        'magefall_title':'Magefall: Un estudio sobre el diseño iterativo y las etapas de conceptualización de videojuegos (TFG, 2025)',
-        'project_magefall_1': '<strong>Investigador y Diseñador de Sistemas.</strong>',
-        'project_magefall_2': 'Realicé una investigación profunda sobre diseño iterativo y diseño de juego avanzado.',
-        'project_magefall_3': 'Apliqué los conocimientos para desarrollar un concepto de juego mediante un ciclo iterativo.',
-        'project_magefall_4': 'Diseñé y perfeccioné los sistemas de combate y progresión, asegurando su profundidad.',
-        'project_magefall_5': 'Prototipé y simplifiqué mecánicas complejas utilizando técnicas de prototipado en papel.',
+        'magefall_description': 'Magefall, concebido originalmente como mi tesis de grado, es mi proyecto actual donde aplico principios avanzados de diseño desarrollando un juego desde cero hasta un prototipo final utilizando frameworks profesionales. Además, estoy utilizando Unreal Engine 5 y Blueprints para profundizar en las funcionalidades del motor y mejorar mis habilidades técnicas.',
+
+        'magefall_title': 'Magefall: Prototipo de juego de Acción-Aventura <br>(Proyecto Personal, Actualidad)',
+        'project_magefall_1': '<strong>Diseñador de Gameplay y Técnico</strong>',
+        'project_magefall_2': 'Desarrollando sistemas de juego centrados en hechizos, armamento y estructuras de misiones, validados mediante playtesting con el público objetivo e implementados a través de frameworks de diseño profesionales.',
+        'project_magefall_3': 'Realicé una investigación profunda sobre diseño iterativo y sistemas avanzados de juego, elogiada por el tribunal universitario, mediante el análisis de los flujos de trabajo de diseñadores profesionales líderes en la industria.',
+        'project_magefall_4': 'He garantizado de una iteración rápida y mitigación de riesgos mediante el uso de prototipado en papel para simplificar mecánicas complejas y descartar funciones no viables en etapas tempranas del desarrollo.',
+        'project_magefall_5': 'He maximizado el valor de cada ciclo de desarrollo siguiendo un proceso iterativo centrado en la resolución de problemas, prototipado rápido, pruebas y documentación.',
         'project_magefall_6': 'Llevé a cabo sesiones de playtesting para identificar y evaluar problemas y fortalezas.',
         'project_magefall_7': 'Redacté documentación clara y versátil, incluyendo un GDD, briefs de proyecto y one-pagers.',
 
@@ -328,7 +329,7 @@ const translations = {
         'aboutMe_p3': 'In 2025, my first multiplatform project, <strong>‘El Coco’</strong>, was released, where I collaborated with the Recotechnology S.L. team as a <strong>Game Designer</strong> and <strong>Producer</strong> while finishing my Bachelor\'s Thesis. My responsibilities included managing the team’s goals and tasks, and serving as a 360° Game Designer with a heavy focus on content and progression design. Currently, I am enrolled in the international <strong><a href="https://gamedesignskills.com/courses/mechanics-bootcamp-scale-depth-alexander-brazie/ ">‘Mastering Game Mechanics’</a></strong> by Game Design Skills to master professional mechanics design and collaborative workflows with other designers. Simultaneously, I am developing <strong>‘Magefall’</strong>, my own action-adventure prototype, to learn more about Unreal Engine 5 and put my new knowledge into practice.',
         'aboutMe_p4': 'This is just the beginning; my passion for games and continuous desire to learn drive me to seek new horizons and pursue a role in the industry to further develop my skills.',
 
-        'aboutMe_subjects':'Degree in Game Design and Development (2020-2025)',
+        'aboutMe_subjects':'Bachelor\'s Degree in Game Design and Development (2021-2025)',
         'aboutMe_subject1':'Analyzed game <strong>economies</strong> and studied <strong>design</strong> principles and frameworks.',
         'aboutMe_subject2':'Designed <strong>gameplay</strong> and <strong>balanced</strong> mechanics for several small-scale games.',
         'aboutMe_subject3':'Developed games using <strong>iterative frameworks</strong>.',
@@ -366,7 +367,7 @@ const translations = {
 
         'skills_gameDesign':'Game Design',
         'skills_coop':'Co-op',
-        'skills_gameplay':'Gameplay Design',
+        'skills_gameplay':'Mechanics Design',
         'skills_designPvP':'PvP',
         'skills_enemy':'Enemy Design',
         'skills_iterative':'Iterative Design',
@@ -414,15 +415,13 @@ const translations = {
 
         'experience_personal': 'Personal projects',
 
-        'magefall_description': 'Throughout this project, I studied and developed the essential elements for the conceptualization stages of a video game. I deepened my knowledge of game design by researching industry experts and successfully formalized a game concept by following an iterative, problem-oriented approach.',
-        'magefall_title':'Magefall: A study of iterative design and video game conceptualization stages (Bachelor\'s Thesis, 2025)',
-        'project_magefall_1':'<strong>Researcher & Systems Designer</strong>',
-        'project_magefall_2':'Carried out an in-depth investigation into iterative design and advanced game design.',
-        'project_magefall_3':'Applied newly acquired knowledge to develop a game concept through an iterative cycle.',
-        'project_magefall_4':'Designed and refined combat and progression systems, ensuring mechanical depth.',
-        'project_magefall_5':'Prototyped and simplified complex mechanics using paper prototyping techniques.',
-        'project_magefall_6':'Conducted playtesting sessions to identify issues and strengths, followed by their evaluation.',
-        'project_magefall_7':'Authored clear and versatile documentation, including a GDD, project briefs, and one-pagers.',
+        'magefall_description': 'Magefall is my current project—originally conceived as my bachelor’s thesis—where I apply advanced design principles by developing a game from scratch into an in-engine prototype using professional frameworks. Furthermore, I am using Unreal Engine 5 and Blueprints to deepen in engine feature and improve my technical design skills.',
+        'magefall_title': 'Magefall: An Action-Adventure Game Prototype <br>(Personal Project, Ongoing)',
+        'project_magefall_1': '<strong>Game & Technical Designer</strong>',
+        'project_magefall_2': 'Developing gameplay systems centered on spells, weaponry, and mission structures, validated through target audience playtesting and implemented via professional design frameworks.',
+        'project_magefall_3': 'Conducted in-depth research into iterative design and advanced game systems—praised from university faculty—by analyzing the workflows of industry-leading professional designers.',
+        'project_magefall_4': 'Ensuring rapid iteration and mitigating risk by using paper prototyping to simplify complex mechanics and filter out non-viable features early in development.',
+        'project_magefall_5': 'Maximizing the value of every development cycle by following an iterative process focused on problem-solving, rapid prototyping, testing and documenting.',
 
         'SCR3D_description':'A brand-new spaceship hero shooter where you choose your character, customize your weapons, and fight your rivals to dominate the Arena. Each game is a \'best-of-three\' match where you level up your ship to unlock powerful boosters and signature abilities.',
         'SCR3D_1':'<strong> PvP Game Designer & Narrative Designer.</strong',
