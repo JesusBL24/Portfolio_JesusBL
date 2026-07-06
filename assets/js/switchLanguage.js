@@ -122,10 +122,10 @@ const translations = {
         'aboutMe_title': 'Sobre mí',
         'aboutMe_p1': 'Nacido en 2003, mi interés por los videojuegos comenzó cuando cogí los mandos con tres años, lo que me ha permitido desarrollar durante años una comprensión intuitiva de <strong>los objetivos detrás de las decisiones de diseño y de las consecuencias de diferentes mecánicas</strong>. De niño, también pasaba largas tardes jugando con LEGO, imaginando historias y mundos que más tarde me inspiraron a empezar a escribir, programar y cultivar un fuerte interés por la narrativa y el arte.',
         'aboutMe_p2': 'Reciéntemente obtuve mi <strong>título de Grado en Diseño y Desarrollo de Videojuegos</strong> en la Universidad Rey Juan Carlos de Madrid. Durante estos años, estudié diseño de mecánicas y niveles, el pipeline de producción de videojuegos, dirección de equipos usando Scrum (Certificado) y programación en C#, C++, javascript y Unity Engine. Además, mi deseo de aprendizaje me llevó a estudiar diseño de forma independiente y a participar con compañeros en <strong>varias game jams</strong> como <strong>diseñador</strong> y <strong>storyteller</strong> (e incluso una vez como director de arte). Esta experiencia ha fortalecido significativamente mis habilidades de comunicación, trabajo en equipo, análisis y resolución de problemas.',
-        'aboutMe_p3': 'En 2025 se lanzó mi primer proyecto multiplataforma, ‘El Coco’, en el cual colaboré con el equipo de Recotechnology S.L. como Game Designer y Productor mientras terminaba mi TFG. Mis responsabilidades incluyeron la gestión de los objetivos y tareas del equipo, además de actuar como Game Designer 360° con un fuerte enfoque en el diseño de contenido y progresión. Actualmente, participo en el bootcamp internacional <strong><a href="https://gamedesignskills.com/courses/mechanics-bootcamp-scale-depth-alexander-brazie/ ">‘Mastering Game Mechanics’</a></strong> de Game Design Skills para perfeccionar el diseño de mecánicas profesional y los flujos de trabajo colaborativos con otros diseñadores. Al mismo tiempo, estoy desarrollando ‘Magefall’, mi propio prototipo de acción y aventura, para aprender más sobre Unreal Engine 5 y poner en práctica mis nuevos conocimientos.',
+        'aboutMe_p3': 'En 2025 se lanzó mi primer proyecto multiplataforma, ‘El Coco’, en el cual colaboré con el equipo de Recotechnology S.L. como Game Designer y Productor mientras terminaba mi TFG. Mis responsabilidades incluyeron la gestión de los objetivos y tareas del equipo, además de actuar como Game Designer 360° con un fuerte enfoque en el diseño de contenido y progresión. Este año he participado en el bootcamp internacional <strong><a href="https://gamedesignskills.com/courses/mechanics-bootcamp-scale-depth-alexander-brazie/ ">‘Mastering Game Mechanics’</a></strong> de Game Design Skills para perfeccionar el diseño de mecánicas profesional y los flujos de trabajo colaborativos con otros diseñadores.',
         'aboutMe_p4': 'Esto es solo el comienzo; mi pasión por los videojuegos y mi deseo continuo de aprender me impulsan a buscar nuevos horizontes y una oportunidad profesional en la industria para seguir desarrollando mis habilidades.',
 
-        'aboutMe_subjects':'Grado en Diseño y Desarrollo de videojuegos (2021-2025)',
+        'aboutMe_subjects':'Grado en Diseño y Desarrollo de videojuegos (2020-2025)',
         'aboutMe_subject1':'Analicé <strong>economías</strong> de juego y estudié <strong>principios</strong> y <strong>frameworks</strong> de <strong>diseño</strong>.',
         'aboutMe_subject2':'Diseñé el <strong>gameplay</strong> y <strong>equilibré</strong> mecánicas en varios juegos pequeños.',
         'aboutMe_subject3':'<strong>Lideré el desarrollo</strong> gestionando tareas y objetivos en game jams y proyectos académicos.',
@@ -140,13 +140,13 @@ const translations = {
         'aboutMe_subject12':'Certificado de Scrum Master',
 
         //BOOTCAMP:
-        'aboutMe_bootcamp': 'Mastering Game Mechanics Bootcamp (Actualmente)',
-        'aboutMe_bootcamp1':'Aprendiendo herramientas, procesos y habilidades para diseñar de forma consistente <strong>mecánicas</strong> que logren un <strong>gameplay</strong> profundo, atractivo y escalable.',
-        'aboutMe_bootcamp2':'Desarrollando un mejor <strong>pensamiento de diseño</strong> y una <strong>comunicación</strong> más clara y matizada.',
-        'aboutMe_bootcamp3':'Adquiriendo una <strong>mejor comprensión</strong> de los procesos colaborativos entre el diseño de sistemas, el diseño de mecánicas y otras disciplinas.',
-        'aboutMe_bootcamp4':'Potenciando mis <strong>soft skills</strong>, incluyendo la discrepancia productiva y la resolución de conflictos.',
-        'aboutMe_bootcamp5':'Mejorando mis <strong>habilidades iterativas</strong>: recopilación de feedback, análisis, resolución de problemas e implementación.',
-        'aboutMe_bootcamp6':'Practicando con <strong>equipos internacionales</strong> a través de diversos talleres.',
+        'aboutMe_bootcamp': 'Mastering Game Mechanics Bootcamp (2026)',
+        'aboutMe_bootcamp1':'Aprendí herramientas, procesos y habilidades para diseñar de forma consistente <strong>mecánicas</strong> que logren un <strong>gameplay</strong> profundo, atractivo y escalable.',
+        'aboutMe_bootcamp2':'Desarrollé un mejor <strong>pensamiento de diseño</strong> y una <strong>comunicación</strong> más clara y matizada.',
+        'aboutMe_bootcamp3':'Adquirí una <strong>mejor comprensión</strong> de los procesos colaborativos entre el diseño de sistemas, el diseño de mecánicas y otras disciplinas.',
+        'aboutMe_bootcamp4':'Potencié mis <strong>soft skills</strong>, incluyendo la discrepancia productiva y la resolución de conflictos.',
+        'aboutMe_bootcamp5':'Mejoré mis <strong>habilidades iterativas</strong>: recopilación de feedback, análisis, resolución de problemas e implementación.',
+        'aboutMe_bootcamp6':'Practiqué con <strong>equipos internacionales</strong> a través de diversos talleres.',
 
         //SKILLS
         'skills_title':'Habilidades',
@@ -326,10 +326,10 @@ const translations = {
         'aboutMe_title': 'About me',
         'aboutMe_p1': 'Born in 2003, my interest in video games started at the age of three, allowing me during all these years to develop an intuitive understanding of <strong>the objectives behind each design decision and the consequences of different mechanics</strong>. As a child, I also spent long evenings playing with LEGO, imagining stories and worlds that later inspired me to begin writing, programming, and cultivating a strong interest in storytelling and art.',
         'aboutMe_p2': 'I recently received my <strong>Bachelor\'s Degree in Game Design and Development</strong> from Rey Juan Carlos University in Madrid. During these years, I  studied mechanics and level design, the video game production pipeline, team management using Scrum (Certificate) and programming in C#, C++, javascript and Unity Engine. Furthermore, my desire for improvement led me to independently studying design and participating with colleagues in <strong>several game jams</strong> as a <strong>designer</strong> and <strong>storyteller</strong> (and even once as an art director). This experience has significantly strengthened my communication, team working, analysis, and problem-solving skills.',
-        'aboutMe_p3': 'In 2025, my first multiplatform project, <strong>‘El Coco’</strong>, was released, where I collaborated with the Recotechnology S.L. team as a <strong>Game Designer</strong> and <strong>Producer</strong> while finishing my Bachelor\'s Thesis. My responsibilities included managing the team’s goals and tasks, and serving as a 360° Game Designer with a heavy focus on content and progression design. Currently, I am enrolled in the international <strong><a href="https://gamedesignskills.com/courses/mechanics-bootcamp-scale-depth-alexander-brazie/ ">‘Mastering Game Mechanics’</a></strong> by Game Design Skills to master professional mechanics design and collaborative workflows with other designers. Simultaneously, I am developing <strong>‘Magefall’</strong>, my own action-adventure prototype, to learn more about Unreal Engine 5 and put my new knowledge into practice.',
+        'aboutMe_p3': 'In 2025, my first multiplatform project, <strong>‘El Coco’</strong>, was released, where I collaborated with the Recotechnology S.L. team as a <strong>Game Designer</strong> and <strong>Producer</strong> while finishing my Bachelor\'s Thesis. My responsibilities included managing the team’s goals and tasks, and serving as a 360° Game Designer with a heavy focus on content and progression design. This year, I have enrolled in the international <strong><a href="https://gamedesignskills.com/courses/mechanics-bootcamp-scale-depth-alexander-brazie/ ">‘Mastering Game Mechanics’</a></strong> by Game Design Skills to master professional mechanics design and collaborative workflows with other designers. .',
         'aboutMe_p4': 'This is just the beginning; my passion for games and continuous desire to learn drive me to seek new horizons and pursue a role in the industry to further develop my skills.',
 
-        'aboutMe_subjects':'Bachelor\'s Degree in Game Design and Development (2021-2025)',
+        'aboutMe_subjects':'Bachelor\'s Degree in Game Design and Development (2020-2025)',
         'aboutMe_subject1':'Analyzed game <strong>economies</strong> and studied <strong>design</strong> principles and frameworks.',
         'aboutMe_subject2':'Designed <strong>gameplay</strong> and <strong>balanced</strong> mechanics for several small-scale games.',
         'aboutMe_subject3':'Developed games using <strong>iterative frameworks</strong>.',
@@ -344,13 +344,13 @@ const translations = {
         'aboutMe_subject12':'Scrum Master certificate',
 
         //BOOTCAMP:
-        'aboutMe_bootcamp': 'Mastering Game Mechanics Bootcamp (Ongoing)',
-        'aboutMe_bootcamp1':'Learning tools, processes, skills, and knowledge to consistently <strong>design mechanics</strong> that leads to deeper engaging gameplay at scale.',
-        'aboutMe_bootcamp2':'Developing a clearer, sharper and more nuanced <strong>design thinking</strong> and <strong>communication</strong>.',
-        'aboutMe_bootcamp3':'Acquiring a better understanding of <strong>collaborative processes</strong> between systems and mechanics design and other disciplines.',
-        'aboutMe_bootcamp4':'Enhancing <strong>soft skills</strong> including productive disagreement and conflict resolution.',
-        'aboutMe_bootcamp5':'Improving <strong>iterative skills</strong>: Feedback gathering, analysis, problem-solving and implementation.',
-        'aboutMe_bootcamp6':'Practicing with <strong>international teams</strong> in several workshops.<br>',
+        'aboutMe_bootcamp': 'Mastering Game Mechanics Bootcamp (2026)',
+        'aboutMe_bootcamp1':'Learned tools, processes, skills, and knowledge to consistently <strong>design mechanics</strong> that leads to deeper engaging gameplay at scale.',
+        'aboutMe_bootcamp2':'Developed a clearer, sharper and more nuanced <strong>design thinking</strong> and <strong>communication</strong>.',
+        'aboutMe_bootcamp3':'Acquired a better understanding of <strong>collaborative processes</strong> between systems and mechanics design and other disciplines.',
+        'aboutMe_bootcamp4':'Enhanced <strong>soft skills</strong> including productive disagreement and conflict resolution.',
+        'aboutMe_bootcamp5':'Improved <strong>iterative skills</strong>: Feedback gathering, analysis, problem-solving and implementation.',
+        'aboutMe_bootcamp6':'Practiced with <strong>international teams</strong> in several workshops.<br>',
 
         //SKILLS
         'skills_title':'Skills',

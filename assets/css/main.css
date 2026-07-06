@@ -228,6 +228,22 @@ input, select, textarea {
 
 /* Container */
 
+	#top{
+		.container{
+			height: auto;
+			margin-bottom: -100px;
+			margin-top: -100px;
+		}
+	}
+
+	#experience{
+		.container{
+			height: auto;
+			margin-bottom: -10em;
+			margin-top: -5em;
+		}
+	}
+
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 50px);
@@ -254,6 +270,8 @@ input, select, textarea {
 					width: 900px;
 				}
 
+
+
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -266,6 +284,11 @@ input, select, textarea {
 					width: 720px;
 				}
 
+			#experience{
+				.container{
+					margin-top: 0em;
+				}
+			}
 		}
 
 		@media screen and (max-width: 980px) {
@@ -1621,7 +1644,7 @@ input, select, textarea {
 /* Section/Article */
 
 	section, article {
-		margin-bottom: 3em;
+		margin-bottom: 2em;
 	}
 
 	section > :last-child,
@@ -1644,14 +1667,13 @@ input, select, textarea {
 		}
 
 		.image.fit {
-			display: block;
-			width: 100%;
+			display: flex;
+			width: 10px;
 		}
 
 		.image.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 2em 0;
 		}
 
 		.image.left {
@@ -2288,15 +2310,15 @@ input, select, textarea {
 		}
 
 		#top {
-			padding: 10em 0 10em 0;
+			padding: 7em 0 7em 0;
 			text-align: left;
 		}
 
 		#top .image {
-			border-radius: 100%;
-			width: 20em;
-			height: 20em;
-			margin: 0;
+			border-radius: 10%;
+			width: 10em;
+			height: 10em;
+			margin: auto;
 		}
 
 		#top .image img {
@@ -2304,22 +2326,24 @@ input, select, textarea {
 		}
 
 		#top header {
-			margin: 0 0 3em 0;
+			margin: 0;
 		}
 
 		#top h1 {
 			margin-top: 0.35em;
+			font-size: 3em;
 		}
 
 		#top h2#eslogan {
 			margin-top: 0.35em;
 			color: #946cff;
 			font-style: italic;
+			font-size: 2em;
 		}
 
 		#top p {
-			font-size: 1.5em;
-			line-height: 1.75em;
+			font-size: 1em;
+			line-height: 1em;
 		}
 
 		#top p a {
@@ -2381,6 +2405,7 @@ input, select, textarea {
 				font-size: 11pt;
 			}
 
+
 			input, textarea, select {
 				font-size: 11pt;
 			}
@@ -2403,11 +2428,12 @@ input, select, textarea {
 			/* Articles */
 			#top {
 				padding: 8em 0;
+				padding: 8em 0 6em 0;
 			}
 
 			#top .image {
-				width: 24em;
-				height: 24em;
+				width: 10em;
+				height: 10em;
 				margin: 0;
 			}
 
@@ -2420,7 +2446,7 @@ input, select, textarea {
 			/* Articles */
 			#top {
 				text-align: center;
-				padding: 5em 0;
+				padding: 8em 0 6em 0;
 			}
 
 			#top .image {
@@ -2436,6 +2462,11 @@ input, select, textarea {
 			/* Basic */
 			body {
 				padding-top: 44px;
+			}
+
+			#top .image {
+				width: 5em;
+				height: 5em;
 			}
 
 			body, input, textarea, select {
@@ -2596,6 +2627,7 @@ input, select, textarea {
 					justify-content: center;
 					align-content: center;
 				}
+
 			}
 
 			#nav a {
@@ -2612,12 +2644,14 @@ input, select, textarea {
 
 			/* Articles */
 			#top {
-				padding: 3em 0;
+				margin-top: 1em;
+				margin-bottom: -2em;
+				padding: 10em 1em;
 			}
 
 			#top .image {
-				width: 15em;
-				height: 15em;
+				width: 10em;
+				height: 10em;
 				margin-bottom: 0;
 			}
 
