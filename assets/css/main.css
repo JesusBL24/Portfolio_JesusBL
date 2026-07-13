@@ -3109,13 +3109,19 @@ input, select, textarea {
 	/* Botón de cerrar */
 	.close-btn {
 		float: right;
-		font-size: 50px;
+		font-size: 60px;
 		cursor: pointer;
-		color: #beabff;
+		color: red;
 		background-color: #3e3e3e;
 		position: fixed;
 		right: 6em;
+		text-shadow: none;
 	}
+
+	.close-btn:hover {
+		color: red;      /* O el color de acento de tu juego */
+	}
+
 
 	@media screen and (max-width: 736px) {
 		.modal-content{
@@ -3144,6 +3150,10 @@ input, select, textarea {
 		body.no-scroll {
 			/* Mantiene el espacio de la scrollbar para que la web no salte */
 			padding-right: 15px;
+		}
+
+		.indexModal{
+			align-items: center;
 		}
 
 		.modal-media {
