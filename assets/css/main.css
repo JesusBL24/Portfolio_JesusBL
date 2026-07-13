@@ -3101,17 +3101,28 @@ input, select, textarea {
 		}
 	}
 
-
-
 	.modal-content h4 {
 		color: #3e3e3e;
 		font-size: 20px;
 	}
 
+	/* Botón de cerrar */
+	.close-btn {
+		float: right;
+		font-size: 50px;
+		cursor: pointer;
+		color: #beabff;
+		background-color: #3e3e3e;
+		position: fixed;
+		right: 6em;
+	}
 
 	@media screen and (max-width: 736px) {
 		.modal-content{
 			width: 90%;
+		}
+		.close-btn {
+			right: 2em;
 		}
 	}
 
@@ -3123,12 +3134,7 @@ input, select, textarea {
 			padding-right: 15px;
 		}
 
-		/* Botón de cerrar */
-		.close-btn {
-			float: right;
-			font-size: 28px;
-			cursor: pointer;
-		}
+
 
 		/* Esta clase se aplicará al body cuando el modal esté abierto */
 		.no-scroll {
