@@ -47,6 +47,15 @@ function setLanguage(lang) {
 
     // Sync other UI components with the current language
     updateLanguageButtons(lang);
+
+    localStorage.setItem('websiteLang', lang);
+    updateLanguageButtons(lang);
+
+    // NUEVO: Si hay un modal abierto, recárgalo en el nuevo idioma de inmediato
+    if (activeProjectId) {
+        openProjectModal(activeProjectId);
+    }
+
 }
 
 
@@ -192,9 +201,15 @@ const translations = {
         'experience_professional':'Proyectos profesionales',
         'project_available_on': '<strong>Disponible en:<strong>',
         'knowMore': 'One-pagers',
+        'contribution':'Contribución',
+        'word_and': 'y',
 
         'el_coco_description':'EL COCO es un juego roguelike de acción que te sumerge en un mundo de sueños, recuerdos rotos y pesadillas encarnadas. Desciende a Lo Incierto, un lugar tan extraño como peligroso, y lucha por recuperar lo que perdiste… si es que puedes confiar en quien te guía.',
-        'el_coco_role': '<strong>Diseñador PvP y Productor.</strong>',
+        'el_coco_Genre':'<strong>Género:</strong> Rogue-lite de acción</li>',
+        'el_coco_Type': ' <strong>Tipo:</strong> Retos, Cámara picada</li>',
+        'el_coco_Team Size':'<strong>Tamaño del equipo:</strong> 10</li>',
+        'el_coco_Engine':'<strong>Motor:</strong> Unity (C#)</li>',
+        'el_coco_role': '<strong>Rol</strong>: Diseñador PvP y Productor',
         'el_coco_lead':'Lideré al equipo para lograr un lanzamiento exitoso mediante el establecimiento de un pipeline de diseño iterativo centrado en objetivos relevantes para los jugadores.',
         'el_coco_systems': 'Creé un roguelike de ritmo rápido, mejorando la retención de jugadores al iterar en el core gameplay loop basado en desafíos y power-ups, mejorando el feel y las decisiones.',
         'el_coco_enemies': 'Implementé más de 20 niveles y encuentros, recopilando feedback de playtesters para mejorar la claridad y equilibrar la progresión tanto del jugador como de los enemigos.',
@@ -395,11 +410,17 @@ const translations = {
         'experience_description':'These are my featured professional and personal projects that highlight my skills on game development.',
         'experience_professional':'Professional projects',
         'project_available_on': '<strong>Available on:</strong>',
-        'knowMore': 'One-pagers',
+        'knowMore': 'Design details',
+        'contribution':'Contribution',
+        'word_and': 'and',
 
 
         'el_coco_description': 'EL COCO is an action roguelike that plunges you into a world of dreams, broken memories, and living nightmares. Descend into The Uncertain, a place as strange as it is dangerous, and fight to recover what you’ve lost.',
-        'el_coco_role': '<strong>Game Designer & Producer.</strong>',
+        'el_coco_Genre':'<strong>Genre:</strong> Action Rogue-lite</li>',
+        'el_coco_Type': ' <strong>Type:</strong> Challenges, Top-Down</li>',
+        'el_coco_Team Size':'<strong>Team Size:</strong> 10</li>',
+        'el_coco_Engine':'<strong>Engine:</strong> Unity (C#)</li>',
+        'el_coco_role': '<strong>Role:</strong> Game Designer & Producer',
         'el_coco_lead':'Led the team to a successful launch by establishing an iterative design pipeline focused on player-centered objectives.',
         'el_coco_systems': 'Created a fast-paced roguelike, improving player retention by iterating on the core gameplay loop based in various challenges and power-ups, enhancing feel and player decisions.',
         'el_coco_enemies': 'Implemented 20+ levels and encounters, gathering feedback from playtesters to enhance clarity and balance both player and enemy progression.',

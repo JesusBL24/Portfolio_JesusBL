@@ -33,15 +33,48 @@
 
 })(jQuery);
 
-function openModal() {
-	// Usamos 'flex' en lugar de 'block' para mantener el centrado
-	document.getElementById("textModal").style.display = "flex";
-	document.body.classList.add("no-scroll");
+let activeProjectId = null;
+function openProjectModal(projectId) {
+	activeProjectId = projectId;
+	const currentLang = localStorage.getItem('websiteLang') || 'en';
+	const contentTarget = document.getElementById("modalDynamicContent");
+	const modalOverlay = document.getElementById("projectModalContainer");
+
+	// Construimos la ruta dinámica. Ej: "projects/magefall-es.html"
+	const fileUrl = `assets/projects/${projectId}-${currentLang}.html`;
+
+	// Hacemos la petición asíncrona para traer el archivo
+	fetch(fileUrl)
+		.then(response => {
+			if (!response.ok) {
+				throw new Error(`No se pudo encontrar el archivo del proyecto: ${fileUrl}`);
+			}
+			return response.text(); // Convertimos la respuesta a texto plano (HTML)
+		})
+		.then(htmlContent => {
+			// Inyectamos el HTML directamente dentro del contenedor del modal
+			contentTarget.innerHTML = htmlContent;
+
+			// Mostramos el modal y bloqueamos el scroll del fondo
+			modalOverlay.style.display = "flex";
+			document.body.classList.add("no-scroll");
+		})
+		.catch(error => {
+			console.error("Error al cargar el modal del proyecto:", error);
+			contentTarget.innerHTML = `<p style="color:red; text-align:center;">Error loading project description.</p>`;
+		});
 }
 
-function closeModal() {
-	document.getElementById("textModal").style.display = "none";
+/**
+ * Cierra el modal y limpia el contenedor.
+ */
+function closeProjectModal() {
+	document.getElementById("projectModalContainer").style.display = "none";
 	document.body.classList.remove("no-scroll");
+
+	// Opcional: limpiamos el contenido para que no se vea el proyecto anterior la próxima vez antes de cargar
+	document.getElementById("modalDynamicContent").innerHTML = "";
+	activeProjectId = null;
 }
 
 function openImage(element) {
