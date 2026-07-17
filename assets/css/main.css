@@ -3112,9 +3112,9 @@ input, select, textarea {
 		font-size: 60px;
 		cursor: pointer;
 		color: red;
-		background-color: #3e3e3e;
+		background-color: white;
 		position: fixed;
-		right: 6em;
+		right: 2em;
 		text-shadow: none;
 	}
 
