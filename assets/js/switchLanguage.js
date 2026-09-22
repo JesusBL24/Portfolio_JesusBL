@@ -239,7 +239,7 @@ const translations = {
         'SCR3D_6':'Creé un universo expansivo listo para varias temporadas mediante trasfondos de personaje, facciones y el universo en general.',
         'SCR3D_7':'Desarrollé un trasfondo escalable de mundo  y las historias de origen de todos los personajes.',
 
-        'project_VR_description':'Un nuevo hero shooter de naves espaciales en el que eliges a tu personaje, personalizas tus armas y luchas contra tus rivales para dominar la Arena. Cada partida es un encuentro al mejor de tres, donde subes de nivel tu nave para desbloquear potentes mejoras y habilidades especiales.',
+        'project_VR_description':'Un simulador 3D que te permite crear múltiples situaciones para probar estrategias y toma de decisiones tácticas en tiempo real.',
         'project_VR_1': '<strong>Desarrollador y Diseñador VR</strong>',
         'project_VR_2': '<strong>Desarrollo VR en C#</strong>: Programé una simulación táctica 3D en VR en Unity (C#) utilizando el XR Interaction Toolkit, implementando control de gestos en tiempo real y algoritmos de modificación de escenarios.',
         'project_VR_3': '<strong>Diseño de Sistema dinámico de Creación de Situaciones</strong>: Desarrollé un entorno interactivo tridimensional para la creación de situaciones y toma de decisiones tácticas en tiempo real.',
@@ -457,7 +457,7 @@ const translations = {
         'SCR3D_6':'Created an expansive lore framework ready for seasonal updates, including detailed character backgrounds, factions, and overarching world-building.',
         'SCR3D_7':'Developed a scalable world setting and backstories for the entire character roster.',
 
-        'RAC_description':'Bright young stars with a future to build have a story to tell. Engage with them as much as possible to uncover their pasts and unveil all their secrets.',
+        'project_VR_description':'A 3D simulator that allows you to create multiple situations to test strategies and tactical decision-making in real time.',
         'RAC_1':'<strong>Lead Artist</strong>',
         'RAC_2':'Defined the overall visual identity and art style of the project.',
         'RAC_3':'Designed and illustrated graphical assets and environment art.',
