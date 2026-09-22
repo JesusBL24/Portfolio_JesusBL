@@ -239,6 +239,13 @@ const translations = {
         'SCR3D_6':'Creé un universo expansivo listo para varias temporadas mediante trasfondos de personaje, facciones y el universo en general.',
         'SCR3D_7':'Desarrollé un trasfondo escalable de mundo  y las historias de origen de todos los personajes.',
 
+        'project_VR_description':'Un nuevo hero shooter de naves espaciales en el que eliges a tu personaje, personalizas tus armas y luchas contra tus rivales para dominar la Arena. Cada partida es un encuentro al mejor de tres, donde subes de nivel tu nave para desbloquear potentes mejoras y habilidades especiales.',
+        'project_VR_1': '<strong>Desarrollador y Diseñador VR</strong>',
+        'project_VR_2': '<strong>Desarrollo VR en C#</strong>: Programé una simulación táctica 3D en VR en Unity (C#) utilizando el XR Interaction Toolkit, implementando control de gestos en tiempo real y algoritmos de modificación de escenarios.',
+        'project_VR_3': '<strong>Diseño de Sistema dinámico de Creación de Situaciones</strong>: Desarrollé un entorno interactivo tridimensional para la creación de situaciones y toma de decisiones tácticas en tiempo real.',
+        'project_VR_4': '<strong>Profiling y Optimización</strong>: Optimicé tasas de refresco, uso de memoria y llamadas de renderizado (draw calls) para cumplir con los estándares de latencia en dispositivos VR.',
+        'project_VR_5': '<strong>Proyecto disponible en <a href="https://github.com/JesusBL24/VRProyecto" target="_blank">GitHub</a></strong>',
+
         'RAC_description':'Jóvenes promesas de un futuro brillante tienen algo que contarte. Habla con ellos lo máximo posible para conocer su historia y desvelar todos sus secretos.',
         'RAC_1':'<strong>Artista Principal</strong>',
         'RAC_2':'Definí la identidad visual y el estilo artístico general del proyecto.',
@@ -456,6 +463,12 @@ const translations = {
         'RAC_3':'Designed and illustrated graphical assets and environment art.',
         'RAC_4':'Created and polished the animations for the main character.',
         'RAC_5': 'Recognized with an award and selected for exhibition at <strong>Barcelona Indie Dev Day</strong>.',
+
+        'project_VR_1': '<strong>VR Developer & Designer</strong>',
+        'project_VR_2': '<strong>VR C# Development</strong>: Programmed a 3D tactical VR simulation in Unity (C#) using the XR Interaction Toolkit, implementing real-time gesture control and dynamic scene modification algorithms.',
+        'project_VR_3': '<strong>Design of a Dynamic Situation Creation System</strong>: Designed a tridimensional interactive environment for situation creation and tactic decision-making in real time.',
+        'project_VR_4': '<strong>Performance Profiling</strong>: Optimized frame rates, memory allocation, and render calls to maintain latency standards required for VR headsets.',
+        'project_VR_5': '<strong>Project available in <a href="https://github.com/JesusBL24/VRProyecto" target="_blank">GitHub</a></strong>',
 
         'project_inner_description':'Delve into a futuristic world of mystery where everything feels like a game. However, your decisions will ultimately reveal the truth about who you really are.',
         'project_inner_1': '<strong>Game & Narrative Designer.</strong>',
